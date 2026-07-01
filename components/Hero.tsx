@@ -103,7 +103,7 @@ export default function Hero() {
         }
       `}} />
 
-<section className="relative min-h-[100dvh] flex flex-col items-center pb-24 overflow-hidden bg-[#FAFAFA] text-center" id="home" style={{ paddingTop: '10vh' }}>        
+<section className="relative min-h-[87dvh] flex flex-col items-center pb-24 overflow-hidden bg-[#FAFAFA] text-center" id="home" style={{ paddingTop: '10vh' }}>        
         {/* Deep Background Setup - Premium Ambient Glow */}
         <div className="absolute inset-0 z-0 overflow-hidden bg-[#FDFCF8]">
           <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-[#E8C84A]/20 blur-[120px] animate-[subtle-pan_20s_ease-in-out_infinite]" />
