@@ -4,10 +4,12 @@ import SocialLinks from '@/components/SocialLinks';
 import Monuments from '@/components/Monuments';
 import FoodPlaces from '@/components/FoodPlaces';
 import FeedbackForm from '@/components/FeedbackForm';
+import Loader from '@/components/Loader';
 
 export default function Home() {
   return (
     <main>
+      <Loader />
       <Navbar />
       <Hero />
       <SocialLinks />
