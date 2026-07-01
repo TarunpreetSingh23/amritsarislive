@@ -181,14 +181,16 @@ export default function FeedbackForm() {
               {errors.message && <p className="error-text">{errors.message}</p>}
             </div>
 
-            <button
-              type="submit"
-              className="submit-btn"
-              disabled={submitting}
-              id="feedback-submit"
-            >
-              {submitting ? '⏳ Sending...' : '✨ Submit Feedback'}
-            </button>
+            <div className="flex justify-center mt-8">
+              <button
+                type="submit"
+                className="form-submit"
+                disabled={submitting}
+                id="feedback-submit"
+              >
+                {submitting ? '⏳ Sending...' : '✨ Submit Feedback'}
+              </button>
+            </div>
           </form>
         </div>
       </div>
@@ -196,13 +198,14 @@ export default function FeedbackForm() {
       {/* Toast notification */}
       {toast && (
         <div
-          className={`toast show`}
+          className="fixed top-24 left-1/2 -translate-x-1/2 z-[9999] px-5 py-2.5 rounded-full border bg-white/95 backdrop-blur-md shadow-[0_10px_30px_rgba(201,162,39,0.12)] flex items-center gap-2 animate-[scaleIn_0.3s_cubic-bezier(0.16,1,0.3,1)_both] max-w-[90%] w-max text-xs sm:text-sm font-medium"
           style={{
-            borderColor: toast.type === 'success' ? 'var(--gold-primary)' : '#ef4444',
-            background: toast.type === 'success' ? '#1C1C1E' : '#1a0000',
+            borderColor: toast.type === 'success' ? 'rgba(201, 162, 39, 0.3)' : 'rgba(239, 68, 68, 0.3)',
+            color: toast.type === 'success' ? '#8B6914' : '#b91c1c',
           }}
         >
-          {toast.msg}
+          <span>{toast.type === 'success' ? '✅' : '❌'}</span>
+          <span>{toast.msg}</span>
         </div>
       )}
     </section>
