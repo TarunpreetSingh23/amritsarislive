@@ -55,25 +55,25 @@ export default function Hero() {
     const container = particlesRef.current;
     if (!container) return;
 
-    const particlesCount = 40;
+    const particlesCount = 20; 
     const particles: HTMLDivElement[] = [];
     
     for (let i = 0; i < particlesCount; i++) {
       const p = document.createElement('div');
-      const size = Math.random() * 3 + 1;
+      const size = Math.random() * 2 + 1;
       p.style.cssText = `
         position: absolute;
         bottom: -10px;
         left: ${Math.random() * 100}%;
         width: ${size}px;
         height: ${size}px;
-        background: radial-gradient(circle, rgba(212,175,55,0.8) 0%, rgba(212,175,55,0) 100%);
+        background: #A0A0A0;
         border-radius: 50%;
         pointer-events: none;
-        opacity: ${Math.random() * 0.6 + 0.1};
+        opacity: ${Math.random() * 0.3 + 0.1};
         transform: translateY(0) scale(1);
         transition: transform 0.5s ease-out;
-        animation: float-up ${Math.random() * 10 + 8}s linear infinite;
+        animation: float-up ${Math.random() * 12 + 10}s linear infinite;
         animation-delay: -${Math.random() * 10}s;
       `;
       container.appendChild(p);
@@ -97,32 +97,45 @@ export default function Hero() {
           100% { transform: translateY(-110vh) scale(0); opacity: 0; }
         }
         @keyframes subtle-pan {
-          0% { transform: scale(1.05) translate(0, 0); }
-          50% { transform: scale(1.1) translate(-1%, 1%); }
-          100% { transform: scale(1.05) translate(0, 0); }
+          0% { transform: scale(1.02) translate(0, 0); }
+          50% { transform: scale(1.05) translate(-0.5%, 0.5%); }
+          100% { transform: scale(1.02) translate(0, 0); }
         }
       `}} />
 
-<section className="relative min-h-[87dvh] flex flex-col items-center pb-24 overflow-hidden bg-[#FAFAFA] text-center" id="home" style={{ paddingTop: '10vh' }}>        
-        {/* Deep Background Setup - Premium Ambient Glow */}
-        <div className="absolute inset-0 z-0 overflow-hidden bg-[#FDFCF8]">
-          <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-[#E8C84A]/20 blur-[120px] animate-[subtle-pan_20s_ease-in-out_infinite]" />
-          <div className="absolute bottom-[-10%] right-[-10%] w-[60vw] h-[60vw] rounded-full bg-[#C9A227]/15 blur-[150px] animate-[subtle-pan_25s_ease-in-out_infinite_reverse]" />
-          <div className="absolute top-[40%] left-[60%] w-[30vw] h-[30vw] rounded-full bg-white/60 blur-[80px]" />
+      <section className="relative min-h-[100dvh] flex flex-col items-center pb-24 overflow-hidden bg-[#F2F1EC] text-center" id="home" style={{ paddingTop: '200px' }}>        
+        
+        {/* Sky Blue & Cream Ambient Layer + Geometric Rings */}
+        <div className="absolute inset-0 z-0 overflow-hidden bg-[#F9F8F5]">
+          <div className="absolute top-0 left-0 right-0 h-[45vh] bg-gradient-to-b from-[#D2E4F1]/40 to-transparent blur-[100px] animate-[subtle-pan_20s_ease-in-out_infinite]" />
+          <div className="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-[#EAE8E3]/60 blur-[120px]" />
+
+          {/* Top-Left Embedded Geometric Ring */}
+          <div className="absolute -top-16 -left-16 sm:top-10 sm:left-10 w-64 h-64 flex items-center justify-center opacity-40 mix-blend-multiply pointer-events-none">
+            <div className="absolute inset-0 rounded-full border border-t-[#D4AF37] border-r-[#D4AF37]/40 border-b-[#D4AF37]/10 border-l-[#D4AF37]/20 animate-spin" style={{ animationDuration: '10s' }} />
+            <div className="absolute inset-6 rounded-full border border-t-[#D4AF37]/15 border-r-[#D4AF37]/60 border-b-[#D4AF37] border-l-[#D4AF37]/30 animate-spin" style={{ animationDirection: 'reverse', animationDuration: '7s' }} />
+            <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#D4AF37] to-[#B8860B] opacity-30 blur-xl animate-pulse" />
+          </div>
+
+          {/* Bottom-Right Embedded Geometric Ring */}
+          <div className="absolute bottom-10 -right-16 sm:bottom-24 sm:right-10 w-72 h-72 flex items-center justify-center opacity-30 mix-blend-multiply pointer-events-none">
+            <div className="absolute inset-0 rounded-full border border-t-[#D4AF37]/20 border-r-[#D4AF37] border-b-[#D4AF37]/40 border-l-[#D4AF37]/10 animate-spin" style={{ animationDuration: '12s', animationDirection: 'reverse' }} />
+            <div className="absolute inset-8 rounded-full border border-t-[#D4AF37] border-r-[#D4AF37]/30 border-b-[#D4AF37]/15 border-l-[#D4AF37]/60 animate-spin" style={{ animationDuration: '8s' }} />
+            <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#D4AF37] to-[#B8860B] opacity-20 blur-xl animate-pulse" />
+          </div>
         </div>
 
-        {/* Dynamic Golden Dust */}
+        {/* Dynamic Light Dust */}
         <div className="absolute inset-0 pointer-events-none z-[1]" ref={particlesRef} />
 
-        {/* Central Content - Removing the heavy box, embracing open space */}
-        <div className="relative z-10 flex flex-col items-center w-full max-w-[1000px] px-6 sm:px-12 py-2 gap-10">
+        {/* Central Content */}
+        <div className="relative z-10 flex flex-col items-center w-full max-w-[1200px] px-6 sm:px-12 py-2 gap-8">
           
-          {/* Profile / Logo Area - Elevated */}
-          <div className="relative group mt-6 sm:mt-10">
-            <div className="absolute -inset-4 bg-gradient-to-tr from-[#D4AF37]/30 via-white/0 to-[#D4AF37]/30 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-            <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full p-[3px] bg-gradient-to-br from-[#D4AF37] via-[#F3E5AB] to-[#B8860B] shadow-2xl">
-              <div className="absolute inset-0 rounded-full bg-black/5" />
-              <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/90 bg-white">
+          {/* Profile Area */}
+          <div className="relative group">
+            <div className="absolute -inset-4 bg-black/[0.02] rounded-full blur-xl" />
+            <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full p-[2px] bg-gradient-to-b from-[#EAE8E3] to-[#CCCCCC] shadow-[0_16px_36px_rgba(0,0,0,0.06)]">
+              <div className="relative w-full h-full rounded-full overflow-hidden border-[6px] border-white bg-white">
                 <Image
                   src="/logo.jpeg"
                   alt="Amritsar is Live logo"
@@ -131,56 +144,34 @@ export default function Hero() {
                   priority
                 />
               </div>
-              {/* Refined Verified Badge */}
-              <div className="absolute bottom-2 right-2 w-8 h-8 bg-gradient-to-br from-[#D4AF37] to-[#B8860B] rounded-full flex items-center justify-center text-white border-[3px] border-white shadow-lg" title="Verified">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div className="absolute bottom-2 right-2 w-8 h-8 bg-[#2C2C2C] rounded-full flex items-center justify-center text-[#D4AF37] border-[3px] border-white shadow-md" title="Verified">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
               </div>
             </div>
           </div>
 
-          {/* Typography - The Award Winning Touch */}
-          <div className="flex flex-col items-center space-y-6 max-w-3xl mx-auto">
-            <h1 className="font-serif text-5xl sm:text-7xl md:text-8xl font-medium text-[#1A1A1A] tracking-tight leading-[1.1]">
+          {/* Typography - Forced Single Line & Amazing Font Styling */}
+          <div className="flex flex-col items-center space-y-4 w-full">
+            <h1 className="font-serif text-[10.5vw] sm:text-6xl md:text-7xl lg:text-[5.5rem] font-semibold text-[#1A1A1A] tracking-tighter leading-none whitespace-nowrap drop-shadow-sm">
               Amritsar{' '}
-              <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#B8860B] to-[#D4AF37] pr-2">
+              <span className="font-serif italic text-[#3A3A3A] font-light">
                 is Live
               </span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-[#666666] font-light max-w-[600px] leading-relaxed">
+            <p className="text-sm sm:text-lg md:text-xl text-[#5A5A5A] font-normal max-w-[580px] leading-relaxed">
               Celebrating the heartbeat of the holy city. From majestic golden spires to aromatic food lanes, discover the soul of Amritsar.
             </p>
           </div>
 
-          {/* Elegant Stats Divider */}
-          {/* <div className="w-full max-w-[600px] mt-4 relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#D4AF37]/20 to-transparent h-[1px] top-1/2 -translate-y-1/2" />
-            <div className="relative flex justify-between items-center bg-[#FDFCF8]/60 backdrop-blur-xl border border-white/80 rounded-2xl px-8 py-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
-              <div className="flex flex-col items-center gap-1">
-                <span className="font-serif text-3xl sm:text-4xl text-[#1A1A1A]">50K<span className="text-[#D4AF37]">+</span></span>
-                <span className="text-[10px] sm:text-xs text-[#808080] uppercase tracking-[0.2em] font-medium">Followers</span>
-              </div>
-              <div className="w-[1px] h-12 bg-gradient-to-b from-transparent via-[#D4AF37]/30 to-transparent" />
-              <div className="flex flex-col items-center gap-1">
-                <span className="font-serif text-3xl sm:text-4xl text-[#1A1A1A]">200<span className="text-[#D4AF37]">+</span></span>
-                <span className="text-[10px] sm:text-xs text-[#808080] uppercase tracking-[0.2em] font-medium">Posts</span>
-              </div>
-              <div className="w-[1px] h-12 bg-gradient-to-b from-transparent via-[#D4AF37]/30 to-transparent" />
-              <div className="flex flex-col items-center gap-1">
-                <span className="font-serif text-3xl sm:text-4xl text-[#1A1A1A]">8<span className="text-[#D4AF37]">+</span></span>
-                <span className="text-[10px] sm:text-xs text-[#808080] uppercase tracking-[0.2em] font-medium">Monuments</span>
-              </div>
-            </div>
-          </div> */}
-
           {/* Sophisticated Social Icons */}
-          <div className="flex gap-4 sm:gap-6 mt-4">
+          <div className="flex gap-4 sm:gap-5 mt-4">
             {socialLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center bg-white/80 backdrop-blur-sm border border-black/5 text-[#404040] shadow-[0_4px_15px_rgb(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-1 ${link.hoverClass}`}
+                className={`w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center bg-white border border-[#E5E5E5] text-[#2C2C2C] shadow-[0_4px_12px_rgba(0,0,0,0.02)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(0,0,0,0.06)] ${link.hoverClass}`}
                 aria-label={link.label}
               >
                 {link.svg}
@@ -189,8 +180,8 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Attached Bottom Navigation Bar - Matches Navbar Size & Design */}
-        <div className="fixed bottom-0 left-0 right-0 w-full h-16 z-50 bg-white/90 backdrop-blur-md border-t border-[var(--gold-primary)]/20 shadow-[0_-2px_20px_rgba(0,0,0,0.06)] flex items-center justify-center px-4">
+        {/* Attached Bottom Navigation Bar */}
+        <div className="fixed bottom-0 left-0 right-0 w-full h-16 z-50 bg-white/95 backdrop-blur-md border-t border-[#EAEAE6] shadow-[0_-4px_24px_rgba(0,0,0,0.03)] flex items-center justify-center px-4">
           <div className="flex items-center justify-around w-full max-w-[480px]">
             {navItems.map((item) => {
               const Icon = item.icon;
@@ -198,14 +189,14 @@ export default function Hero() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="group flex flex-col items-center justify-center w-16 h-14 rounded-xl transition-all duration-300 text-[var(--gold-dark)] hover:text-[var(--gold-primary)] hover:bg-[var(--gold-primary)]/5"
+                  className="group flex flex-col items-center justify-center w-16 h-14 rounded-xl transition-all duration-300 text-[#555555] hover:text-[#1A1A1A] hover:bg-[#F4F4F2]"
                 >
                   <Icon
                     size={20}
-                    strokeWidth={1.75}
+                    strokeWidth={1.5}
                     className="transition-transform duration-300 group-hover:-translate-y-0.5"
                   />
-                  <span className="mt-1 text-[10px] font-semibold tracking-wide uppercase leading-none">
+                  <span className="mt-1 text-[10px] font-bold tracking-wider uppercase leading-none text-[#777777] group-hover:text-[#1A1A1A]">
                     {item.label}
                   </span>
                 </button>
