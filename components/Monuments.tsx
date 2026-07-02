@@ -9,6 +9,7 @@ interface Monument {
   thumbnail: string | null;
   originalimage: string | null;
   pageUrl: string;
+  category?: string;
 }
 
 const MONUMENT_EMOJIS: Record<string, string> = {
@@ -136,7 +137,7 @@ export default function Monuments() {
                 </div>
 
                 <div className="monument-card-footer">
-                  <span className="monument-card-tag">Heritage</span>
+                  <span className="monument-card-tag">{m.category || 'Heritage'}</span>
                   <span className="monument-read-more">Read more →</span>
                 </div>
               </div>

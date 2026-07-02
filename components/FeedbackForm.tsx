@@ -105,24 +105,35 @@ export default function FeedbackForm() {
             <label className="form-label" style={{ textAlign: 'center', display: 'block', fontSize: '1rem' }}>
               Rate Your Experience
             </label>
-            <div className="star-rating" style={{ justifyContent: 'center' }}>
-              {[1, 2, 3, 4, 5].map((star) => (
-                <button
-                  key={star}
-                  type="button"
-                  className={`star-btn ${(hoverStar || form.rating) >= star ? 'active' : ''}`}
-                  onMouseEnter={() => setHoverStar(star)}
-                  onMouseLeave={() => setHoverStar(0)}
-                  onClick={() => update('rating', star)}
-                  aria-label={`Rate ${star} stars`}
-                  id={`star-${star}`}
-                >
-                  ★
-                </button>
-              ))}
+            <div className="star-rating" style={{ justifyContent: 'center', display: 'flex', gap: '4px' }}>
+              {[1, 2, 3, 4, 5].map((star) => {
+                const isActive = (hoverStar || form.rating) >= star;
+                return (
+                  <button
+                    key={star}
+                    type="button"
+                    className={`star-btn ${isActive ? 'active' : ''}`}
+                    style={{
+                      color: isActive ? '#D4AF37' : '#D1D5DB', // Force gold color when active, gray when inactive
+                      transition: 'color 0.2s ease-in-out',
+                      background: 'none',
+                      border: 'none',
+                      cursor: 'pointer',
+                      fontSize: '1.75rem' // Ensure stars are visible and clickable
+                    }}
+                    onMouseEnter={() => setHoverStar(star)}
+                    onMouseLeave={() => setHoverStar(0)}
+                    onClick={() => update('rating', star)}
+                    aria-label={`Rate ${star} stars`}
+                    id={`star-${star}`}
+                  >
+                    ★
+                  </button>
+                );
+              })}
             </div>
             {form.rating > 0 && (
-              <p style={{ color: 'var(--gold-primary)', fontSize: '0.85rem', marginTop: 6, fontWeight: 500 }}>
+              <p style={{ color: '#D4AF37', fontSize: '0.85rem', marginTop: 6, fontWeight: 500 }}>
                 {['', 'Poor', 'Fair', 'Good', 'Great', 'Excellent! 🌟'][form.rating]}
               </p>
             )}
@@ -181,14 +192,15 @@ export default function FeedbackForm() {
               {errors.message && <p className="error-text">{errors.message}</p>}
             </div>
 
-            <div className="flex justify-center pt-4 ">
+            {/* Added explicit margin-top (mt-8) and extra padding to separate from the textarea */}
+            <div className="flex justify-center mt-8 pt-4 pb-2">
               <button
                 type="submit"
                 className="form-submit"
                 disabled={submitting}
                 id="feedback-submit"
               >
-                {submitting ? '⏳ Sending...' : '✨ Submit Feedback'}
+                {submitting ? '⏳ Sending...' : ' Submit Feedback'}
               </button>
             </div>
           </form>

@@ -16,7 +16,7 @@ export default function Home() {
       <SocialLinks />
       <Monuments />
       <Museums />
-      <FoodPlaces />
+      {/* <FoodPlaces /> */}
       <FeedbackForm />
 
       {/* Footer */}

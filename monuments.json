@@ -1,0 +1,74 @@
+[
+  {
+    "id": "Harmandir_Sahib",
+    "title": "Harmandir Sahib",
+    "category": "Sikh Shrine",
+    "description": "The Harmandir Sahib, also known as the Golden Temple, is a Gurdwara located in the city of Amritsar, Punjab, India. It is the preeminent spiritual site of Sikhism, famous for its magnificent gold-plated dome and surrounding holy pool (Sarovar).",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Golden_Temple_India_HDR_crop.jpg/800px-Golden_Temple_India_HDR_crop.jpg",
+    "link": "https://en.wikipedia.org/wiki/Harmandir_Sahib"
+  },
+  {
+    "id": "Jallianwala_Bagh",
+    "title": "Jallianwala Bagh",
+    "category": "Historic Memorial",
+    "description": "Jallianwala Bagh is a historic garden and memorial of national importance in Amritsar, India, preserved in memory of those wounded and killed in the Jallianwala Bagh Massacre that occurred on the festival of Baisakhi, 13 April 1919.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Jallianwala_Bagh_memorial_lane.jpg/800px-Jallianwala_Bagh_memorial_lane.jpg",
+    "link": "https://en.wikipedia.org/wiki/Jallianwala_Bagh"
+  },
+  {
+    "id": "Durgiana_Temple",
+    "title": "Durgiana Temple",
+    "category": "Hindu Temple",
+    "description": "The Durgiana Temple, also known as Lakshmi Narayan Temple, Durga Tirath and Sitla Mandir, is a premier Hindu temple situated in the city of Amritsar, Punjab, India. It architecturally resembles the Golden Temple and is dedicated to Goddess Durga.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Durgianatempl.jpg/800px-Durgianatempl.jpg",
+    "link": "https://en.wikipedia.org/wiki/Durgiana_Temple"
+  },
+  {
+    "id": "Gobindgarh_Fort",
+    "title": "Gobindgarh Fort",
+    "category": "Historic Fort",
+    "description": "Gobindgarh Fort is a historic military fort located in the center of the city of Amritsar, Punjab, India. Established in the 18th century, it was renovated by Maharaja Ranjit Singh and has now been opened to the public as a cultural museum.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Entrance_to_Gobindgarh_Fort.jpg/800px-Entrance_to_Gobindgarh_Fort.jpg",
+    "link": "https://en.wikipedia.org/wiki/Gobindgarh_Fort"
+  },
+  {
+    "id": "Ram_Bagh,_Amritsar",
+    "title": "Ram Bagh Garden",
+    "category": "Heritage Garden",
+    "description": "Ram Bagh, also known as Maharaja Ranjit Singh Garden, is a historical palace garden in Amritsar. It housed the summer palace of Maharaja Ranjit Singh, the founder of the Sikh Empire, and is now a beautifully landscaped public park and museum.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Maharaja_Ranjit_Singh_Panorama%2C_Amritsar_01.jpg/800px-Maharaja_Ranjit_Singh_Panorama%2C_Amritsar_01.jpg",
+    "link": "https://en.wikipedia.org/wiki/Ram_Bagh,_Amritsar"
+  },
+  {
+    "id": "Wagah",
+    "title": "Wagah Border",
+    "category": "Border Crossing",
+    "description": "Wagah is a village and border crossing station between Pakistan and India, famous for its daily Wagah border ceremony. Tourists gather here from all over the world to witness the spirited flag-lowering ceremony by both nations' forces.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Wagah_border_ceremony_2017.jpg/800px-Wagah_border_ceremony_2017.jpg",
+    "link": "https://en.wikipedia.org/wiki/Wagah"
+  },
+  {
+    "id": "Akal_Takht",
+    "title": "Akal Takht",
+    "category": "Spiritual Throne",
+    "description": "The Akal Takht, meaning \"Throne of the Timeless One,\" is one of five takhts (seats of power) of the Sikh religion. It is located in the Harmandir Sahib (Golden Temple) complex in Amritsar, serving as the highest seat of temporal authority.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Akal_Takht_Amritsar.jpg/800px-Akal_Takht_Amritsar.jpg",
+    "link": "https://en.wikipedia.org/wiki/Akal_Takht"
+  },
+  {
+    "id": "Mata_Lal_Devi_Temple",
+    "title": "Mata Lal Devi Temple",
+    "category": "Hindu Temple",
+    "description": "Mata Lal Devi Temple is a highly unique and popular Hindu shrine in Amritsar. Dedicated to the 20th-century female saint Lal Devi, the temple features a labyrinthine layout, mirrored walls, and cave-like walkways containing various deities.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Sheesh_Mahal%2C_Mata_Lal_Devi_Temple.jpg/800px-Sheesh_Mahal%2C_Mata_Lal_Devi_Temple.jpg",
+    "link": "https://en.wikipedia.org/wiki/Mata_Lal_Devi_Temple"
+  },
+  {
+    "id": "Ram_Tirth",
+    "title": "Ram Tirth Temple",
+    "category": "Ancient Temple",
+    "description": "Ram Tirth Temple is an ancient pilgrimage site situated in Amritsar, Punjab, India. The site is the birthplace of Luv and Kush, the sons of Devi Sita and Lord Rama, and contains the ashram of Sage Valmiki, who composed the epic Ramayana here.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Ram_Tirth_Temple_Amritsar.jpg/800px-Ram_Tirth_Temple_Amritsar.jpg",
+    "link": "https://en.wikipedia.org/wiki/Ram_Tirth"
+  }
+]

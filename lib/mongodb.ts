@@ -65,3 +65,19 @@ const museumSchema = new mongoose.Schema(
 
 export const Museum =
   mongoose.models.Museum || mongoose.model('Museum', museumSchema);
+
+// Monument Schema
+const monumentSchema = new mongoose.Schema(
+  {
+    id: { type: String, required: true, unique: true },
+    title: { type: String, required: true },
+    category: { type: String, required: true },
+    description: { type: String, required: true },
+    image: { type: String, required: true },
+    link: { type: String, required: true },
+  },
+  { timestamps: true }
+);
+
+export const Monument =
+  mongoose.models.Monument || mongoose.model('Monument', monumentSchema);
