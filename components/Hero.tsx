@@ -120,8 +120,29 @@ export default function Hero() {
           {/* Bottom-Right Embedded Geometric Ring */}
           <div className="absolute bottom-10 -right-16 sm:bottom-24 sm:right-10 w-72 h-72 flex items-center justify-center opacity-30 mix-blend-multiply pointer-events-none">
             <div className="absolute inset-0 rounded-full border border-t-[#D4AF37]/20 border-r-[#D4AF37] border-b-[#D4AF37]/40 border-l-[#D4AF37]/10 animate-spin" style={{ animationDuration: '12s', animationDirection: 'reverse' }} />
-            <div className="absolute inset-8 rounded-full border border-t-[#D4AF37] border-r-[#D4AF37]/30 border-b-[#D4AF37]/15 border-l-[#D4AF37]/60 animate-spin" style={{ animationDuration: '8s' }} />
+            <div className="absolute inset-8 rounded-full border border-t-[#D4AF37]/30 border-r-[#D4AF37]/15 border-l-[#D4AF37]/60 animate-spin" style={{ animationDuration: '8s' }} />
             <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#D4AF37] to-[#B8860B] opacity-20 blur-xl animate-pulse" />
+          </div>
+
+          {/* Middle-Left Embedded Geometric Ring */}
+          <div className="absolute top-[35%] -left-20 sm:left-4 w-52 h-52 flex items-center justify-center opacity-25 mix-blend-multiply pointer-events-none">
+            <div className="absolute inset-0 rounded-full border border-t-[#D4AF37]/30 border-r-[#D4AF37]/10 border-b-[#D4AF37] border-l-[#D4AF37]/50 animate-spin" style={{ animationDuration: '14s' }} />
+            <div className="absolute inset-5 rounded-full border border-t-[#D4AF37]/40 border-r-[#D4AF37]/70 border-b-[#D4AF37]/10 border-l-[#D4AF37]/20 animate-spin" style={{ animationDirection: 'reverse', animationDuration: '9s' }} />
+            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#D4AF37] to-[#B8860B] opacity-25 blur-xl animate-pulse" />
+          </div>
+
+          {/* Middle-Right Embedded Geometric Ring */}
+          <div className="absolute top-[18%] -right-20 sm:right-16 w-60 h-60 flex items-center justify-center opacity-30 mix-blend-multiply pointer-events-none">
+            <div className="absolute inset-0 rounded-full border border-t-[#D4AF37]/15 border-r-[#D4AF37]/50 border-b-[#D4AF37] border-l-[#D4AF37]/30 animate-spin" style={{ animationDuration: '11s', animationDirection: 'reverse' }} />
+            <div className="absolute inset-6 rounded-full border border-t-[#D4AF37]/40 border-r-[#D4AF37]/10 border-b-[#D4AF37]/60 border-l-[#D4AF37]/20 animate-spin" style={{ animationDuration: '6s' }} />
+            <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#D4AF37] to-[#B8860B] opacity-20 blur-xl animate-pulse" />
+          </div>
+
+          {/* Bottom-Left Embedded Geometric Ring */}
+          <div className="absolute bottom-[22%] -left-24 sm:left-12 w-80 h-80 flex items-center justify-center opacity-20 mix-blend-multiply pointer-events-none">
+            <div className="absolute inset-0 rounded-full border border-t-[#D4AF37]/50 border-r-[#D4AF37]/20 border-b-[#D4AF37]/10 border-l-[#D4AF37] animate-spin" style={{ animationDuration: '16s' }} />
+            <div className="absolute inset-8 rounded-full border border-t-[#D4AF37]/20 border-r-[#D4AF37]/60 border-b-[#D4AF37] border-l-[#D4AF37]/40 animate-spin" style={{ animationDirection: 'reverse', animationDuration: '10s' }} />
+            <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#D4AF37] to-[#B8860B] opacity-15 blur-xl animate-pulse" />
           </div>
         </div>
 
@@ -151,7 +172,7 @@ export default function Hero() {
           </div>
 
           {/* Typography - Forced Single Line & Amazing Font Styling */}
-          <div className="flex flex-col items-center space-y-4 w-full">
+          <div className="flex flex-col gap-3 items-center space-y-4 w-full">
             <h1 className="font-serif text-[10.5vw] sm:text-6xl md:text-7xl lg:text-[5.5rem] font-semibold text-[#1A1A1A] tracking-tighter leading-none whitespace-nowrap drop-shadow-sm">
               Amritsar{' '}
               <span className="font-serif italic text-[#3A3A3A] font-light">
@@ -178,28 +199,50 @@ export default function Hero() {
               </a>
             ))}
           </div>
+
+          {/* Elegant Portrait Description & Highlights */}
+          <div className="flex flex-col gap-7 items-center mt-6 space-y-6 max-w-[640px] px-4">
+            <div className="w-20 h-[1.5px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-70" />
+            <p className="font-serif italic text-base sm:text-lg md:text-xl text-[#5C5549] leading-relaxed font-light drop-shadow-sm">
+              "A sanctuary of golden light where history breathes, spiritual hymns rise, and the warmth of community welcomes every wandering soul."
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 pt-2 text-[10px] sm:text-xs font-semibold tracking-[0.2em] uppercase text-[#6B6B67]">
+              <span className="flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]/80" />
+                Spiritual Heart
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]/80" />
+                Living History
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]/80" />
+                Culinary Soul
+              </span>
+            </div>
+          </div>
         </div>
 
         {/* Attached Bottom Navigation Bar */}
-        <div className="fixed bottom-0 left-0 right-0 w-full h-16 z-50 bg-white/95 backdrop-blur-md border-t border-[#EAEAE6] shadow-[0_-4px_24px_rgba(0,0,0,0.03)] flex items-center justify-center px-4">
+       <div className="fixed bottom-0 left-0 right-0 w-full h-16 z-50 bg-white/95 backdrop-blur-md border-t border-[#EAEAE6] shadow-[0_-4px_24px_rgba(0,0,0,0.03)] flex items-center justify-center px-4">
           <div className="flex items-center justify-around w-full max-w-[480px]">
             {navItems.map((item) => {
               const Icon = item.icon;
               return (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className="group flex flex-col items-center justify-center w-16 h-14 rounded-xl transition-all duration-300 text-[#555555] hover:text-[#1A1A1A] hover:bg-[#F4F4F2]"
-                >
-                  <Icon
-                    size={20}
-                    strokeWidth={1.5}
-                    className="transition-transform duration-300 group-hover:-translate-y-0.5"
-                  />
-                  <span className="mt-1 text-[10px] font-bold tracking-wider uppercase leading-none text-[#777777] group-hover:text-[#1A1A1A]">
-                    {item.label}
-                  </span>
-                </button>
+               <button
+  key={item.id}
+  onClick={() => scrollToSection(item.id)}
+  className="group flex flex-col items-center justify-center gap-1.5 w-16 h-14 rounded-xl transition-all duration-300 text-[#8B6914] hover:text-[#1A1A1A] hover:bg-[#F4F4F2]"
+>
+  <Icon
+    size={20}
+    strokeWidth={1.5}
+    className="transition-transform duration-300 group-hover:-translate-y-0.5"
+  />
+  <span className="text-[10px] font-bold tracking-wider uppercase leading-none text-[#8B6914] group-hover:text-[#1A1A1A]">
+    {item.label}
+  </span>
+</button>
               );
             })}
           </div>

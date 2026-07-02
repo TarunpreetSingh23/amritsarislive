@@ -53,6 +53,7 @@ export default function Modal({ monument, onClose }: ModalProps) {
             alt={monument.title}
             className="modal-img"
             loading="lazy"
+            referrerPolicy="no-referrer"
           />
         ) : (
           <div style={{

@@ -1,14 +1,14 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Home, Smartphone, Landmark, UtensilsCrossed, MessageSquare } from 'lucide-react';
+import { Home, Smartphone, Landmark, UtensilsCrossed, Library } from 'lucide-react';
 
 const NAV_LINKS = [
   { href: '#home', label: 'Home' },
   { href: '#socials', label: 'Socials' },
   { href: '#monuments', label: 'Monuments' },
   { href: '#food', label: 'Food' },
-  { href: '#feedback', label: 'Feedback' },
+  { href: '#museums', label: 'Museums' },
 ];
 
 export default function Navbar() {
@@ -44,11 +44,10 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-          scrolled
+        className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${scrolled
             ? 'bg-white/80 backdrop-blur-xl border-b border-gray-200 shadow-sm'
-            : 'bg-transparent'
-        }`}
+            : 'bg-white/80'
+          }`}
       >
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-around gap-25 px-4 sm:px-6 lg:px-8">
 
@@ -120,9 +119,8 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${
-            menuOpen ? 'max-h-[300px] border-b border-[#D4AF37]/20 shadow-2xl opacity-100' : 'max-h-0 opacity-0'
-          }`}
+          className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${menuOpen ? 'max-h-[300px] border-b border-[#D4AF37]/20 shadow-2xl opacity-100' : 'max-h-0 opacity-0'
+            }`}
         >
           <div className="bg-white/98 backdrop-blur-2xl px-6 py-4 flex flex-col gap-1 relative overflow-hidden">
             {/* Background Ambient Glow inside Mobile Dropdown */}
@@ -132,7 +130,7 @@ export default function Navbar() {
               let Icon = Smartphone;
               if (link.href === '#monuments') Icon = Landmark;
               else if (link.href === '#food') Icon = UtensilsCrossed;
-              else if (link.href === '#feedback') Icon = MessageSquare;
+              else if (link.href === '#museums') Icon = Library;
 
               return (
                 <a

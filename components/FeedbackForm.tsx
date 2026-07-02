@@ -181,7 +181,7 @@ export default function FeedbackForm() {
               {errors.message && <p className="error-text">{errors.message}</p>}
             </div>
 
-            <div className="flex justify-center mt-8">
+            <div className="flex justify-center pt-4 ">
               <button
                 type="submit"
                 className="form-submit"

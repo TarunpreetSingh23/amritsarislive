@@ -25,9 +25,8 @@ export default function Loader() {
 
   return (
     <div
-      className={`fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-[#FDFCF8] transition-all duration-700 ease-out ${
-        visible ? 'opacity-100 scale-100' : 'opacity-0 scale-[1.03] pointer-events-none'
-      }`}
+      className={`fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-[#FDFCF8] transition-all duration-700 ease-out ${visible ? 'opacity-100 scale-100' : 'opacity-0 scale-[1.03] pointer-events-none'
+        }`}
     >
       {/* Background Ambient Glows */}
       <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-[#E8C84A]/10 blur-[100px] pointer-events-none" />
@@ -37,13 +36,13 @@ export default function Loader() {
       <div className="relative w-36 h-36 flex items-center justify-center mb-8">
         {/* Outer slow-spinning thin gold ring */}
         <div className="absolute inset-0 rounded-full border border-t-[#D4AF37] border-r-[#D4AF37]/40 border-b-[#D4AF37]/10 border-l-[#D4AF37]/20 animate-spin" style={{ animationDuration: '4s' }} />
-        
+
         {/* Inner fast-reverse-spinning thin gold ring */}
         <div className="absolute inset-3 rounded-full border border-t-[#D4AF37]/15 border-r-[#D4AF37]/60 border-b-[#D4AF37] border-l-[#D4AF37]/30 animate-spin" style={{ animationDirection: 'reverse', animationDuration: '2.5s' }} />
 
         {/* Central glowing golden core */}
         <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#D4AF37] to-[#B8860B] shadow-[0_0_25px_rgba(212,175,55,0.5)] animate-pulse" />
-        
+
         {/* Floating orbital particles inside ring */}
         <div className="absolute w-2 h-2 rounded-full bg-[#D4AF37] top-4 left-4 animate-ping" />
         <div className="absolute w-1.5 h-1.5 rounded-full bg-[#E8C84A] bottom-4 right-4 animate-pulse" />
