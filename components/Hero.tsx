@@ -103,7 +103,7 @@ export default function Hero() {
         }
       `}} />
 
-      <section className="relative min-h-[100dvh] flex flex-col items-center pb-24 overflow-hidden bg-[#F2F1EC] text-center" id="home" style={{ paddingTop: '200px' }}>        
+      <section className="relative min-h-[93dvh] flex flex-col items-center pb-24 overflow-hidden bg-[#F2F1EC] text-center" id="home" style={{ paddingTop: '100px' }}>        
         
         {/* Sky Blue & Cream Ambient Layer + Geometric Rings */}
         <div className="absolute inset-0 z-0 overflow-hidden bg-[#F9F8F5]">
@@ -150,7 +150,7 @@ export default function Hero() {
         <div className="absolute inset-0 pointer-events-none z-[1]" ref={particlesRef} />
 
         {/* Central Content */}
-        <div className="relative z-10 flex flex-col items-center w-full max-w-[1200px] px-6 sm:px-12 py-2 gap-8">
+        <div className="relative z-10 flex flex-col items-center w-full max-w-[1200px] px-4 sm:px-10 py-2 gap-8">
           
           {/* Profile Area */}
           <div className="relative group">
