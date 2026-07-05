@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useRef } from 'react';
+import Link from 'next/link';
 
 interface MonumentData {
   id: string;
@@ -8,14 +9,24 @@ interface MonumentData {
   thumbnail: string | null;
   originalimage: string | null;
   pageUrl: string;
+  category?: string;
+  bestTime?: string;
+  timeRequired?: string;
+  highlights?: string[];
+  entryFee?: string;
+  timings?: string;
+  address?: string;
+  mapUrl?: string;
+  bulletPoints?: string[];
 }
 
 interface ModalProps {
   monument: MonumentData | null;
   onClose: () => void;
+  type?: 'monument' | 'museum';
 }
 
-export default function Modal({ monument, onClose }: ModalProps) {
+export default function Modal({ monument, onClose, type = 'monument' }: ModalProps) {
   const overlayRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -34,6 +45,9 @@ export default function Modal({ monument, onClose }: ModalProps) {
   if (!monument) return null;
 
   const img = monument.originalimage || monument.thumbnail;
+  const detailHref = type === 'museum'
+    ? `/museums/${monument.id}`
+    : `/monuments/${monument.id}`;
 
   return (
     <div
@@ -65,24 +79,59 @@ export default function Modal({ monument, onClose }: ModalProps) {
         )}
 
         <div className="modal-body">
-          <div className="modal-badge">Heritage Site · Amritsar</div>
+          <div className="modal-badge">{monument.category || 'Heritage Site'} · Amritsar</div>
           <h2 className="modal-title"
             dangerouslySetInnerHTML={{ __html: monument.title }}
           />
+
+          {/* Quick Info Pills */}
+          {(monument.timings || monument.entryFee || monument.timeRequired) && (
+            <div className="modal-pills">
+              {monument.timings && (
+                <span className="modal-pill">
+                  🕐 {monument.timings}
+                </span>
+              )}
+              {monument.entryFee && (
+                <span className="modal-pill">
+                  🎟️ {monument.entryFee}
+                </span>
+              )}
+              {monument.timeRequired && (
+                <span className="modal-pill">
+                  ⏱️ {monument.timeRequired}
+                </span>
+              )}
+            </div>
+          )}
+
+          {/* Highlights Badges */}
+          {monument.highlights && monument.highlights.length > 0 && (
+            <div className="modal-highlights">
+              {monument.highlights.slice(0, 4).map((h, i) => (
+                <span key={i} className="modal-highlight-badge">✦ {h}</span>
+              ))}
+            </div>
+          )}
+
           <p className="modal-text">{monument.extract}</p>
 
           <div className="modal-actions">
+            <Link
+              href={detailHref}
+              className="btn-gold"
+              onClick={onClose}
+            >
+              🗺️ View Full Interactive Guide
+            </Link>
             <a
               href={monument.pageUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-gold"
+              className="btn-outline"
             >
-              📖 Read Full History
+              📖 Wikipedia
             </a>
-            <button className="btn-outline" onClick={onClose}>
-              ← Back
-            </button>
           </div>
         </div>
       </div>

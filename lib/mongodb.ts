@@ -1,11 +1,5 @@
 import mongoose from 'mongoose';
 
-const MONGODB_URI = process.env.MONGODB_URI!;
-
-if (!MONGODB_URI) {
-  throw new Error('Please define the MONGODB_URI environment variable in .env.local');
-}
-
 interface MongooseCache {
   conn: typeof mongoose | null;
   promise: Promise<typeof mongoose> | null;
@@ -23,6 +17,12 @@ if (!global.mongoose) {
 }
 
 async function connectDB() {
+  const MONGODB_URI = process.env.MONGODB_URI;
+
+  if (!MONGODB_URI) {
+    throw new Error('Please define the MONGODB_URI environment variable in .env.local');
+  }
+
   if (cached.conn) {
     return cached.conn;
   }
@@ -59,6 +59,14 @@ const museumSchema = new mongoose.Schema(
     description: { type: String, required: true },
     image: { type: String, required: true },
     link: { type: String, required: true },
+    bestTime: { type: String },
+    timeRequired: { type: String },
+    highlights: [{ type: String }],
+    entryFee: { type: String },
+    timings: { type: String },
+    address: { type: String },
+    mapUrl: { type: String },
+    bulletPoints: [{ type: String }],
   },
   { timestamps: true }
 );
@@ -75,6 +83,14 @@ const monumentSchema = new mongoose.Schema(
     description: { type: String, required: true },
     image: { type: String, required: true },
     link: { type: String, required: true },
+    bestTime: { type: String },
+    timeRequired: { type: String },
+    highlights: [{ type: String }],
+    entryFee: { type: String },
+    timings: { type: String },
+    address: { type: String },
+    mapUrl: { type: String },
+    bulletPoints: [{ type: String }],
   },
   { timestamps: true }
 );

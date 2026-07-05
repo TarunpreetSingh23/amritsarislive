@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useRef, useState, useCallback } from 'react';
+import Link from 'next/link';
 import Modal from './Modal';
 
 interface Museum {
@@ -9,6 +10,15 @@ interface Museum {
   thumbnail: string | null;
   originalimage: string | null;
   pageUrl: string;
+  category?: string;
+  bestTime?: string;
+  timeRequired?: string;
+  highlights?: string[];
+  entryFee?: string;
+  timings?: string;
+  address?: string;
+  mapUrl?: string;
+  bulletPoints?: string[];
 }
 
 const MUSEUM_EMOJIS: Record<string, string> = {
@@ -43,7 +53,7 @@ export default function Museums() {
 
   return (
     <>
-      <section className="section monuments-section bg-white" id="museums" ref={sectionRef}>
+      <section className="section monuments-section" id="museums" ref={sectionRef} style={{ background: '#fff' }}>
         <div className="section-header">
           <span className="section-label">Art & Archives</span>
           <h2 className="section-title"><span>Museums</span> of Amritsar</h2>
@@ -74,7 +84,7 @@ export default function Museums() {
             {museums.map((m) => (
               <div
                 key={m.id}
-                className="monument-card border border-[#D4AF37]/15"
+                className="monument-card"
                 onClick={() => setSelected(m)}
                 role="button"
                 tabIndex={0}
@@ -82,6 +92,7 @@ export default function Museums() {
                 id={`museum-${m.id}`}
                 style={{
                   transition: 'box-shadow 0.4s ease, border-color 0.4s ease, transform 0.4s ease',
+                  borderColor: 'rgba(212,175,55,0.15)',
                 }}
                 onKeyDown={(e) => e.key === 'Enter' && setSelected(m)}
               >
@@ -110,8 +121,17 @@ export default function Museums() {
                 </div>
 
                 <div className="monument-card-footer">
-                  <span className="monument-card-tag bg-[#D4AF37]/10 text-[#8B6914]">Gallery</span>
-                  <span className="monument-read-more text-[#8B6914] hover:text-[#C9A227]">Read more →</span>
+                  <span className="monument-card-tag" style={{ background: 'rgba(212,175,55,0.1)', color: '#8B6914' }}>
+                    {m.category || 'Gallery'}
+                  </span>
+                  <Link
+                    href={`/museums/${m.id}`}
+                    className="monument-read-more"
+                    style={{ color: '#8B6914' }}
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    Read more →
+                  </Link>
                 </div>
               </div>
             ))}
@@ -124,6 +144,7 @@ export default function Museums() {
         <Modal
           monument={selected}
           onClose={() => setSelected(null)}
+          type="museum"
         />
       )}
     </>

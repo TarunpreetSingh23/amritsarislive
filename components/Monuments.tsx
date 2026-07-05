@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useRef, useState, useCallback } from 'react';
+import Link from 'next/link';
 import Modal from './Modal';
 
 interface Monument {
@@ -10,6 +11,14 @@ interface Monument {
   originalimage: string | null;
   pageUrl: string;
   category?: string;
+  bestTime?: string;
+  timeRequired?: string;
+  highlights?: string[];
+  entryFee?: string;
+  timings?: string;
+  address?: string;
+  mapUrl?: string;
+  bulletPoints?: string[];
 }
 
 const MONUMENT_EMOJIS: Record<string, string> = {
@@ -138,7 +147,13 @@ export default function Monuments() {
 
                 <div className="monument-card-footer">
                   <span className="monument-card-tag">{m.category || 'Heritage'}</span>
-                  <span className="monument-read-more">Read more →</span>
+                  <Link
+                    href={`/monuments/${m.id}`}
+                    className="monument-read-more"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    Read more →
+                  </Link>
                 </div>
               </div>
             ))}
@@ -146,7 +161,7 @@ export default function Monuments() {
         )}
       </section>
 
-      <Modal monument={selected} onClose={() => setSelected(null)} />
+      <Modal monument={selected} onClose={() => setSelected(null)} type="monument" />
     </>
   );
 }
