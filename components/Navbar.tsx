@@ -1,14 +1,16 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Home, Smartphone, Landmark, UtensilsCrossed, Library, Menu, X } from 'lucide-react';
+import Link from 'next/link';
+import { Home, Smartphone, Landmark, UtensilsCrossed, Library, Map, Menu, X } from 'lucide-react';
 
 const NAV_LINKS = [
-  { href: '#home', label: 'Home' },
-  { href: '#socials', label: 'Socials' },
-  { href: '#monuments', label: 'Monuments' },
-  { href: '#food', label: 'Food' },
-  { href: '#museums', label: 'Museums' },
+  { href: '#home', label: 'Home', page: false },
+  { href: '#socials', label: 'Socials', page: false },
+  { href: '#monuments', label: 'Monuments', page: false },
+  { href: '#food', label: 'Food', page: false },
+  { href: '#museums', label: 'Museums', page: false },
+  { href: '/itinerary', label: 'Itinerary', page: true },
 ];
 
 export default function Navbar() {
@@ -67,7 +69,7 @@ export default function Navbar() {
                 is Live
               </span>
 
-              <span className="ml-1 mb-1 h-2.5 w-2.5 rounded-full bg-[var(--gold-primary)] animate-pulse" />
+              {/* <span className="ml-1 mb-1 h-2.5 w-2.5 rounded-full bg-[var(--gold-primary)] animate-pulse" /> */}
             </h1>
           </a>
 
@@ -76,13 +78,22 @@ export default function Navbar() {
           <ul className="hidden md:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
-                <a
-                  href={link.href}
-                  onClick={(e) => scrollTo(e, link.href)}
-                  className="relative text-sm font-medium text-gray-600 transition hover:text-black after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[var(--gold-primary)] after:transition-all hover:after:w-full"
-                >
-                  {link.label}
-                </a>
+                {link.page ? (
+                  <Link
+                    href={link.href}
+                    className="relative text-sm font-medium text-gray-600 transition hover:text-black after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[var(--gold-primary)] after:transition-all hover:after:w-full"
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a
+                    href={link.href}
+                    onClick={(e) => scrollTo(e, link.href)}
+                    className="relative text-sm font-medium text-gray-600 transition hover:text-black after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[var(--gold-primary)] after:transition-all hover:after:w-full"
+                  >
+                    {link.label}
+                  </a>
+                )}
               </li>
             ))}
           </ul>
@@ -143,15 +154,12 @@ export default function Navbar() {
               let Icon = Smartphone;
               if (link.href === '#monuments') Icon = Landmark;
               else if (link.href === '#food') Icon = UtensilsCrossed;
-              else if (link.href === '#museums') Icon = Library; // Make sure 'Library' is imported from lucide-react
+              else if (link.href === '#museums') Icon = Library;
+              else if (link.href === '/itinerary') Icon = Map;
 
-              return (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={(e) => scrollTo(e, link.href)}
-                  className="flex items-center gap-4 rounded-2xl px-3 py-2.5 text-gray-600 transition-all duration-300 hover:bg-[#F9F8F5] hover:text-[#1A1A1A] active:scale-[0.98] group relative overflow-hidden"
-                >
+              const commonClasses = "flex items-center gap-4 rounded-2xl px-3 py-2.5 text-gray-600 transition-all duration-300 hover:bg-[#F9F8F5] hover:text-[#1A1A1A] active:scale-[0.98] group relative overflow-hidden";
+              const inner = (
+                <>
                   {/* Subtle hover background highlight */}
                   <div className="absolute inset-0 bg-gradient-to-r from-[#D4AF37]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
@@ -164,6 +172,26 @@ export default function Navbar() {
                   <span className="relative text-[12px] font-bold tracking-[0.1em] uppercase group-hover:translate-x-1 transition-transform duration-300">
                     {link.label}
                   </span>
+                </>
+              );
+
+              return link.page ? (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMenuOpen(false)}
+                  className={commonClasses}
+                >
+                  {inner}
+                </Link>
+              ) : (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={(e) => scrollTo(e, link.href)}
+                  className={commonClasses}
+                >
+                  {inner}
                 </a>
               );
             })}

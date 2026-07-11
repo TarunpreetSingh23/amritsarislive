@@ -116,7 +116,7 @@ export default function Modal({ monument, onClose, type = 'monument' }: ModalPro
 
           <p className="modal-text">{monument.extract}</p>
 
-          <div className="modal-actions">
+          <div className="modal-actions flex  w-full justify-center">
             <Link
               href={detailHref}
               className="btn-gold"
@@ -124,14 +124,6 @@ export default function Modal({ monument, onClose, type = 'monument' }: ModalPro
             >
               🗺️ View Full Interactive Guide
             </Link>
-            <a
-              href={monument.pageUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-outline"
-            >
-              📖 Wikipedia
-            </a>
           </div>
         </div>
       </div>

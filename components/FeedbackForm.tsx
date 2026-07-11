@@ -134,7 +134,7 @@ export default function FeedbackForm() {
             </div>
             {form.rating > 0 && (
               <p style={{ color: '#D4AF37', fontSize: '0.85rem', marginTop: 6, fontWeight: 500 }}>
-                {['', 'Poor', 'Fair', 'Good', 'Great', 'Excellent! 🌟'][form.rating]}
+                {['', 'Poor', 'Fair', 'Good', 'Great', 'Excellent! '][form.rating]}
               </p>
             )}
           </div>
@@ -199,7 +199,7 @@ export default function FeedbackForm() {
                 disabled={submitting}
                 id="feedback-submit"
               >
-                {submitting ? '⏳ Sending...' : '✨ Submit Feedback'}
+                {submitting ? ' Sending...' : ' Submit Feedback'}
               </button>
             </div>
           </form>
