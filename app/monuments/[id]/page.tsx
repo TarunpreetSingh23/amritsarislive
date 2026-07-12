@@ -994,7 +994,7 @@ export default function MonumentDetailPage({
 
                 {/* Google Maps Premium Button */}
                 {monument.mapUrl && (
-                  <a href={monument.mapUrl} target="_blank" rel="noopener noreferrer" className="mon-map-btn reveal-on-scroll delay-300" style={{ display: 'flex' }}>
+                  <a href={monument.mapUrl} target="_blank" rel="noopener noreferrer" className="btn-gold mon-map-btn reveal-on-scroll delay-300" style={{ display: 'flex' }}>
                     <Map size={18} />
                     Open in Google Maps
                   </a>
