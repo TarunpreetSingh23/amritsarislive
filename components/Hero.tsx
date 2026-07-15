@@ -1,24 +1,26 @@
 'use client';
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
-
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import {
   Smartphone,
   Landmark,
   UtensilsCrossed,
-  MessageSquare,
+  Library,
   Compass
 } from "lucide-react";
 
 export default function Hero() {
+  const router = useRouter();
   const particlesRef = useRef<HTMLDivElement>(null);
 
   const navItems = [
     { id: "socials", label: "Posts", icon: Smartphone },
     { id: "monuments", label: "Monuments", icon: Landmark },
-    { id: "food", label: "Famous Food", icon: UtensilsCrossed },
-    { id: "feedback", label: "Feedback", icon: MessageSquare },
+    { id: "food", label: "Foods", icon: UtensilsCrossed },
+    { id: "explore", label: "Explore", icon: Compass },
+    { id: "museums", label: "Museums", icon: Library },
   ];
 
   const socialLinks = [
@@ -97,7 +99,11 @@ export default function Hero() {
   }, []);
 
   const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    if (id === 'explore') {
+      router.push('/explore');
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (

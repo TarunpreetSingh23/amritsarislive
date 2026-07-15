@@ -134,3 +134,15 @@ export function sanitizeImageUrl(url: string | null): string | null {
   return sanitized;
 }
 
+// Video Schema
+const videoSchema = new mongoose.Schema(
+  {
+    title: { type: String, required: true },
+    cloudinaryVideoUrl: { type: String, required: true },
+  },
+  { timestamps: true }
+);
+
+export const Video =
+  mongoose.models.Video || mongoose.model('Video', videoSchema);
+

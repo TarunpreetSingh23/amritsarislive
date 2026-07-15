@@ -2,13 +2,13 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { Home, Smartphone, Landmark, UtensilsCrossed, Library, Map, Menu, X } from 'lucide-react';
+import { Home, Smartphone, Landmark, UtensilsCrossed, Library, Map, Menu, X, Compass } from 'lucide-react';
 
 const NAV_LINKS = [
   { href: '#home', label: 'Home', page: false },
   { href: '#socials', label: 'Socials', page: false },
   { href: '#monuments', label: 'Monuments', page: false },
-  { href: '#food', label: 'Food', page: false },
+  { href: '/explore', label: 'Explore', page: true },
   { href: '#museums', label: 'Museums', page: false },
   { href: '/itinerary', label: 'Itinerary', page: true },
 ];
@@ -153,7 +153,7 @@ export default function Navbar() {
             {NAV_LINKS.filter(link => link.href !== '#home').map((link, idx) => {
               let Icon = Smartphone;
               if (link.href === '#monuments') Icon = Landmark;
-              else if (link.href === '#food') Icon = UtensilsCrossed;
+              else if (link.href === '/explore') Icon = Compass;
               else if (link.href === '#museums') Icon = Library;
               else if (link.href === '/itinerary') Icon = Map;
 

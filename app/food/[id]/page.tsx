@@ -921,9 +921,9 @@ export default function FoodDetailPage({
               )}
             </div>
             <div className="mon-hero-overlay">
-              <div className="mon-hero-badge">
+              {/* <div className="mon-hero-badge">
                 <Utensils size={14} style={{ marginRight: '6px' }} /> {foodItem.category || 'Culinary'}
-              </div>
+              </div> */}
               <h1 className="mon-hero-title">{foodItem.title}</h1>
               <div className="mon-hero-rule" />
             </div>
