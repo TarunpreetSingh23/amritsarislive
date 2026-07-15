@@ -68,7 +68,7 @@ export default function MonumentDetailPage({
   useEffect(() => {
     const fetchMonument = async () => {
       try {
-        const res = await fetch(`/api/monuments/${id}`);
+        const res = await fetch(`/api/monuments/${id}`, { cache: 'no-store' });
         const data = await res.json();
         setMonument(data.monument || null);
       } catch (e) {
@@ -929,25 +929,39 @@ export default function MonumentDetailPage({
 
           {/* Hero Banner with Zoom & Parallax */}
           <div className="mon-hero">
-            <div className="mon-hero-img-container">
+            <div className="mon-hero-img-container" style={{ position: 'relative', overflow: 'hidden', width: '100%', height: '100%' }}>
               {images.length > 0 ? (
-                images.map((imgUrl, index) => (
-                 <Image
-  src={imgUrl}
-  alt={monument.title}
-  fill
-  priority
-  unoptimized
-  className={`
-    object-cover
-    object-center
-    blur-none
-    filter-none
-    transition-[opacity,transform] duration-1000 ease-in-out
-    ${index === activeImgIndex ? "opacity-100 scale-105" : "opacity-0 scale-100"}
-  `}
-/>
-                ))
+                <div
+                  style={{
+                    display: 'flex',
+                    width: `${images.length * 100}%`,
+                    height: '100%',
+                    transform: `translateX(-${(activeImgIndex * 100) / images.length}%)`,
+                    transition: 'transform 1.2s cubic-bezier(0.16, 1, 0.3, 1)',
+                    willChange: 'transform',
+                  }}
+                >
+                  {images.map((imgUrl, index) => (
+                    <div
+                      key={imgUrl}
+                      style={{
+                        width: `${100 / images.length}%`,
+                        height: '100%',
+                        position: 'relative',
+                        overflow: 'hidden',
+                      }}
+                    >
+                      <Image
+                        src={imgUrl}
+                        alt={`${monument.title} ${index + 1}`}
+                        fill
+                        priority
+                        unoptimized
+                        className="object-cover object-center blur-none filter-none"
+                      />
+                    </div>
+                  ))}
+                </div>
               ) : (
                 <div style={{ width: '100%', height: '100%', background: 'linear-gradient(135deg, #5E3120, #23201C)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--gold)' }}>
                   <Landmark size={80} strokeWidth={1.5} />

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import connectDB, { Museum } from '@/lib/mongodb';
+import connectDB, { Museum, sanitizeImageUrl } from '@/lib/mongodb';
 import fs from 'fs';
 import path from 'path';
 
@@ -42,8 +42,8 @@ export async function GET(
         id: m.id,
         title: m.title,
         extract: m.description || m.extract || '',
-        thumbnail: m.image || m.thumbnail || null,
-        originalimage: m.image || m.originalimage || null,
+        thumbnail: sanitizeImageUrl(m.image || m.thumbnail || null),
+        originalimage: sanitizeImageUrl(m.image || m.originalimage || null),
         pageUrl: m.link || m.pageUrl || '',
         category: m.category || 'Gallery',
         bestTime: m.bestTime || '',

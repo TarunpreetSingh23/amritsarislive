@@ -53,7 +53,7 @@ export default function MuseumDetailPage({
   useEffect(() => {
     const fetchMuseum = async () => {
       try {
-        const res = await fetch(`/api/museums/${id}`);
+        const res = await fetch(`/api/museums/${id}`, { cache: 'no-store' });
         const data = await res.json();
         setMuseum(data.museum || null);
       } catch (e) {
@@ -931,9 +931,9 @@ export default function MuseumDetailPage({
               )}
             </div>
             <div className="mon-hero-overlay">
-              <div className="mon-hero-badge">
+              {/* <div className="mon-hero-badge">
                 <Landmark size={14} style={{ marginRight: '6px' }} /> {museum.category || 'Museum'}
-              </div>
+              </div> */}
               <h1 className="mon-hero-title">{museum.title}</h1>
               <div className="mon-hero-rule" />
             </div>

@@ -122,3 +122,15 @@ const foodSchema = new mongoose.Schema(
 export const Food =
   mongoose.models.Food || mongoose.model('Food', foodSchema);
 
+export function sanitizeImageUrl(url: string | null): string | null {
+  if (!url) return null;
+  let sanitized = url;
+  if (sanitized.startsWith('/images/museums/') || sanitized.startsWith('/images/monuments/')) {
+    sanitized = '/' + sanitized.split('/').pop();
+  }
+  if (sanitized.endsWith('.jpd')) {
+    sanitized = sanitized.slice(0, -4) + '.jpg';
+  }
+  return sanitized;
+}
+

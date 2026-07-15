@@ -53,7 +53,7 @@ export default function FoodDetailPage({
   useEffect(() => {
     const fetchFoodItem = async () => {
       try {
-        const res = await fetch(`/api/food/${id}`);
+        const res = await fetch(`/api/food/${id}`, { cache: 'no-store' });
         const data = await res.json();
         setFoodItem(data.food || null);
       } catch (e) {
