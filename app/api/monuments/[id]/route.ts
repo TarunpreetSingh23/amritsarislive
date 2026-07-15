@@ -37,13 +37,17 @@ export async function GET(
     }
 
     const m = monumentData;
+    const imagesList = m.images && m.images.length > 0 
+      ? m.images 
+      : (m.image ? [m.image] : []);
     return NextResponse.json({
       monument: {
         id: m.id,
         title: m.title,
         extract: m.description || m.extract || '',
-        thumbnail: m.image || m.thumbnail || null,
-        originalimage: m.image || m.originalimage || null,
+        thumbnail: imagesList[0] || null,
+        originalimage: imagesList[0] || null,
+        images: imagesList,
         pageUrl: m.link || m.pageUrl || '',
         category: m.category || 'Heritage',
         bestTime: m.bestTime || '',

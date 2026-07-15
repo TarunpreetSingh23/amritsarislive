@@ -2,8 +2,8 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import SocialLinks from '@/components/SocialLinks';
 import Monuments from '@/components/Monuments';
+import Food from '@/components/Food';
 import Museums from '@/components/Museums';
-import FoodPlaces from '@/components/FoodPlaces';
 import FeedbackForm from '@/components/FeedbackForm';
 import Loader from '@/components/Loader';
 
@@ -15,8 +15,9 @@ export default function Home() {
       <Hero />
       <SocialLinks />
       <Monuments />
+      <Food />
       <Museums />
-      {/* <FoodPlaces /> */}
+      
       <FeedbackForm />
 
       {/* Footer */}

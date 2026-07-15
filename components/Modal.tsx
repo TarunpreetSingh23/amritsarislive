@@ -23,7 +23,7 @@ interface MonumentData {
 interface ModalProps {
   monument: MonumentData | null;
   onClose: () => void;
-  type?: 'monument' | 'museum';
+  type?: 'monument' | 'museum' | 'food';
 }
 
 export default function Modal({ monument, onClose, type = 'monument' }: ModalProps) {
@@ -47,6 +47,8 @@ export default function Modal({ monument, onClose, type = 'monument' }: ModalPro
   const img = monument.originalimage || monument.thumbnail;
   const detailHref = type === 'museum'
     ? `/museums/${monument.id}`
+    : type === 'food'
+    ? `/food/${monument.id}`
     : `/monuments/${monument.id}`;
 
   return (
@@ -75,7 +77,7 @@ export default function Modal({ monument, onClose, type = 'monument' }: ModalPro
             background: 'linear-gradient(135deg, #1C1C1E, #2C2C2E)',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             fontSize: '4rem', borderRadius: '20px 20px 0 0',
-          }}>🏛️</div>
+          }}>{type === 'food' ? '🍲' : '🏛️'}</div>
         )}
 
         <div className="modal-body">

@@ -88,7 +88,7 @@ export default function ItineraryPage() {
   const enrichStop = (id: string, type: 'monument' | 'museum') => {
     if (type === 'monument') {
       const m = monumentsData.find((x) => x.id === id);
-      return { image: m?.image ?? null, address: m?.address ?? '' };
+      return { image: m?.images?.[0] ?? null, address: m?.address ?? '' };
     }
     const m = museumsData.find((x) => x.id === id);
     return { image: m?.image ?? null, address: m?.address ?? '' };

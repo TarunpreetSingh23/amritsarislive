@@ -81,7 +81,7 @@ const monumentSchema = new mongoose.Schema(
     title: { type: String, required: true },
     category: { type: String, required: true },
     description: { type: String, required: true },
-    image: { type: String, required: true },
+    images: { type: [String], required: true },
     link: { type: String, required: true },
     bestTime: { type: String },
     timeRequired: { type: String },
@@ -97,3 +97,28 @@ const monumentSchema = new mongoose.Schema(
 
 export const Monument =
   mongoose.models.Monument || mongoose.model('Monument', monumentSchema);
+
+// Food Schema
+const foodSchema = new mongoose.Schema(
+  {
+    id: { type: String, required: true, unique: true },
+    title: { type: String, required: true },
+    category: { type: String, required: true },
+    description: { type: String, required: true },
+    image: { type: String, required: true },
+    link: { type: String, required: true },
+    bestTime: { type: String },
+    timeRequired: { type: String },
+    highlights: [{ type: String }],
+    entryFee: { type: String },
+    timings: { type: String },
+    address: { type: String },
+    mapUrl: { type: String },
+    bulletPoints: [{ type: String }],
+  },
+  { timestamps: true }
+);
+
+export const Food =
+  mongoose.models.Food || mongoose.model('Food', foodSchema);
+

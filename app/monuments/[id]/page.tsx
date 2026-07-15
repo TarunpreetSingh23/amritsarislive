@@ -18,13 +18,14 @@ import {
   Pin,
   Landmark,
 } from 'lucide-react';
-
+import Image from 'next/image';
 interface MonumentDetail {
   id: string;
   title: string;
   extract: string;
   thumbnail: string | null;
   originalimage: string | null;
+  images: string[];
   pageUrl: string;
   category: string;
   bestTime: string;
@@ -48,6 +49,20 @@ export default function MonumentDetailPage({
   const [copied, setCopied] = useState(false);
   const [imgLoaded, setImgLoaded] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const [activeImgIndex, setActiveImgIndex] = useState(0);
+
+  const images = useMemo(() => {
+    if (!monument) return [];
+    return monument.images || (monument.originalimage ? [monument.originalimage] : []);
+  }, [monument]);
+
+  useEffect(() => {
+    if (images.length <= 1) return;
+    const interval = setInterval(() => {
+      setActiveImgIndex((prev) => (prev + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [images]);
 
   // Fetch Monument Data (Keep API exactly the same)
   useEffect(() => {
@@ -915,15 +930,24 @@ export default function MonumentDetailPage({
           {/* Hero Banner with Zoom & Parallax */}
           <div className="mon-hero">
             <div className="mon-hero-img-container">
-              {img ? (
-                <img
-                  src={img}
-                  alt={monument.title}
-                  className={`mon-hero-img${imgLoaded ? ' mon-hero-img-loaded' : ''}`}
-                  referrerPolicy="no-referrer"
-                  onLoad={() => setImgLoaded(true)}
-                  style={{ transform: `scale(${imgLoaded ? 1.05 : 1}) translateY(${scrollY * 0.12}px)` }}
-                />
+              {images.length > 0 ? (
+                images.map((imgUrl, index) => (
+                 <Image
+  src={imgUrl}
+  alt={monument.title}
+  fill
+  priority
+  unoptimized
+  className={`
+    object-cover
+    object-center
+    blur-none
+    filter-none
+    transition-[opacity,transform] duration-1000 ease-in-out
+    ${index === activeImgIndex ? "opacity-100 scale-105" : "opacity-0 scale-100"}
+  `}
+/>
+                ))
               ) : (
                 <div style={{ width: '100%', height: '100%', background: 'linear-gradient(135deg, #5E3120, #23201C)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--gold)' }}>
                   <Landmark size={80} strokeWidth={1.5} />
@@ -931,9 +955,9 @@ export default function MonumentDetailPage({
               )}
             </div>
             <div className="mon-hero-overlay">
-              <div className="mon-hero-badge">
+              {/* <div className="mon-hero-badge">
                 <Landmark size={14} style={{ marginRight: '6px' }} /> {monument.category || 'Monument'}
-              </div>
+              </div> */}
               <h1 className="mon-hero-title">{monument.title}</h1>
               <div className="mon-hero-rule" />
             </div>

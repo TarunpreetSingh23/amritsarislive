@@ -25,23 +25,29 @@ export async function GET(_req: NextRequest) {
       }
     }
 
-    const monuments = monumentsData.map((m: any) => ({
-      id: m.id,
-      title: m.title,
-      extract: m.description || m.extract || '',
-      thumbnail: m.image || m.thumbnail || null,
-      originalimage: m.image || m.originalimage || null,
-      pageUrl: m.link || m.pageUrl || '',
-      category: m.category || 'Heritage',
-      bestTime: m.bestTime || '',
-      timeRequired: m.timeRequired || '',
-      highlights: m.highlights || [],
-      entryFee: m.entryFee || '',
-      timings: m.timings || '',
-      address: m.address || '',
-      mapUrl: m.mapUrl || '',
-      bulletPoints: m.bulletPoints || [],
-    }));
+    const monuments = monumentsData.map((m: any) => {
+      const imagesList = m.images && m.images.length > 0 
+        ? m.images 
+        : (m.image ? [m.image] : []);
+      return {
+        id: m.id,
+        title: m.title,
+        extract: m.description || m.extract || '',
+        thumbnail: imagesList[0] || null,
+        originalimage: imagesList[0] || null,
+        images: imagesList,
+        pageUrl: m.link || m.pageUrl || '',
+        category: m.category || 'Heritage',
+        bestTime: m.bestTime || '',
+        timeRequired: m.timeRequired || '',
+        highlights: m.highlights || [],
+        entryFee: m.entryFee || '',
+        timings: m.timings || '',
+        address: m.address || '',
+        mapUrl: m.mapUrl || '',
+        bulletPoints: m.bulletPoints || [],
+      };
+    });
 
     return NextResponse.json({ monuments });
   } catch (error: any) {

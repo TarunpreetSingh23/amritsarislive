@@ -117,7 +117,7 @@ export default function Hero() {
         }
       `}} />
 
-      <section className="relative min-h-[93dvh] flex flex-col items-center pb-24 overflow-hidden bg-[#acc2d9] text-center" id="home" style={{ paddingTop: '100px' }}>
+      <section className="relative min-h-[97dvh] flex flex-col items-center pb-24 overflow-hidden bg-[#acc2d9] text-center" id="home" style={{ paddingTop: '100px' }}>
 
         {/* Sky Blue & Cream Ambient Layer + Geometric Rings */}
         <div className="absolute inset-0 z-0 overflow-hidden bg-[#F9F8F5]">

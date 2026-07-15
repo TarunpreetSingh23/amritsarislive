@@ -1,0 +1,134 @@
+[
+  {
+    "id": "kesar-da-dhaba",
+    "title": "Kesar Da Dhaba",
+    "category": "Heritage Dhaba",
+    "description": "Established in 1916 in Lahore and shifted to Amritsar after partition, Kesar Da Dhaba is a legendary vegetarian eatery nestled in the narrow lanes of the old city. Famous for its slow-cooked dal makhani (simmered for 12 hours in clay pots), buttery lachha parathas, and shahi paneer, it offers an authentic taste of Punjabi heritage.",
+    "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?q=80&w=800&auto=format&fit=crop",
+    "link": "https://en.wikipedia.org/wiki/Kesar_Da_Dhaba",
+    "bestTime": "Lunch & Dinner (Winter is ideal)",
+    "timeRequired": "45–60 minutes",
+    "highlights": ["12-hour slow-cooked Dal Makhani", "Desi Ghee Lachha Paratha", "Iconic Shahi Paneer thali", "Over 100 years of culinary history", "Rustic, heritage ambiance"],
+    "entryFee": "₹300 – ₹500 for two",
+    "timings": "12:00 PM – 11:00 PM",
+    "address": "Chowk Passian, Near Town Hall, Shastri Market, Amritsar, Punjab 143001",
+    "mapUrl": "https://maps.google.com/?q=Kesar+Da+Dhaba+Amritsar",
+    "bulletPoints": [
+      "Founded by Lala Kesar Mal and his wife in Lahore in 1916, moving to Amritsar in 1947",
+      "Signature Dal Fry is prepared with a generous amount of pure desi ghee",
+      "Celebrities, food critics, and politicians from around the globe have dined here",
+      "Located in a narrow lane, best reached by walking or auto-rickshaw from the Town Hall area",
+      "Maintains the same traditional recipes and cooking styles passed down through generations"
+    ]
+  },
+  {
+    "id": "bhai-kulwant-singh-kulcha",
+    "title": "Bhai Kulwant Singh Kulchian Wale",
+    "category": "Traditional Kulcha",
+    "description": "Renowned for serving the crispest and most authentic Amritsari Kulcha, this spot is a favorite breakfast destination. The kulchas are stuffed with a perfectly spiced mixture of potatoes, cauliflower, or paneer, baked in a traditional clay tandoor, and crushed by hand to hold plenty of fresh butter. Served alongside spicy chole and tangy tamarind chutney.",
+    "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?q=80&w=800&auto=format&fit=crop",
+    "link": "https://en.wikipedia.org/wiki/Amritsari_kulcha",
+    "bestTime": "Breakfast (8:00 AM to 11:30 AM)",
+    "timeRequired": "30–45 minutes",
+    "highlights": ["Flaky, multi-layered tandoori Kulchas", "Authentic spicy Chole", "Tamarind-onion chutney", "Generous dollops of fresh butter", "Live tandoor baking show"],
+    "entryFee": "₹150 – ₹250 for two",
+    "timings": "7:30 AM – 4:00 PM",
+    "address": "Near Golden Temple (Jallianwala Bagh Street), Amritsar, Punjab 143006",
+    "mapUrl": "https://maps.google.com/?q=Bhai+Kulwant+Singh+Kulchian+Wale+Amritsar",
+    "bulletPoints": [
+      "Uses a distinct multi-layering technique with ghee to achieve unmatched crispness",
+      "Baked at high temperatures in a clay tandoor fueled by coal",
+      "Every kulcha is crushed by hand right after baking to release trapped steam and coat with butter",
+      "Located just a short walk from the Golden Temple and Jallianwala Bagh",
+      "Arrive early in the morning to beat the long lines of locals and tourists alike"
+    ]
+  },
+  {
+    "id": "beera-chicken-house",
+    "title": "Beera Chicken House",
+    "category": "Non-Veg Specialty",
+    "description": "Established in 1972, Beera Chicken House is an absolute paradise for non-vegetarian food lovers. Located on Majitha Road, it is globally famous for its Tandoori Chicken, which is marinated in a unique blend of homemade spices and roasted whole to juicy, tender perfection. Pair it with soft Keema Naans for an unforgettable Punjabi feast.",
+    "image": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?q=80&w=800&auto=format&fit=crop",
+    "link": "https://en.wikipedia.org/wiki/Punjabi_cuisine",
+    "bestTime": "Evening / Dinner",
+    "timeRequired": "45–60 minutes",
+    "highlights": ["Legendary Roasted Tandoori Chicken", "Stuffed Keema Naan with gravy", "Juicy Chicken Tikka", "Authentic spicy green chutney", "Popular street-side dining spot"],
+    "entryFee": "₹400 – ₹600 for two",
+    "timings": "12:30 PM – 11:00 PM",
+    "address": "Majitha Rd, opposite Bhandari Hospital, Sehaj Avenue, Amritsar, Punjab 143001",
+    "mapUrl": "https://maps.google.com/?q=Beera+Chicken+House+Amritsar",
+    "bulletPoints": [
+      "Famous for roasting the chicken whole instead of breaking it into pieces beforehand",
+      "Marinated using a light, non-colored spice rub that keeps the meat moist and tender",
+      "Frequented by prominent culinary experts and travel show hosts",
+      "Operates a popular drive-in dining service where food is served right to your car",
+      "A culinary staple of Amritsar's vibrant night food culture"
+    ]
+  },
+  {
+    "id": "gurdas-ram-jalebi",
+    "title": "Gurdas Ram Jalebi Wala",
+    "category": "Traditional Sweets",
+    "description": "Located in a tiny shop just a few steps away from the Golden Temple, Gurdas Ram Jalebi Wala has been serving hot, piping, and crispy jalebis and gulab jamuns for decades. The jalebis are fried in pure desi ghee right in front of your eyes and soaked in sugar syrup, offering the ultimate sweet ending to your heritage tour.",
+    "image": "https://images.unsplash.com/photo-1605197586541-754eef44090a?q=80&w=800&auto=format&fit=crop",
+    "link": "https://en.wikipedia.org/wiki/Jalebi",
+    "bestTime": "Late afternoon or evening",
+    "timeRequired": "15–20 minutes",
+    "highlights": ["Fresh, hot, crispy Jalebis", "Desi Ghee preparation", "Soft, melt-in-the-mouth Gulab Jamuns", "Historic location near Golden Temple", "Affordable local street treat"],
+    "entryFee": "₹50 – ₹100 for two",
+    "timings": "8:00 AM – 10:00 PM",
+    "address": "Katras Ahluwalia, Near Golden Temple, Amritsar, Punjab 143006",
+    "mapUrl": "https://maps.google.com/?q=Gurdas+Ram+Jalebi+Wala+Amritsar",
+    "bulletPoints": [
+      "Operates from a very small shop front, emphasizing quality and speed of preparation",
+      "Prepared using traditional cotton cloth squeeze bags to shape the loops in oil",
+      "Locals recommend pairing the sweet jalebis with savory rabri when available",
+      "Perfect quick snack stop during a walking tour of the Golden Temple corridors",
+      "Highly renowned for retaining the exact same crisp texture and syrup sweetness for generations"
+    ]
+  },
+  {
+    "id": "giani-tea-stall",
+    "title": "Giani Tea Stall",
+    "category": "Breakfast & Chai",
+    "description": "Frequented by politicians, morning walkers, and tourists, Giani Tea Stall is a legendary breakfast institution in Amritsar. Famous for its special Masala Chai brewed with cardamom, cinnamon, and ginger, alongside butter-toasted local bread, kachoris, and paneer bhurji, it encapsulates the lively morning spirit of the city.",
+    "image": "https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?q=80&w=800&auto=format&fit=crop",
+    "link": "https://en.wikipedia.org/wiki/Masala_chai",
+    "bestTime": "Early Morning (6:00 AM – 9:00 AM)",
+    "timeRequired": "20–30 minutes",
+    "highlights": ["Rich, aromatic Masala Chai", "Double butter toast", "Crispy Kachori with chole", "Spicy Paneer Bhurji", "Lively local morning discussions"],
+    "entryFee": "₹100 – ₹200 for two",
+    "timings": "5:00 AM – 9:30 PM",
+    "address": "Cooper Road, Near Bhandari Bridge, Amritsar, Punjab 143001",
+    "mapUrl": "https://maps.google.com/?q=Giani+Tea+Stall+Amritsar",
+    "bulletPoints": [
+      "One of the oldest tea stalls in Amritsar, serving customers since the mid-20th century",
+      "Tea is slow-brewed in massive brass vessels with premium milk and fresh ground spices",
+      "The walls are lined with photographs of prominent politicians and actors who visited the stall",
+      "The breakfast toast is toasted over coal fires, imparting a distinct smoky flavor",
+      "An excellent spot to experience authentic local conversations and morning community vibes"
+    ]
+  },
+  {
+    "id": "ahuja-milk-bhandar",
+    "title": "Ahuja Milk Bhandar",
+    "category": "Lassi & Desserts",
+    "description": "No trip to Amritsar is complete without tasting the rich, velvety Amritsari Lassi at Ahuja Milk Bhandar. Known for their thick, hand-churned sweet lassi served in large clay or brass glasses, it is topped with a generous lump of fresh butter (makhan) and flavored with a unique natural extract (kesar/rose), making it a dessert in its own right.",
+    "image": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=800&auto=format&fit=crop",
+    "link": "https://en.wikipedia.org/wiki/Lassi",
+    "bestTime": "Afternoon / Hot summer days",
+    "timeRequired": "15–30 minutes",
+    "highlights": ["Signature Kesar/Special Lassi", "Thick layer of fresh butter topping", "Traditional clay glass (kulhad) serving", "Rich, creamy churned yogurt", "Famous milk sweets & rabri"],
+    "entryFee": "₹100 – ₹180 for two",
+    "timings": "8:00 AM – 11:00 PM",
+    "address": "B.K. Dutt Gate, Dhab Khatikan, Amritsar, Punjab 143001",
+    "mapUrl": "https://maps.google.com/?q=Ahuja+Milk+Bhandar+Amritsar",
+    "bulletPoints": [
+      "Famous for their secret essence added to the lassi, giving it a signature sweet aroma",
+      "Lassi is churned using traditional wooden whisks (madhani) to keep it perfectly thick",
+      "A single glass of Ahuja's special lassi is highly filling and can easily replace a light meal",
+      "Located near Hindu College, a highly lively part of the Amritsar old town",
+      "Also offers delicious Kheer, Rabri, and hot milk during winter nights"
+    ]
+  }
+]

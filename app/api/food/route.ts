@@ -1,0 +1,54 @@
+import { NextRequest, NextResponse } from 'next/server';
+import connectDB, { Food } from '@/lib/mongodb';
+import fs from 'fs';
+import path from 'path';
+
+export async function GET(_req: NextRequest) {
+  try {
+    let foodData = [];
+    try {
+      await connectDB();
+      const dbFood = await Food.find({}).lean();
+      if (dbFood && dbFood.length > 0) {
+        foodData = dbFood;
+      } else {
+        throw new Error('No food places found in database');
+      }
+    } catch (dbError: any) {
+      console.warn('MongoDB connection failed, falling back to food.json:', dbError.message);
+      const filePath = path.join(process.cwd(), 'food.json');
+      if (fs.existsSync(filePath)) {
+        const fileData = fs.readFileSync(filePath, 'utf8');
+        foodData = JSON.parse(fileData);
+      } else {
+        throw new Error('Mock data food.json not found');
+      }
+    }
+
+    const foodPlaces = foodData.map((f: any) => ({
+      id: f.id,
+      title: f.title,
+      extract: f.description || f.extract || '',
+      thumbnail: f.image || f.thumbnail || null,
+      originalimage: f.image || f.originalimage || null,
+      pageUrl: f.link || f.pageUrl || '',
+      category: f.category || 'Culinary',
+      bestTime: f.bestTime || '',
+      timeRequired: f.timeRequired || '',
+      highlights: f.highlights || [],
+      entryFee: f.entryFee || '',
+      timings: f.timings || '',
+      address: f.address || '',
+      mapUrl: f.mapUrl || '',
+      bulletPoints: f.bulletPoints || [],
+    }));
+
+    return NextResponse.json({ food: foodPlaces });
+  } catch (error: any) {
+    console.error('Failed to fetch food places:', error);
+    return NextResponse.json(
+      { error: 'Failed to fetch food places', details: error.message },
+      { status: 500 }
+    );
+  }
+}
