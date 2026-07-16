@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   description:
     'Discover Amritsar like never before. Explore monuments, savor legendary food, and experience the soul of the golden city.',
   keywords: ['Amritsar', 'Golden Temple', 'Punjab', 'Tourism', 'Amritsar is Live'],
+  verification: {
+    google: 'tBHUoFJpDQqmnOA4c9uZbTE7HkoI0VJq-P3z4p5JWKI',
+  },
   openGraph: {
     title: 'Amritsar is Live',
     description: 'Celebrating the heartbeat of the holy city.',

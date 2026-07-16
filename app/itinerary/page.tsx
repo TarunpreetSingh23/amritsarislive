@@ -20,6 +20,7 @@ import {
 
 import monumentsData from '../../monuments.json';
 import museumsData from '../../museums.json';
+import foodData from '../../food.json';
 
 interface ItineraryStop {
   id: string;
@@ -33,6 +34,8 @@ interface ItineraryStop {
   tip: string;
   image?: string | null;
   address?: string;
+  dbId?: string;
+  dbType?: 'monument' | 'museum' | 'food';
 }
 
 interface DaySummary {
@@ -44,11 +47,11 @@ interface DaySummary {
 }
 
 export default function ItineraryPage() {
-  const [activeDay, setActiveDay] = useState<1 | 2>(1);
+  const [activeDay, setActiveDay] = useState<1 | 2 | 3 | 4>(1);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   // Smooth tab switch with fade transition
-  const handleDaySwitch = (day: 1 | 2) => {
+  const handleDaySwitch = (day: 1 | 2 | 3 | 4) => {
     if (day === activeDay) return;
     setIsTransitioning(true);
     setTimeout(() => {
@@ -85,82 +88,120 @@ export default function ItineraryPage() {
   }, [activeDay]);
 
   // Helper to enrich stop data from JSON
-  const enrichStop = (id: string, type: 'monument' | 'museum') => {
+  const enrichStop = (id: string, type: 'monument' | 'museum' | 'food') => {
     if (type === 'monument') {
       const m = monumentsData.find((x) => x.id === id);
-      return { image: m?.images?.[0] ?? null, address: m?.address ?? '' };
+      return {
+        dbId: id,
+        dbType: 'monument' as const,
+        image: m?.images?.[0] ?? null,
+        address: m?.address ?? ''
+      };
+    } else if (type === 'museum') {
+      const m = museumsData.find((x) => x.image === id || x.id === id);
+      return {
+        dbId: m?.id ?? id,
+        dbType: 'museum' as const,
+        image: m?.image ?? null,
+        address: m?.address ?? ''
+      };
+    } else if (type === 'food') {
+      const f = foodData.find((x) => x.id === id);
+      return {
+        dbId: id,
+        dbType: 'food' as const,
+        image: f?.image ?? null,
+        address: f?.address ?? ''
+      };
     }
-    const m = museumsData.find((x) => x.id === id);
-    return { image: m?.image ?? null, address: m?.address ?? '' };
+    return {};
   };
 
   // ========================= DAY 1 DATA =========================
   const day1Stops: ItineraryStop[] = useMemo(
     () => [
       {
-        id: 'Harmandir_Sahib',
+        id: 'arrival',
         type: 'monument',
-        title: 'Harmandir Sahib — The Golden Temple',
-        category: 'Sikh Shrine',
-        timeSlot: '06:30 AM – 10:00 AM',
-        duration: '3.5 Hours',
+        title: 'Arrival & Check-in',
+        category: 'Logistics',
+        timeSlot: 'Afternoon / Evening',
+        duration: 'Varies',
+        cost: 'Varies',
+        description: 'Arrive in Amritsar, check into your hotel, and settle in. Prepare for a spiritually rich and culinary tour ahead.',
+        tip: 'Keep your camera ready for the vibrant city streets and heritage architecture!',
+      },
+      {
+        id: 'lunch-arrival',
+        type: 'monument',
+        title: 'Lunch at Local Dhaba',
+        category: 'Culinary',
+        timeSlot: '01:30 PM – 02:30 PM',
+        duration: '1 Hour',
+        cost: '₹300 for two',
+        description: 'Have a hearty traditional lunch at your hotel or a local dhaba like Bharawan Da Dhaba or Kesar Da Dhaba.',
+        tip: 'Save some appetite for the delicious street food in the evening!',
+        image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?q=80&w=800&auto=format&fit=crop',
+      },
+      {
+        id: 'gurdwara-shaheedan',
+        type: 'monument',
+        title: 'Gurdwara Shaheedan Sahib',
+        category: 'Spiritual Shrine',
+        timeSlot: '03:30 PM – 04:30 PM',
+        duration: '1 Hour',
         cost: 'Free Entry',
-        description:
-          'Begin your pilgrimage at dawn when the Golden Temple glows in morning light. Walk the marble parikrama barefoot, listen to Gurbani hymns echoing across the Amrit Sarovar, and partake in the sacred Langar — a free community meal serving over 100,000 people daily without distinction.',
-        tip: 'Arriving before 7 AM gives you a serene experience before the crowds. Head scarves and head coverings are provided free at the entrance.',
+        description: 'Visit the sacred Gurdwara Shaheedan Sahib, dedicated to Baba Deep Singh Ji. It is a highly revered shrine carrying deep history and immense spiritual energy.',
+        tip: 'Head covering is mandatory inside the temple complex. Scarves are provided at the entrance.',
+        image: 'https://images.unsplash.com/photo-1600121848594-d8644e57abab?q=80&w=800&auto=format&fit=crop',
+      },
+      {
+        id: 'beera-samosa-snack',
+        type: 'monument',
+        title: 'Beera’s Satpura snack',
+        category: 'Famous Snacks',
+        timeSlot: '05:00 PM – 05:45 PM',
+        duration: '45 Minutes',
+        cost: '₹50 for two',
+        description: 'Stop at the legendary Beera Samosa Wala in Atta Mandi and enjoy their famous crispy Satpura (multi-layered pastry) served with warm potato curry.',
+        tip: 'Try their fresh piping hot samosas as well.',
+        ...enrichStop('beera-samosa-wala', 'food'),
+      },
+      {
+        id: 'guru-ka-mahal',
+        type: 'monument',
+        title: 'Guru Ka Mahal',
+        category: 'Heritage Landmark',
+        timeSlot: '06:15 PM – 07:00 PM',
+        duration: '45 Minutes',
+        cost: 'Free Entry',
+        description: 'Visit Guru Ka Mahal, the historical house built by Guru Ram Das Ji. This is the Janam Asthan (birthplace) of Guru Tegh Bahadur Ji.',
+        tip: 'It is situated in the old city lanes near the Golden Temple, perfect for a short walking tour.',
+        image: 'https://images.unsplash.com/photo-1588096344356-9b4e548d1de4?q=80&w=800&auto=format&fit=crop',
+      },
+      {
+        id: 'sukh-asan',
+        type: 'monument',
+        title: 'Attend Sukh Asan at Golden Temple',
+        category: 'Spiritual Ceremony',
+        timeSlot: '09:30 PM – 10:30 PM',
+        duration: '1 Hour',
+        cost: 'Free Entry',
+        description: 'Attend the peaceful Sukh Asan ceremony at the Golden Temple, where the holy Guru Granth Sahib is carried in a golden palanquin back to its resting room.',
+        tip: 'Stand along the bridge early to catch a clear view of the palanquin processional.',
         ...enrichStop('Harmandir_Sahib', 'monument'),
       },
       {
-        id: 'digital-sikh-museum',
-        type: 'museum',
-        title: 'Digital Sikh Museum',
-        category: 'Spiritual Projection',
-        timeSlot: '10:15 AM – 11:45 AM',
-        duration: '1.5 Hours',
-        cost: 'Free Entry',
-        description:
-          'Descend into the underground gallery directly at the Golden Temple Entrance Plaza for an immersive digital journey through Sikh history. High-tech projection mapping, interactive touch screens, and short documentary films explore the lives of the ten Gurus with breathtaking visual storytelling.',
-        tip: 'The fully air-conditioned museum is a welcome relief after the outdoor temple complex. Perfect timing for a mid-morning break.',
-        ...enrichStop('digital-sikh-museum', 'museum'),
-      },
-      {
-        id: 'Jallianwala_Bagh',
+        id: 'kesar-dhaba-dinner',
         type: 'monument',
-        title: 'Jallianwala Bagh — Martyrs\' Memorial',
-        category: 'Historic Memorial',
-        timeSlot: '12:00 PM – 01:30 PM',
-        duration: '1.5 Hours',
-        cost: 'Free Entry',
-        description:
-          'A 5-minute walk from the Golden Temple, this walled public garden witnessed one of the darkest moments of colonial history — the 1919 Amritsar Massacre. The bullet marks preserved in its walls, the Martyrs\' Well, and the eternal Flame of Liberty are solemn reminders of India\'s struggle for freedom.',
-        tip: 'Read the inscriptions at the narrow entrance passage used by General Dyer\'s troops. The multimedia light-and-sound show runs in the evenings.',
-        ...enrichStop('Jallianwala_Bagh', 'monument'),
-      },
-      {
-        id: 'partition-museum',
-        type: 'museum',
-        title: 'The Partition Museum',
-        category: 'History Museum',
-        timeSlot: '02:00 PM – 03:45 PM',
-        duration: '1.75 Hours',
-        cost: '₹10 Indians · ₹100 Foreign',
-        description:
-          'The world\'s first museum dedicated to the 1947 Partition of British India, housed in the magnificent restored Town Hall building. Seven themed galleries document the mass migration through personal letters, family photographs, oral histories, and memorabilia donated by survivors of this historic tragedy.',
-        tip: 'The oral history audio recordings in the later galleries are deeply emotional. Allow extra time if you want to truly absorb each gallery.',
-        ...enrichStop('partition-museum', 'museum'),
-      },
-      {
-        id: 'Wagah',
-        type: 'monument',
-        title: 'Wagah Border — Beating Retreat Ceremony',
-        category: 'National Landmark',
-        timeSlot: '04:30 PM – 07:00 PM',
-        duration: '2.5 Hours',
-        cost: 'Free Entry',
-        description:
-          'Conclude the day 30 km from the city at India\'s most patriotic spectacle. The daily flag-lowering Beating Retreat ceremony between Indian BSF and Pakistani Rangers is a thunderous display of synchronized marching, high kicks, and patriotic chanting — drawing thousands of cheering spectators on both sides.',
-        tip: 'Arrive by 3:30 PM to claim good seats. The ceremony timing changes seasonally with sunset. Large bags are prohibited — travel light.',
-        ...enrichStop('Wagah', 'monument'),
+        title: 'Dinner at Kesar Da Dhaba',
+        category: 'Culinary Heritage',
+        timeSlot: '10:30 PM – 11:30 PM',
+        duration: '1 Hour',
+        cost: '₹400 for two',
+        description: 'Enjoy a traditional dinner of slow-cooked Dal Makhani, buttery lachha parathas, and shahi paneer at Kesar Da Dhaba or Bharawan Da Dhaba.',
+        tip: 'Dal Makhani is simmered for 12 hours here in clay pots. Be prepared for narrow lanes leading to the dhaba.',
+        image: '/kesar.jpg',
       },
     ],
     []
@@ -170,90 +211,281 @@ export default function ItineraryPage() {
   const day2Stops: ItineraryStop[] = useMemo(
     () => [
       {
-        id: 'Durgiana_Temple',
+        id: 'amrit-vela',
         type: 'monument',
-        title: 'Durgiana Temple — The Silver Temple',
-        category: 'Hindu Shrine',
-        timeSlot: '08:30 AM – 10:00 AM',
+        title: 'Amrit Vela Prakash at Golden Temple',
+        category: 'Spiritual Ceremony',
+        timeSlot: '03:30 AM – 05:00 AM',
         duration: '1.5 Hours',
         cost: 'Free Entry',
-        description:
-          'Architecturally mirroring the Golden Temple, this stunning silver-doored Hindu shrine sits in a sacred pool dedicated to Goddess Durga and Lord Lakshmi Narayan. Intricate carvings adorn the white marble exterior, and the tranquil pond setting makes for a peaceful morning visit.',
-        tip: 'The temple pond has beautiful birds in the early morning. Visit the inner sanctum first before the afternoon crowds arrive.',
-        ...enrichStop('Durgiana_Temple', 'monument'),
+        description: 'Witness the early morning Prakash ceremony at the Golden Temple when the holy Guru Granth Sahib is brought out to the main sanctum.',
+        tip: 'It is the most serene and peaceful time of the day to experience the spiritual core of the shrine.',
+        ...enrichStop('Harmandir_Sahib', 'monument'),
       },
       {
-        id: 'Mata_Lal_Devi_Temple',
+        id: 'langar-breakfast',
         type: 'monument',
-        title: 'Mata Lal Devi Temple — The Cave Labyrinth',
-        category: 'Unique Pilgrimage',
-        timeSlot: '10:30 AM – 12:00 PM',
-        duration: '1.5 Hours',
+        title: 'Breakfast at Langar',
+        category: 'Culinary Community',
+        timeSlot: '07:30 AM – 08:30 AM',
+        duration: '1 Hour',
         cost: 'Free Entry',
-        description:
-          'A completely one-of-a-kind experience — this temple replicates the Vaishno Devi pilgrimage through an elaborate artificial cave system. Navigate mirrored corridors, wade through shallow water channels, crawl through low passageways, and discover shrines dedicated to Mata Lal Devi at every turn.',
-        tip: 'Wear comfortable clothes you don\'t mind getting wet or dusty. The cave is dimly lit with colorful lights — truly surreal and photogenic.',
-        ...enrichStop('Mata_Lal_Devi_Temple', 'monument'),
+        description: 'Partake in the Guru Ka Langar, a massive community kitchen serving free vegetarian meals to all visitors without discrimination.',
+        tip: 'Sit cross-legged on the floor mat and enjoy the hot dal, roti, and kheer prepared by volunteers.',
+        image: 'https://images.unsplash.com/photo-1606491956689-2ea866880c84?q=80&w=800&auto=format&fit=crop',
       },
       {
-        id: 'Gobindgarh_Fort',
+        id: 'Jallianwala_Bagh',
         type: 'monument',
-        title: 'Gobindgarh Fort — Heritage Complex',
-        category: 'Military Heritage',
-        timeSlot: '01:00 PM – 03:30 PM',
-        duration: '2.5 Hours',
-        cost: '₹100 Basic · ₹500 Premium',
-        description:
-          'Once the treasury of the Sikh Empire and rumored resting place of the Koh-i-Noor diamond, this 18th-century fort is now a living cultural museum. Explore arms and weapons galleries, watch live craft demonstrations, catch 7D shows, and stroll through historically restored battlements with panoramic city views.',
-        tip: 'Book the evening Heritage Walk package online for access to the dramatic laser-mapping show on the fort walls after dark.',
-        ...enrichStop('Gobindgarh_Fort', 'monument'),
-      },
-      {
-        id: 'ranjit-singh-panorama',
-        type: 'museum',
-        title: 'Maharaja Ranjit Singh Panorama',
-        category: 'Multimedia Museum',
-        timeSlot: '04:00 PM – 05:15 PM',
+        title: 'Visit Jallianwala Bagh',
+        category: 'Historic Memorial',
+        timeSlot: '09:30 AM – 10:45 AM',
         duration: '1.25 Hours',
-        cost: '₹20',
-        description:
-          'Set within the tranquil 84-acre Ram Bagh garden, this unique circular museum immerses visitors inside a massive 360° panoramic painting depicting the life and battles of Maharaja Ranjit Singh. Life-sized dioramas, battle sound effects, and meticulous historical detail bring the Sikh Empire to vivid life.',
-        tip: 'The surrounding Ram Bagh gardens are a lovely spot for a walk. The adjacent Company Bagh Palace displays the Maharaja\'s personal weapons and coins.',
-        ...enrichStop('ranjit-singh-panorama', 'museum'),
+        cost: 'Free Entry',
+        description: 'Walk through the historic walled public garden where the 1919 massacre occurred. Bullet marks are still preserved in the walls.',
+        tip: 'Read the memorial plaques along the narrow entryway used by General Dyer\'s troops.',
+        ...enrichStop('Jallianwala_Bagh', 'monument'),
+      },
+      {
+        id: 'partition-museum',
+        type: 'museum',
+        title: 'Explore the Partition Museum',
+        category: 'History Museum',
+        timeSlot: '11:00 AM – 01:00 PM',
+        duration: '2 Hours',
+        cost: '₹10 Indians · ₹100 Foreign',
+        description: 'Explore the world\'s first museum dedicated to the 1947 Partition of British India, housed in the restored Town Hall building.',
+        tip: 'Oral survivor stories in the later galleries are deeply moving. Take your time.',
+        ...enrichStop('partition-museum', 'museum'),
       },
       {
         id: 'war-memorial',
         type: 'museum',
-        title: 'Punjab State War Memorial & Museum',
-        category: 'Military History',
-        timeSlot: '05:30 PM – 07:00 PM',
+        title: 'Visit War Heroes’ Memorial and Museum',
+        category: 'Military Museum',
+        timeSlot: '02:00 PM – 03:30 PM',
         duration: '1.5 Hours',
         cost: '₹30 Adults · ₹10 Children',
-        description:
-          'End your heritage journey beneath the world\'s tallest stainless steel sword monument — a gleaming 45-meter blade honoring Punjab\'s fallen heroes. The museum complex displays decommissioned MiG fighter jets, battle tanks, artillery, and multimedia galleries spanning from ancient Vedic warfare to the 1999 Kargil conflict.',
-        tip: 'Visit during the golden hour before sunset when the stainless steel sword monument catches stunning light. Perfect photography opportunity.',
+        description: 'Visit the state war heroes\' memorial museum showcasing military history. Features a massive 45-meter-high stainless steel sword monument.',
+        tip: 'Perfect place to appreciate the bravery of Punjab soldiers from ancient times to the modern era.',
         ...enrichStop('war-memorial', 'museum'),
+      },
+      {
+        id: 'Wagah',
+        type: 'monument',
+        title: 'Watch Wagah Border Beating Retreat',
+        category: 'National Landmark',
+        timeSlot: '04:30 PM – 07:00 PM',
+        duration: '2.5 Hours',
+        cost: 'Free Entry',
+        description: 'Watch the high-stepping military ceremony and border retreat drills between the Indian BSF and Pakistani Rangers.',
+        tip: 'Arrive early by 3:30 PM to claim good seats. Large bags are not allowed in the stadium.',
+        ...enrichStop('Wagah', 'monument'),
+      },
+      {
+        id: 'brothers-dhaba-dinner',
+        type: 'monument',
+        title: 'Dinner at Brothers Dhaba',
+        category: 'Culinary Spot',
+        timeSlot: '08:30 PM – 09:30 PM',
+        duration: '1 Hour',
+        cost: '₹400 for two',
+        description: 'Have a traditional Punjabi dinner at Brothers Dhaba near Town Hall.',
+        tip: 'Try their special stuffed Amritsari parathas and badam milk.',
+        image: 'https://images.unsplash.com/photo-1626132647523-66f5bf380027?q=80&w=800&auto=format&fit=crop',
       },
     ],
     []
   );
 
-  const activeStops = activeDay === 1 ? day1Stops : day2Stops;
+  // ========================= DAY 3 DATA =========================
+  const day3Stops: ItineraryStop[] = useMemo(
+    () => [
+      {
+        id: 'shastri-market',
+        type: 'monument',
+        title: 'Shop at Shastri Market',
+        category: 'Shopping Bazaars',
+        timeSlot: '10:00 AM – 11:30 AM',
+        duration: '1.5 Hours',
+        cost: 'Varies',
+        description: 'Shop for traditional colorful Punjabi suits, Phulkari embroidery, and handcrafted Punjabi juttis in the old market lanes.',
+        tip: 'Bargaining is expected. It is best to shop early to avoid heavy daytime crowds.',
+        image: 'https://images.unsplash.com/photo-1583258292688-d0213df4a3a8?q=80&w=800&auto=format&fit=crop',
+      },
+      {
+        id: 'kulcha-lunch',
+        type: 'monument',
+        title: 'Enjoy Amritsari Kulcha & Lassi',
+        category: 'Culinary Landmark',
+        timeSlot: '12:00 PM – 01:00 PM',
+        duration: '1 Hour',
+        cost: '₹200 for two',
+        description: 'Enjoy a classic crispy wood-fired Amritsari Kulcha topped with butter and served with chole and a tall glass of thick, creamy lassi.',
+        tip: 'Gian Chand Lassi on Cooper Road is highly recommended after your kulcha meal.',
+        ...enrichStop('gian-chand-lassi', 'food'),
+      },
+      {
+        id: 'Durgiana_Temple',
+        type: 'monument',
+        title: 'Visit Durgiana Temple',
+        category: 'Spiritual Shrine',
+        timeSlot: '01:30 PM – 02:30 PM',
+        duration: '1 Hour',
+        cost: 'Free Entry',
+        description: 'Visit the sacred Durgiana Hindu Temple, architecturally similar to the Golden Temple, built inside a water tank.',
+        tip: 'Also known as the Silver Temple due to its stunning silver doors and carved marble exterior.',
+        ...enrichStop('Durgiana_Temple', 'monument'),
+      },
+      {
+        id: 'Mata_Lal_Devi_Temple',
+        type: 'monument',
+        title: 'Visit Mata Lal Devi Temple',
+        category: 'Unique Shrine',
+        timeSlot: '03:00 PM – 04:00 PM',
+        duration: '1 Hour',
+        cost: 'Free Entry',
+        description: 'Navigate the artificial cave labyrinths and mirrored corridors in this unique temple dedicated to Mata Lal Devi.',
+        tip: 'Be prepared to crawl through small sections of the cave. Kids love this labyrinth!',
+        ...enrichStop('Mata_Lal_Devi_Temple', 'monument'),
+      },
+      {
+        id: 'ram-tirath',
+        type: 'monument',
+        title: 'Visit Ram Tirath Temple',
+        category: 'Heritage Spot',
+        timeSlot: '04:30 PM – 05:30 PM',
+        duration: '1 Hour',
+        cost: 'Free Entry',
+        description: 'Visit the ancient Ram Tirath Temple, associated with the Ramayana, believed to be the place where Luv and Kush were born.',
+        tip: 'It has a large sacred pool surrounding the temple complex, perfect for a sunset walk.',
+        ...enrichStop('Ram_Tirth', 'monument'),
+      },
+      {
+        id: 'sadda-pind',
+        type: 'monument',
+        title: 'Spend Afternoon at Sadda Pind',
+        category: 'Cultural Village',
+        timeSlot: '06:00 PM – 09:00 PM',
+        duration: '3 Hours',
+        cost: '₹700 (includes dinner)',
+        description: 'Experience the traditional village life of Punjab at Sadda Pind. Enjoy bhangra performances, local crafts, and a traditional dinner.',
+        tip: 'Keep at least 3 hours to explore the full village. The ticket includes interactive cultural activities.',
+        image: 'https://images.unsplash.com/photo-1599341951474-27f989cd30ef?q=80&w=800&auto=format&fit=crop',
+      },
+      {
+        id: 'Gobindgarh_Fort',
+        type: 'monument',
+        title: 'Gobindgarh Fort Laser Show',
+        category: 'Military Heritage',
+        timeSlot: '09:15 PM – 10:00 PM',
+        duration: '45 Minutes',
+        cost: '₹150',
+        description: 'Stroll through the 18th-century Gobindgarh Fort and watch the Sher-e-Punjab light & sound mapping show.',
+        tip: 'The show starts after dark on the fort walls. Book tickets in advance.',
+        ...enrichStop('Gobindgarh_Fort', 'monument'),
+      },
+    ],
+    []
+  );
 
-  const daySummaries: Record<1 | 2, DaySummary> = {
+  // ========================= DAY 4 DATA =========================
+  const day4Stops: ItineraryStop[] = useMemo(
+    () => [
+      {
+        id: 'checkout',
+        type: 'monument',
+        title: 'Check out from Hotel',
+        category: 'Logistics',
+        timeSlot: '09:00 AM – 09:30 AM',
+        duration: '30 Minutes',
+        cost: 'Varies',
+        description: 'Pack your luggage, check out from the hotel, and prepare for departure.',
+        tip: 'You can store your bags at the hotel cloakroom while completing the yatra.',
+        image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop',
+      },
+      {
+        id: 'panj-sarovar-yatra',
+        type: 'monument',
+        title: 'Visit sacred Five Sarovars of Amritsar',
+        category: 'Spiritual Yatra',
+        timeSlot: '10:00 AM – 01:30 PM',
+        duration: '3.5 Hours',
+        cost: 'Free Entry',
+        description: 'Complete the sacred Panj Sarovar Yatra by visiting the five holy pools of Amritsar: Bibeksar Sahib, Ramsar Sahib, Harmandir Sahib, Santokhsar Sahib, and Kaulsar Sahib.',
+        tip: 'It is a highly auspicious spiritual yatra in Amritsar. Walk peacefully through each gurdwara.',
+        ...enrichStop('Harmandir_Sahib', 'monument'),
+      },
+      {
+        id: 'prayers-yatra',
+        type: 'monument',
+        title: 'Offer Prayers & Yatra Completion',
+        category: 'Spiritual',
+        timeSlot: '01:30 PM – 02:00 PM',
+        duration: '30 Minutes',
+        cost: 'Free Entry',
+        description: 'Offer prayers at the final stop of the yatra, receive karah prasad, and complete your yatra rituals.',
+        tip: 'Maintain silence and reflect on your trip.',
+        image: 'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?q=80&w=800&auto=format&fit=crop',
+      },
+      {
+        id: 'departure',
+        type: 'monument',
+        title: 'Departure & Onward Journey',
+        category: 'Logistics',
+        timeSlot: '03:00 PM onward',
+        duration: 'Varies',
+        cost: 'Varies',
+        description: 'Collect your luggage and depart for your onward journey back home.',
+        tip: 'We hope you had a wonderful and spiritually fulfilling trip to Amritsar!',
+      },
+    ],
+    []
+  );
+
+  const activeStops = useMemo(() => {
+    switch (activeDay) {
+      case 1:
+        return day1Stops;
+      case 2:
+        return day2Stops;
+      case 3:
+        return day3Stops;
+      case 4:
+        return day4Stops;
+      default:
+        return day1Stops;
+    }
+  }, [activeDay, day1Stops, day2Stops, day3Stops, day4Stops]);
+
+  const daySummaries: Record<1 | 2 | 3 | 4, DaySummary> = {
     1: {
-      totalStops: 5,
+      totalStops: 7,
       totalHours: '~12 Hours',
-      theme: 'Spiritual & Historic Core',
-      tagline: 'Faith, freedom, and the soul of Amritsar in a single unforgettable day.',
+      theme: 'Arrival & Spiritual Evening',
+      tagline: 'Settle in, explore the birthplace of Baba Deep Singh, and attend the night Sukh Asan.',
       icon: <Sun size={24} />,
     },
     2: {
-      totalStops: 5,
-      totalHours: '~10 Hours',
-      theme: 'Royal Heritage & Ancient Forts',
-      tagline: 'Temples, labyrinths, fortresses, and Sikh Empire grandeur.',
-      icon: <Moon size={24} />,
+      totalStops: 7,
+      totalHours: '~15 Hours',
+      theme: 'Heritage & Border Experience',
+      tagline: 'Attend Amrit Vela, learn local war history, and witness the Wagah border beating retreat.',
+      icon: <Sunrise size={24} />,
+    },
+    3: {
+      totalStops: 7,
+      totalHours: '~12 Hours',
+      theme: 'Temples, Food & Culture',
+      tagline: 'Traditional shopping, iconic kulchas, cave labyrinths, and Sadda Pind Punjabi village.',
+      icon: <Star size={24} />,
+    },
+    4: {
+      totalStops: 4,
+      totalHours: '~6 Hours',
+      theme: 'Panj Sarovar Yatra & Departure',
+      tagline: 'Complete the sacred yatra across five holy sarovars before departing home.',
+      icon: <Compass size={24} />,
     },
   };
 
@@ -760,6 +992,27 @@ export default function ItineraryPage() {
           color: rgba(201, 161, 74, 0.07);
         }
 
+        .stop-card-image-container {
+          width: 100%;
+          height: 200px;
+          border-radius: 12px;
+          overflow: hidden;
+          margin-bottom: 20px;
+          border: 1px solid var(--light-border);
+        }
+
+        .stop-card-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          transition: var(--transition-smooth);
+        }
+
+        .stop-card:hover .stop-card-image {
+          transform: scale(1.04);
+        }
+
         /* Category badge */
         .stop-badge {
           display: inline-flex;
@@ -976,8 +1229,26 @@ export default function ItineraryPage() {
           .stop-col { padding-left: 16px; }
           .stop-card { padding: 22px 20px; }
           .stop-title { font-size: 18px; }
-          .iti-tabs { flex-direction: column; border-radius: 20px; }
-          .iti-tab-btn { justify-content: center; }
+          .iti-tabs {
+            flex-direction: row;
+            border-radius: 100px;
+            overflow-x: auto;
+            max-width: 100%;
+            padding: 4px;
+            gap: 6px;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+          }
+          .iti-tabs::-webkit-scrollbar {
+            display: none;
+          }
+          .iti-tab-btn {
+            padding: 10px 18px;
+            font-size: 13px;
+            gap: 6px;
+            flex-shrink: 0;
+            justify-content: center;
+          }
         }
 
         @media (max-width: 480px) {
@@ -1043,22 +1314,20 @@ export default function ItineraryPage() {
             {/* ─── Day Switcher Tabs ─── */}
             <div className="iti-tabs-section reveal-on-scroll">
               <div className="iti-tabs">
-                <button
-                  className={`iti-tab-btn ${activeDay === 1 ? 'iti-tab-btn-active' : ''}`}
-                  onClick={() => handleDaySwitch(1)}
-                  aria-pressed={activeDay === 1}
-                >
-                  <Sunrise size={18} />
-                  Day 1 — Core Experience
-                </button>
-                <button
-                  className={`iti-tab-btn ${activeDay === 2 ? 'iti-tab-btn-active' : ''}`}
-                  onClick={() => handleDaySwitch(2)}
-                  aria-pressed={activeDay === 2}
-                >
-                  <Star size={18} />
-                  Day 2 — Immersive Tour
-                </button>
+                {[1, 2, 3, 4].map((dayNum) => (
+                  <button
+                    key={dayNum}
+                    className={`iti-tab-btn ${activeDay === dayNum ? 'iti-tab-btn-active' : ''}`}
+                    onClick={() => handleDaySwitch(dayNum as 1 | 2 | 3 | 4)}
+                    aria-pressed={activeDay === dayNum}
+                  >
+                    {dayNum === 1 && <Sunrise size={18} />}
+                    {dayNum === 2 && <Calendar size={18} />}
+                    {dayNum === 3 && <Star size={18} />}
+                    {dayNum === 4 && <Compass size={18} />}
+                    Day {dayNum}
+                  </button>
+                ))}
               </div>
             </div>
 
@@ -1093,10 +1362,17 @@ export default function ItineraryPage() {
               key={activeDay}
             >
               {activeStops.map((stop, index) => {
-                const href =
-                  stop.type === 'museum'
-                    ? `/museums/${stop.id}`
-                    : `/monuments/${stop.id}`;
+                // Determine if this stop has a guide route in DB
+                let href = '';
+                if (stop.dbId && stop.dbType) {
+                  if (stop.dbType === 'monument') {
+                    href = `/monuments/${stop.dbId}`;
+                  } else if (stop.dbType === 'museum') {
+                    href = `/museums/${stop.dbId}`;
+                  } else if (stop.dbType === 'food') {
+                    href = `/food/${stop.dbId}`;
+                  }
+                }
 
                 return (
                   <div
@@ -1152,6 +1428,13 @@ export default function ItineraryPage() {
                         {/* Description */}
                         <p className="stop-desc">{stop.description}</p>
 
+                        {/* Image display */}
+                        {stop.image && (
+                          <div className="stop-card-image-container">
+                            <img src={stop.image} alt={stop.title} className="stop-card-image" loading="lazy" />
+                          </div>
+                        )}
+
                         {/* Traveler tip */}
                         <div className="stop-tip">
                           <div className="stop-tip-icon">💡</div>
@@ -1161,18 +1444,22 @@ export default function ItineraryPage() {
                           </div>
                         </div>
 
-                        {/* CTA */}
-                        <div className="stop-cta-row">
-                          <Link href={href} className="stop-explore-btn">
-                            View Full Guide <ChevronRight size={15} />
-                          </Link>
-                          {stop.address && (
-                            <span className="stop-map-tag">
-                              <MapPin size={13} />
-                              {stop.address.split(',')[0]}
-                            </span>
-                          )}
-                        </div>
+                        {/* CTA / Address Row */}
+                        {(href || stop.address) && (
+                          <div className="stop-cta-row">
+                            {href && (
+                              <Link href={href} className="stop-explore-btn">
+                                View Full Guide <ChevronRight size={15} />
+                              </Link>
+                            )}
+                            {stop.address && (
+                              <span className="stop-map-tag">
+                                <MapPin size={13} />
+                                {stop.address.split(',')[0]}
+                              </span>
+                            )}
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>
