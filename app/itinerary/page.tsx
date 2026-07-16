@@ -56,6 +56,7 @@ export default function ItineraryPage() {
     setIsTransitioning(true);
     setTimeout(() => {
       setActiveDay(day);
+      window.scrollTo(0, 0);
       setIsTransitioning(false);
     }, 300);
   };
@@ -153,7 +154,7 @@ export default function ItineraryPage() {
         cost: 'Free Entry',
         description: 'Visit the sacred Gurdwara Shaheedan Sahib, dedicated to Baba Deep Singh Ji. It is a highly revered shrine carrying deep history and immense spiritual energy.',
         tip: 'Head covering is mandatory inside the temple complex. Scarves are provided at the entrance.',
-        image: 'https://images.unsplash.com/photo-1600121848594-d8644e57abab?q=80&w=800&auto=format&fit=crop',
+        image: '/baba.jpg',
       },
       {
         id: 'beera-samosa-snack',
@@ -166,6 +167,7 @@ export default function ItineraryPage() {
         description: 'Stop at the legendary Beera Samosa Wala in Atta Mandi and enjoy their famous crispy Satpura (multi-layered pastry) served with warm potato curry.',
         tip: 'Try their fresh piping hot samosas as well.',
         ...enrichStop('beera-samosa-wala', 'food'),
+        image: 'https://images.unsplash.com/photo-1601050690597-df056fb4ce78?q=80&w=800&auto=format&fit=crop',
       },
       {
         id: 'guru-ka-mahal',
@@ -177,7 +179,7 @@ export default function ItineraryPage() {
         cost: 'Free Entry',
         description: 'Visit Guru Ka Mahal, the historical house built by Guru Ram Das Ji. This is the Janam Asthan (birthplace) of Guru Tegh Bahadur Ji.',
         tip: 'It is situated in the old city lanes near the Golden Temple, perfect for a short walking tour.',
-        image: 'https://images.unsplash.com/photo-1588096344356-9b4e548d1de4?q=80&w=800&auto=format&fit=crop',
+        image: '/mahal.jpg',
       },
       {
         id: 'sukh-asan',
@@ -190,6 +192,7 @@ export default function ItineraryPage() {
         description: 'Attend the peaceful Sukh Asan ceremony at the Golden Temple, where the holy Guru Granth Sahib is carried in a golden palanquin back to its resting room.',
         tip: 'Stand along the bridge early to catch a clear view of the palanquin processional.',
         ...enrichStop('Harmandir_Sahib', 'monument'),
+        image: '/sukh-asan.jpg',
       },
       {
         id: 'kesar-dhaba-dinner',
@@ -221,6 +224,7 @@ export default function ItineraryPage() {
         description: 'Witness the early morning Prakash ceremony at the Golden Temple when the holy Guru Granth Sahib is brought out to the main sanctum.',
         tip: 'It is the most serene and peaceful time of the day to experience the spiritual core of the shrine.',
         ...enrichStop('Harmandir_Sahib', 'monument'),
+        image: '/golden-temple1.jpg',
       },
       {
         id: 'langar-breakfast',
@@ -232,7 +236,7 @@ export default function ItineraryPage() {
         cost: 'Free Entry',
         description: 'Partake in the Guru Ka Langar, a massive community kitchen serving free vegetarian meals to all visitors without discrimination.',
         tip: 'Sit cross-legged on the floor mat and enjoy the hot dal, roti, and kheer prepared by volunteers.',
-        image: 'https://images.unsplash.com/photo-1606491956689-2ea866880c84?q=80&w=800&auto=format&fit=crop',
+        image: '/l.webp',
       },
       {
         id: 'Jallianwala_Bagh',
@@ -245,6 +249,7 @@ export default function ItineraryPage() {
         description: 'Walk through the historic walled public garden where the 1919 massacre occurred. Bullet marks are still preserved in the walls.',
         tip: 'Read the memorial plaques along the narrow entryway used by General Dyer\'s troops.',
         ...enrichStop('Jallianwala_Bagh', 'monument'),
+        image: '/jb.jpg',
       },
       {
         id: 'partition-museum',
@@ -257,6 +262,7 @@ export default function ItineraryPage() {
         description: 'Explore the world\'s first museum dedicated to the 1947 Partition of British India, housed in the restored Town Hall building.',
         tip: 'Oral survivor stories in the later galleries are deeply moving. Take your time.',
         ...enrichStop('partition-museum', 'museum'),
+        image: '/partition-museum.jpg',
       },
       {
         id: 'war-memorial',
@@ -269,6 +275,7 @@ export default function ItineraryPage() {
         description: 'Visit the state war heroes\' memorial museum showcasing military history. Features a massive 45-meter-high stainless steel sword monument.',
         tip: 'Perfect place to appreciate the bravery of Punjab soldiers from ancient times to the modern era.',
         ...enrichStop('war-memorial', 'museum'),
+        image: '/w.jpg',
       },
       {
         id: 'Wagah',
@@ -281,6 +288,7 @@ export default function ItineraryPage() {
         description: 'Watch the high-stepping military ceremony and border retreat drills between the Indian BSF and Pakistani Rangers.',
         tip: 'Arrive early by 3:30 PM to claim good seats. Large bags are not allowed in the stadium.',
         ...enrichStop('Wagah', 'monument'),
+        image: '/wb.jpg',
       },
       {
         id: 'brothers-dhaba-dinner',
@@ -292,7 +300,7 @@ export default function ItineraryPage() {
         cost: '₹400 for two',
         description: 'Have a traditional Punjabi dinner at Brothers Dhaba near Town Hall.',
         tip: 'Try their special stuffed Amritsari parathas and badam milk.',
-        image: 'https://images.unsplash.com/photo-1626132647523-66f5bf380027?q=80&w=800&auto=format&fit=crop',
+        image: '/bro.webp',
       },
     ],
     []
@@ -311,7 +319,7 @@ export default function ItineraryPage() {
         cost: 'Varies',
         description: 'Shop for traditional colorful Punjabi suits, Phulkari embroidery, and handcrafted Punjabi juttis in the old market lanes.',
         tip: 'Bargaining is expected. It is best to shop early to avoid heavy daytime crowds.',
-        image: 'https://images.unsplash.com/photo-1583258292688-d0213df4a3a8?q=80&w=800&auto=format&fit=crop',
+        image: '/s.jpg',
       },
       {
         id: 'kulcha-lunch',
@@ -324,6 +332,7 @@ export default function ItineraryPage() {
         description: 'Enjoy a classic crispy wood-fired Amritsari Kulcha topped with butter and served with chole and a tall glass of thick, creamy lassi.',
         tip: 'Gian Chand Lassi on Cooper Road is highly recommended after your kulcha meal.',
         ...enrichStop('gian-chand-lassi', 'food'),
+        image: '/gian.jpg',
       },
       {
         id: 'Durgiana_Temple',
@@ -336,6 +345,7 @@ export default function ItineraryPage() {
         description: 'Visit the sacred Durgiana Hindu Temple, architecturally similar to the Golden Temple, built inside a water tank.',
         tip: 'Also known as the Silver Temple due to its stunning silver doors and carved marble exterior.',
         ...enrichStop('Durgiana_Temple', 'monument'),
+        image: 'https://res.cloudinary.com/dstgn8brb/image/upload/v1784091001/2023_08_22_17_49_IMG_8407_wljo0r.jpg',
       },
       {
         id: 'Mata_Lal_Devi_Temple',
@@ -348,6 +358,7 @@ export default function ItineraryPage() {
         description: 'Navigate the artificial cave labyrinths and mirrored corridors in this unique temple dedicated to Mata Lal Devi.',
         tip: 'Be prepared to crawl through small sections of the cave. Kids love this labyrinth!',
         ...enrichStop('Mata_Lal_Devi_Temple', 'monument'),
+        image: '/mld.jpg',
       },
       {
         id: 'ram-tirath',
@@ -360,6 +371,7 @@ export default function ItineraryPage() {
         description: 'Visit the ancient Ram Tirath Temple, associated with the Ramayana, believed to be the place where Luv and Kush were born.',
         tip: 'It has a large sacred pool surrounding the temple complex, perfect for a sunset walk.',
         ...enrichStop('Ram_Tirth', 'monument'),
+        image: '/ram-tirth.jpg',
       },
       {
         id: 'sadda-pind',
@@ -371,7 +383,7 @@ export default function ItineraryPage() {
         cost: '₹700 (includes dinner)',
         description: 'Experience the traditional village life of Punjab at Sadda Pind. Enjoy bhangra performances, local crafts, and a traditional dinner.',
         tip: 'Keep at least 3 hours to explore the full village. The ticket includes interactive cultural activities.',
-        image: 'https://images.unsplash.com/photo-1599341951474-27f989cd30ef?q=80&w=800&auto=format&fit=crop',
+        image: '/sada.png',
       },
       {
         id: 'Gobindgarh_Fort',
@@ -384,6 +396,7 @@ export default function ItineraryPage() {
         description: 'Stroll through the 18th-century Gobindgarh Fort and watch the Sher-e-Punjab light & sound mapping show.',
         tip: 'The show starts after dark on the fort walls. Book tickets in advance.',
         ...enrichStop('Gobindgarh_Fort', 'monument'),
+        image: '/laser.jpg',
       },
     ],
     []
@@ -402,7 +415,7 @@ export default function ItineraryPage() {
         cost: 'Varies',
         description: 'Pack your luggage, check out from the hotel, and prepare for departure.',
         tip: 'You can store your bags at the hotel cloakroom while completing the yatra.',
-        image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop',
+        // image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop',
       },
       {
         id: 'panj-sarovar-yatra',
@@ -414,7 +427,8 @@ export default function ItineraryPage() {
         cost: 'Free Entry',
         description: 'Complete the sacred Panj Sarovar Yatra by visiting the five holy pools of Amritsar: Bibeksar Sahib, Ramsar Sahib, Harmandir Sahib, Santokhsar Sahib, and Kaulsar Sahib.',
         tip: 'It is a highly auspicious spiritual yatra in Amritsar. Walk peacefully through each gurdwara.',
-        ...enrichStop('Harmandir_Sahib', 'monument'),
+        // ...enrichStop('Harmandir_Sahib', 'monument'),
+        image: '/5s.jpg',
       },
       {
         id: 'prayers-yatra',
@@ -537,7 +551,7 @@ export default function ItineraryPage() {
           background-image:
             radial-gradient(ellipse at 12% 8%, rgba(201, 161, 74, 0.05) 0%, transparent 50%),
             radial-gradient(ellipse at 88% 90%, rgba(94, 49, 32, 0.04) 0%, transparent 50%);
-          overflow-x: hidden;
+          overflow-x: clip;
         }
 
         /* Geometric pattern overlay */
@@ -700,12 +714,20 @@ export default function ItineraryPage() {
           flex-direction: column;
           align-items: center;
           margin-bottom: 56px;
-          gap: 20px;
+          gap: 15px;
+          position: sticky;
+          top: 0px;
+          z-index: 45;
+          padding: 12px 0;
+          background: rgba(245, 244, 241, 0.9);
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          width: 100%;
         }
 
         .iti-tabs {
           display: flex;
-          gap: 12px;
+          gap: 8px;
           background: var(--card-bg);
           border: 1px solid var(--light-border);
           border-radius: 100px;
@@ -716,7 +738,7 @@ export default function ItineraryPage() {
         .iti-tab-btn {
           display: flex;
           align-items: center;
-          gap: 10px;
+          gap: 5px;
           background: transparent;
           border: none;
           color: var(--text-secondary);
@@ -1312,7 +1334,7 @@ export default function ItineraryPage() {
             </header>
 
             {/* ─── Day Switcher Tabs ─── */}
-            <div className="iti-tabs-section reveal-on-scroll">
+            <div className="iti-tabs-section">
               <div className="iti-tabs">
                 {[1, 2, 3, 4].map((dayNum) => (
                   <button
@@ -1321,10 +1343,10 @@ export default function ItineraryPage() {
                     onClick={() => handleDaySwitch(dayNum as 1 | 2 | 3 | 4)}
                     aria-pressed={activeDay === dayNum}
                   >
-                    {dayNum === 1 && <Sunrise size={18} />}
+                    {/* {dayNum === 1 && <Sunrise size={18} />}
                     {dayNum === 2 && <Calendar size={18} />}
                     {dayNum === 3 && <Star size={18} />}
-                    {dayNum === 4 && <Compass size={18} />}
+                    {dayNum === 4 && <Compass size={18} />} */}
                     Day {dayNum}
                   </button>
                 ))}
