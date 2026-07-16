@@ -477,7 +477,7 @@ export default function ItineraryPage() {
       totalStops: 7,
       totalHours: '~12 Hours',
       theme: 'Arrival & Spiritual Evening',
-      tagline: 'Settle in, explore the birthplace of Baba Deep Singh, and attend the night Sukh Asan.',
+      tagline: 'Settle in, explore the Gurdwara of Baba Deep Singh, and attend the night Sukh Asan.',
       icon: <Sun size={24} />,
     },
     2: {
