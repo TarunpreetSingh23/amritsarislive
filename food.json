@@ -1,134 +1,229 @@
-[
-  {
-    "id": "ram-patty-kulcha",
-    "title": "Ram Patty Kulcha",
-    "category": "Patty Kulcha",
-    "description": "Located in the busy lanes of Katra Ahluwalia near the Golden Temple, Ram Patty Kulcha Point is a legendary street food stall run by three brothers. It is famous for its unique triangle-shaped, flaky 'Patty Kulcha' filled with a spiced mixture of corn, peas, and potatoes, baked to crispy perfection in a traditional clay tandoor. Served with flavorful chole and their signature onion chutney.",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=800&auto=format&fit=crop",
-    "link": "https://en.wikipedia.org/wiki/Amritsari_kulcha",
-    "bestTime": "Morning / Early Afternoon (9:00 AM – 1:30 PM)",
-    "timeRequired": "20–30 minutes",
-    "highlights": ["Unique triangle shape", "Corn & Peas stuffing", "Served with desi ghee", "Jalebi Chowk proximity", "Budget-friendly street food"],
-    "entryFee": "₹80 – ₹150 for two",
-    "timings": "9:00 AM – 2:30 PM (or until stocks last)",
-    "address": "Katra Ahluwalia, Near Jalebi Chowk, Amritsar, Punjab 143001",
-    "mapUrl": "https://maps.google.com/?q=Ram+Patty+Kulcha+Amritsar",
-    "bulletPoints": [
-      "Run by three brothers who maintain the secret recipe for their flaky crust",
-      "Instead of a standard flatbread, the patty kulcha resembles a flaky puff pastry baked in a tandoor",
-      "Arrive early in the morning as they regularly sell out before their official closing time",
-      "Extremely popular among local shoppers and pilgrims visiting the nearby Darbar Sahib",
-      "A rare non-traditional variation of the Amritsari Kulcha that has gained legendary status"
-    ]
+[{
+  "_id": {
+    "$oid": "6a5748f29b40c8ae4adeee38"
   },
-  {
-    "id": "gian-chand-lassi",
-    "title": "Gian Chand Lassi (Gian di Lassi)",
-    "category": "Traditional Lassi",
-    "description": "Gian Chand Lassi (popularly known as Gian di Lassi), located in Katra Sher Singh, is a legendary, decades-old institution celebrated as one of the oldest and most iconic lassi shops in Amritsar. It is famous for its thick, sweet, hand-churned lassi served in tall glasses, topped with a massive dollop of fresh cream (malai) and butter, with the 'Peda Lassi' being a highly recommended local favorite.",
-    "image": "/g.jpg",
-    "link": "https://en.wikipedia.org/wiki/Lassi",
-    "bestTime": "Afternoon (12:00 PM – 4:00 PM)",
-    "timeRequired": "15–20 minutes",
-    "highlights": ["Famous Peda Lassi", "Thick malai & butter topping", "Traditional wooden churned yogurt", "Decades-old heritage shop", "Rich, dessert-like consistency"],
-    "entryFee": "₹100 – ₹180 for two",
-    "timings": "8:00 AM – 10:00 PM",
-    "address": "Katra Sher Singh, Near Regent Cinema, Amritsar, Punjab 143001",
-    "mapUrl": "https://maps.google.com/?q=Gian+Chand+Lassi+Amritsar",
-    "bulletPoints": [
-      "Widely recognized as the pioneer of the 'Peda Lassi', where sweet peda sweets are blended directly into the yogurt",
-      "Every glass is prepared fresh using traditional wooden whisks (madhani) to retain thickness",
-      "Frequented by travelers and food writers seeking the most authentic Punjabi lassi experience",
-      "Located in the historic Katra Sher Singh area, making it a perfect afternoon refreshment stop",
-      "The consistency is so rich and thick that it is eaten with a spoon rather than drunk"
-    ]
+  "id": "ram-patty-kulcha",
+  "title": "Ram Patty Kulcha",
+  "category": "Patty Kulcha",
+  "description": "Located in the busy lanes of Katra Ahluwalia near the Golden Temple, Ram Patty Kulcha Point is a legendary street food stall run by three brothers. It is famous for its unique triangle-shaped, flaky 'Patty Kulcha' filled with a spiced mixture of corn, peas, and potatoes, baked to crispy perfection in a traditional clay tandoor. Served with flavorful chole and their signature onion chutney.",
+  "image": "/rk.jpg",
+  "link": "https://en.wikipedia.org/wiki/Amritsari_kulcha",
+  "bestTime": "Morning / Early Afternoon (9:00 AM – 1:30 PM)",
+  "timeRequired": "20–30 minutes",
+  "highlights": [
+    "Unique triangle shape",
+    "Corn & Peas stuffing",
+    "Served with desi ghee",
+    "Jalebi Chowk proximity",
+    "Budget-friendly street food"
+  ],
+  "entryFee": "₹80 – ₹150 for two",
+  "timings": "9:00 AM – 2:30 PM (or until stocks last)",
+  "address": "Katra Ahluwalia, Near Jalebi Chowk, Amritsar, Punjab 143001",
+  "mapUrl": "https://maps.google.com/?q=Ram+Patty+Kulcha+Amritsar",
+  "bulletPoints": [
+    "Run by three brothers who maintain the secret recipe for their flaky crust",
+    "Instead of a standard flatbread, the patty kulcha resembles a flaky puff pastry baked in a tandoor",
+    "Arrive early in the morning as they regularly sell out before their official closing time",
+    "Extremely popular among local shoppers and pilgrims visiting the nearby Darbar Sahib",
+    "A rare non-traditional variation of the Amritsari Kulcha that has gained legendary status"
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-07-15T08:46:42.890Z"
   },
-  {
-    "id": "gurdas-ram-jalebi",
-    "title": "Gurdas Ram Jalebi Wala",
-    "category": "Traditional Sweets",
-    "description": "Located in a tiny shop just a few steps away from the Golden Temple, Gurdas Ram Jalebi Wala has been serving hot, piping, and crispy jalebis and gulab jamuns for decades. The jalebis are fried in pure desi ghee right in front of your eyes and soaked in sugar syrup, offering the ultimate sweet ending to your heritage tour.",
-    "image": "/gr.jpg",
-    "link": "https://en.wikipedia.org/wiki/Jalebi",
-    "bestTime": "Late afternoon or evening",
-    "timeRequired": "15–20 minutes",
-    "highlights": ["Fresh, hot, crispy Jalebis", "Desi Ghee preparation", "Soft, melt-in-the-mouth Gulab Jamuns", "Historic location near Golden Temple", "Affordable local street treat"],
-    "entryFee": "₹50 – ₹100 for two",
-    "timings": "8:00 AM – 10:00 PM",
-    "address": "Katras Ahluwalia, Near Golden Temple, Amritsar, Punjab 143006",
-    "mapUrl": "https://maps.google.com/?q=Gurdas+Ram+Jalebi+Wala+Amritsar",
-    "bulletPoints": [
-      "Operates from a very small shop front, emphasizing quality and speed of preparation",
-      "Prepared using traditional cotton cloth squeeze bags to shape the loops in oil",
-      "Locals recommend pairing the sweet jalebis with savory rabri when available",
-      "Perfect quick snack stop during a walking tour of the Golden Temple corridors",
-      "Highly renowned for retaining the exact same crisp texture and syrup sweetness for generations"
-    ]
-  },
-  {
-    "id": "beera-samosa-wala",
-    "title": "Beera Samosa Wala",
-    "category": "Traditional Snacks",
-    "description": "Established in 1949, Beera Samosa Wala is a legendary street food joint located in Atta Mandi, near the Golden Temple. With over 75 years of history, it is famous for serving hot, crispy, and flaky samosas filled with spicy potatoes, served alongside their signature tangy aloo sabzi. The shop is also highly celebrated for its 'Satpura', a multi-layered crispy pastry.",
-    "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?q=80&w=800&auto=format&fit=crop",
-    "link": "https://en.wikipedia.org/wiki/Samosa",
-    "bestTime": "Evening / Tea-time (4:00 PM – 6:30 PM)",
-    "timeRequired": "15–30 minutes",
-    "highlights": ["Over 75 years of heritage", "Crispy Satpura pastry", "Spicy Samosa with Aloo Sabzi", "Traditional street-side frying", "Located near Atta Mandi"],
-    "entryFee": "₹60 – ₹120 for two",
-    "timings": "9:00 AM – 9:00 PM",
-    "address": "Atta Mandi, Katra Ahluwalia, Near Golden Temple, Amritsar, Punjab 143006",
-    "mapUrl": "https://maps.google.com/?q=Beera+Samosa+Wala+Amritsar",
-    "bulletPoints": [
-      "Founded right after partition in 1949, preserving traditional refugee snack recipes",
-      "Their unique 'Satpura' is a multi-layered pastry that crumbles delightfully with every bite",
-      "Unlike typical chutney pairings, they serve their samosas drenched in a warm, spicy potato curry",
-      "An absolute must-visit for tourists exploring the old city lanes behind Darbar Sahib",
-      "Maintains an old-school, no-frills setup where snack batches are fried fresh in massive iron woks"
-    ]
-  },
-  {
-    "id": "lubhaya-ram-aam-papad",
-    "title": "Lubhaya Ram & Sons Aam Papad",
-    "category": "Sweet & Sour Chaat",
-    "description": "Established in 1965 on Lawrence Road, Lubhaya Ram & Sons is a legendary establishment renowned for its authentic Aam Papad (mango leather). It is famous for serving a unique sweet and sour chaat made from layers of sun-dried mango pulp chopped and tossed with black salt, cumin, chili powder, and fresh lemon juice, alongside an assortment of traditional digestive candies (churan).",
-    "image": "https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?q=80&w=800&auto=format&fit=crop",
-    "link": "https://en.wikipedia.org/wiki/Aam_papad",
-    "bestTime": "Afternoon or Evening (1:00 PM – 8:00 PM)",
-    "timeRequired": "15–20 minutes",
-    "highlights": ["Sun-dried mango leather chaat", "Sweet & sour spicy toppings", "Established in 1965", "Large variety of churan & supari", "Located on Lawrence Road"],
-    "entryFee": "₹80 – ₹150 for two",
-    "timings": "10:00 AM – 10:00 PM",
-    "address": "Lawrence Road, Opposite Arya Samaj Mandir, Amritsar, Punjab 143001",
-    "mapUrl": "https://maps.google.com/?q=Lubhaya+Ram+And+Sons+Amritsar",
-    "bulletPoints": [
-      "Known for their distinct recipe where mango sheets are seasoned and shredded into a flavorful chaat",
-      "Offers a wide selection of mango varieties ranging from sweet (meetha) to extremely tangy (khatta)",
-      "A popular stop for locals to pick up post-meal digestive candies and traditional pickles",
-      "Located opposite the historic Arya Samaj Mandir, a central commercial hub in Amritsar",
-      "Perfect souvenir stop to buy packed sweet-and-sour mango sheets for friends and family"
-    ]
-  },
-  {
-    "id": "kanha-sweets",
-    "title": "Kanha Sweets",
-    "category": "Iconic Breakfast",
-    "description": "Kanha Sweets on Lawrence Road is an iconic breakfast institution in Amritsar, widely celebrated for serving the city's finest Puri Chole. The meal features large, piping hot, crispy puris served alongside spicy masala chole and a unique sweet-and-tangy aloo ki sabzi, often paired with their famous rich Gur ka Halwa and sweet lassi.",
-    "image": "https://images.unsplash.com/photo-1626132647523-66f5bf380027?q=80&w=800&auto=format&fit=crop",
-    "link": "https://en.wikipedia.org/wiki/Chole_bhature",
-    "bestTime": "Morning Breakfast (8:00 AM – 11:30 AM)",
-    "timeRequired": "30–45 minutes",
-    "highlights": ["Famous crispy Puris", "Spicy Chole & Sweet Aloo Sabzi", "Unlimited gravy servings", "Delicious Gur ka Halwa", "Lawrence Road breakfast landmark"],
-    "entryFee": "₹200 – ₹350 for two",
-    "timings": "8:00 AM – 4:00 PM",
-    "address": "Lawrence Road, White Avenue, Opposite Bijli Pehalwan Mandir, Amritsar, Punjab 143001",
-    "mapUrl": "https://maps.google.com/?q=Kanha+Sweets+Amritsar",
-    "bulletPoints": [
-      "Famous for their unique service style where potato and chickpea curries are refilled unlimitedly",
-      "The aloo sabzi has a signature sweet-and-sour (khatta-meetha) profile that pairs perfectly with spicy chole",
-      "Their Gur ka Halwa (jaggery semolina pudding) is widely regarded as a stellar sweet accompaniment",
-      "Arrive early on weekends to secure a table, as crowds gather for their traditional breakfast",
-      "Also features a popular sweet counter showcasing high-quality traditional Punjabi milk sweets"
-    ]
+  "updatedAt": {
+    "$date": "2026-07-15T08:46:42.890Z"
   }
+},
+  {
+  "_id": {
+    "$oid": "6a5748f29b40c8ae4adeee39"
+  },
+  "id": "gian-chand-lassi",
+  "title": "Gian Chand Lassi (Gian di Lassi)",
+  "category": "Traditional Lassi",
+  "description": "Gian Chand Lassi (popularly known as Gian di Lassi), located in Katra Sher Singh, is a legendary, decades-old institution celebrated as one of the oldest and most iconic lassi shops in Amritsar. It is famous for its thick, sweet, hand-churned lassi served in tall glasses, topped with a massive dollop of fresh cream (malai) and butter, with the 'Peda Lassi' being a highly recommended local favorite.",
+  "image": "/gian.jpg",
+  "link": "https://en.wikipedia.org/wiki/Lassi",
+  "bestTime": "Afternoon (12:00 PM – 4:00 PM)",
+  "timeRequired": "15–20 minutes",
+  "highlights": [
+    "Famous Peda Lassi",
+    "Thick malai & butter topping",
+    "Traditional wooden churned yogurt",
+    "Decades-old heritage shop",
+    "Rich, dessert-like consistency"
+  ],
+  "entryFee": "₹100 – ₹180 for two",
+  "timings": "8:00 AM – 10:00 PM",
+  "address": "Katra Sher Singh, Near Regent Cinema, Amritsar, Punjab 143001",
+  "mapUrl": "https://maps.google.com/?q=Gian+Chand+Lassi+Amritsar",
+  "bulletPoints": [
+    "Widely recognized as the pioneer of the 'Peda Lassi', where sweet peda sweets are blended directly into the yogurt",
+    "Every glass is prepared fresh using traditional wooden whisks (madhani) to retain thickness",
+    "Frequented by travelers and food writers seeking the most authentic Punjabi lassi experience",
+    "Located in the historic Katra Sher Singh area, making it a perfect afternoon refreshment stop",
+    "The consistency is so rich and thick that it is eaten with a spoon rather than drunk"
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-07-15T08:46:42.891Z"
+  },
+  "updatedAt": {
+    "$date": "2026-07-15T08:46:42.891Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a5748f29b40c8ae4adeee3a"
+  },
+  "id": "gurdas-ram-jalebi",
+  "title": "Gurdas Ram Jalebi Wala",
+  "category": "Traditional Sweets",
+  "description": "Located in a tiny shop just a few steps away from the Golden Temple, Gurdas Ram Jalebi Wala has been serving hot, piping, and crispy jalebis and gulab jamuns for decades. The jalebis are fried in pure desi ghee right in front of your eyes and soaked in sugar syrup, offering the ultimate sweet ending to your heritage tour.",
+  "image": "/gr.jpg",
+  "link": "https://en.wikipedia.org/wiki/Jalebi",
+  "bestTime": "Late afternoon or evening",
+  "timeRequired": "15–20 minutes",
+  "highlights": [
+    "Fresh, hot, crispy Jalebis",
+    "Desi Ghee preparation",
+    "Soft, melt-in-the-mouth Gulab Jamuns",
+    "Historic location near Golden Temple",
+    "Affordable local street treat"
+  ],
+  "entryFee": "₹50 – ₹100 for two",
+  "timings": "8:00 AM – 10:00 PM",
+  "address": "Katras Ahluwalia, Near Golden Temple, Amritsar, Punjab 143006",
+  "mapUrl": "https://maps.google.com/?q=Gurdas+Ram+Jalebi+Wala+Amritsar",
+  "bulletPoints": [
+    "Operates from a very small shop front, emphasizing quality and speed of preparation",
+    "Prepared using traditional cotton cloth squeeze bags to shape the loops in oil",
+    "Locals recommend pairing the sweet jalebis with savory rabri when available",
+    "Perfect quick snack stop during a walking tour of the Golden Temple corridors",
+    "Highly renowned for retaining the exact same crisp texture and syrup sweetness for generations"
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-07-15T08:46:42.891Z"
+  },
+  "updatedAt": {
+    "$date": "2026-07-15T08:46:42.891Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a5748f29b40c8ae4adeee3b"
+  },
+  "id": "beera-samosa-wala",
+  "title": "Beera Samosa Wala",
+  "category": "Traditional Snacks",
+  "description": "Established in 1949, Beera Samosa Wala is a legendary street food joint located in Atta Mandi, near the Golden Temple. With over 75 years of history, it is famous for serving hot, crispy, and flaky samosas filled with spicy potatoes, served alongside their signature tangy aloo sabzi. The shop is also highly celebrated for its 'Satpura', a multi-layered crispy patty.",
+  "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?q=80&w=800&auto=format&fit=crop",
+  "link": "https://en.wikipedia.org/wiki/Samosa",
+  "bestTime": "Evening / Tea-time (4:00 PM – 6:30 PM)",
+  "timeRequired": "15–30 minutes",
+  "highlights": [
+    "Over 75 years of heritage",
+    "Crispy Satpura pastry",
+    "Spicy Samosa with Aloo Sabzi",
+    "Traditional street-side frying",
+    "Located near Atta Mandi"
+  ],
+  "entryFee": "₹60 – ₹120 for two",
+  "timings": "9:00 AM – 9:00 PM",
+  "address": "Atta Mandi, Katra Ahluwalia, Near Golden Temple, Amritsar, Punjab 143006",
+  "mapUrl": "https://maps.google.com/?q=Beera+Samosa+Wala+Amritsar",
+  "bulletPoints": [
+    "Founded right after partition in 1949, preserving traditional refugee snack recipes",
+    "Their unique 'Satpura' is a multi-layered patty that crumbles delightfully with every bite",
+    "Unlike typical chutney pairings, they serve their samosas drenched in a warm, spicy potato curry",
+    "An absolute must-visit for tourists exploring the old city lanes behind Darbar Sahib",
+    "Maintains an old-school, no-frills setup where snack batches are fried fresh in massive iron woks"
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-07-15T08:46:42.891Z"
+  },
+  "updatedAt": {
+    "$date": "2026-07-15T08:46:42.891Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a5748f29b40c8ae4adeee3c"
+  },
+  "id": "lubhaya-ram-aam-papad",
+  "title": "Lubhaya Ram & Sons Aam Papad",
+  "category": "Sweet & Sour Chaat",
+  "description": "Established in 1965 on Lawrence Road, Lubhaya Ram & Sons is a legendary establishment renowned for its authentic Aam Papad (mango leather). It is famous for serving a unique sweet and sour chaat made from layers of sun-dried mango pulp chopped and tossed with black salt, cumin, chili powder, and fresh lemon juice, alongside an assortment of traditional digestive candies (churan).",
+  "image": "/lr.png",
+  "link": "https://en.wikipedia.org/wiki/Aam_papad",
+  "bestTime": "Afternoon or Evening (1:00 PM – 8:00 PM)",
+  "timeRequired": "15–20 minutes",
+  "highlights": [
+    "Sun-dried mango leather chaat",
+    "Sweet & sour spicy toppings",
+    "Established in 1965",
+    "Large variety of churan & supari",
+    "Located on Lawrence Road"
+  ],
+  "entryFee": "₹80 – ₹150 for two",
+  "timings": "10:00 AM – 10:00 PM",
+  "address": "Lawrence Road, Opposite Arya Samaj Mandir, Amritsar, Punjab 143001",
+  "mapUrl": "https://maps.google.com/?q=Lubhaya+Ram+And+Sons+Amritsar",
+  "bulletPoints": [
+    "Known for their distinct recipe where mango sheets are seasoned and shredded into a flavorful chaat",
+    "Offers a wide selection of mango varieties ranging from sweet (meetha) to extremely tangy (khatta)",
+    "A popular stop for locals to pick up post-meal digestive candies and traditional pickles",
+    "Located opposite the historic Arya Samaj Mandir, a central commercial hub in Amritsar",
+    "Perfect souvenir stop to buy packed sweet-and-sour mango sheets for friends and family"
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-07-15T08:46:42.891Z"
+  },
+  "updatedAt": {
+    "$date": "2026-07-15T08:46:42.891Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a5748f29b40c8ae4adeee3d"
+  },
+  "id": "kanha-sweets",
+  "title": "Kanha Sweets",
+  "category": "Iconic Breakfast",
+  "description": "Kanha Sweets on Lawrence Road is an iconic breakfast institution in Amritsar, widely celebrated for serving the city's finest Puri Chole. The meal features large, piping hot, crispy puris served alongside spicy masala chole and a unique sweet-and-tangy aloo ki sabzi, often paired with their famous rich Gur ka Halwa and sweet lassi.",
+  "image": "/ks.jpg",
+  "link": "https://en.wikipedia.org/wiki/Chole_bhature",
+  "bestTime": "Morning Breakfast (8:00 AM – 11:30 AM)",
+  "timeRequired": "30–45 minutes",
+  "highlights": [
+    "Famous crispy Puris",
+    "Spicy Chole & Sweet Aloo Sabzi",
+    "Unlimited gravy servings",
+    "Delicious Gur ka Halwa",
+    "Lawrence Road breakfast landmark"
+  ],
+  "entryFee": "₹200 – ₹350 for two",
+  "timings": "8:00 AM – 4:00 PM",
+  "address": "Lawrence Road, White Avenue, Opposite Bijli Pehalwan Mandir, Amritsar, Punjab 143001",
+  "mapUrl": "https://maps.google.com/?q=Kanha+Sweets+Amritsar",
+  "bulletPoints": [
+    "Famous for their unique service style where potato and chickpea curries are refilled unlimitedly",
+    "The aloo sabzi has a signature sweet-and-sour (khatta-meetha) profile that pairs perfectly with spicy chole",
+    "Their Gur ka Halwa (jaggery semolina pudding) is widely regarded as a stellar sweet accompaniment",
+    "Arrive early on weekends to secure a table, as crowds gather for their traditional breakfast",
+    "Also features a popular sweet counter showcasing high-quality traditional Punjabi milk sweets"
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-07-15T08:46:42.891Z"
+  },
+  "updatedAt": {
+    "$date": "2026-07-15T08:46:42.891Z"
+  }
+}
 ]

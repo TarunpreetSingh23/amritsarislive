@@ -1,29 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
-import connectDB, { Monument } from '@/lib/mongodb';
 import fs from 'fs';
 import path from 'path';
 
 export async function GET(_req: NextRequest) {
   try {
-    let monumentsData = [];
-    try {
-      await connectDB();
-      const dbMonuments = await Monument.find({}).lean();
-      if (dbMonuments && dbMonuments.length > 0) {
-        monumentsData = dbMonuments;
-      } else {
-        throw new Error('No monuments found in database');
-      }
-    } catch (dbError: any) {
-      console.warn('MongoDB connection failed, falling back to monuments.json:', dbError.message);
-      const filePath = path.join(process.cwd(), 'monuments.json');
-      if (fs.existsSync(filePath)) {
-        const fileData = fs.readFileSync(filePath, 'utf8');
-        monumentsData = JSON.parse(fileData);
-      } else {
-        throw new Error('Mock data monuments.json not found');
-      }
+    const filePath = path.join(process.cwd(), 'monuments.json');
+    if (!fs.existsSync(filePath)) {
+      throw new Error('Mock data monuments.json not found');
     }
+    
+    const fileData = fs.readFileSync(filePath, 'utf8');
+    const monumentsData = JSON.parse(fileData);
 
     const monuments = monumentsData.map((m: any) => {
       const imagesList = m.images && m.images.length > 0 

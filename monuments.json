@@ -1,229 +1,312 @@
-[
-  {
-    "id": "Harmandir_Sahib",
-    "title": "Harmandir Sahib",
-    "category": "Sikh Shrine",
-    "description": "The Harmandir Sahib, also known as the Golden Temple, is a Gurdwara located in the city of Amritsar, Punjab, India. It is the preeminent spiritual site of Sikhism, famous for its magnificent gold-plated dome and surrounding holy pool (Sarovar).",
-    "images": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Golden_Temple_India_HDR_crop.jpg/800px-Golden_Temple_India_HDR_crop.jpg",
-      "https://images.unsplash.com/photo-1514222134-b57cbb8ce073?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1588096344356-9b4e548d1de4?q=80&w=800&auto=format&fit=crop"
-    ],
-    "link": "https://en.wikipedia.org/wiki/Harmandir_Sahib",
-    "bestTime": "October to March (pleasant weather)",
-    "timeRequired": "2–3 hours",
-    "highlights": ["Gold-plated sanctum", "Sarovar (holy pool)", "Langar (free community kitchen)", "Akal Takht view", "Night illumination"],
-    "entryFee": "Free",
-    "timings": "Open 24 hours, every day",
-    "address": "Golden Temple Road, Atta Mandi, Katra Ahluwalia, Amritsar, Punjab 143006",
-    "mapUrl": "https://maps.google.com/?q=Harmandir+Sahib+Amritsar",
-    "bulletPoints": [
-      "Holiest Gurdwara and spiritual center of Sikhism",
-      "The temple's upper floors are covered with approximately 750 kg of pure gold",
-      "The Langar serves free meals to over 100,000 visitors daily",
-      "Founded by Guru Ram Das in 1577, the current structure was rebuilt in 1764",
-      "The Sarovar surrounding it is believed to have healing properties"
-    ]
+[{
+  "_id": {
+    "$oid": "6a56fe26204b3f0fc3998705"
   },
-  {
-    "id": "Jallianwala_Bagh",
-    "title": "Jallianwala Bagh",
-    "category": "Historic Memorial",
-    "description": "Jallianwala Bagh is a historic garden and memorial of national importance in Amritsar, India, preserved in memory of those wounded and killed in the Jallianwala Bagh Massacre that occurred on the festival of Baisakhi, 13 April 1919.",
-    "images": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Jallianwala_Bagh_memorial_lane.jpg/800px-Jallianwala_Bagh_memorial_lane.jpg",
-      "https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1626082896492-766af4fc6595?q=80&w=800&auto=format&fit=crop"
-    ],
-    "link": "https://en.wikipedia.org/wiki/Jallianwala_Bagh",
-    "bestTime": "October to March",
-    "timeRequired": "1–2 hours",
-    "highlights": ["Martyrs' Well", "Bullet marks on walls", "Eternal Flame memorial", "Narrow entrance passage", "Sound & Light Show"],
-    "entryFee": "Free",
-    "timings": "6:30 AM – 7:30 PM (Summer) / 7:00 AM – 6:30 PM (Winter)",
-    "address": "Golden Temple Road, Jallan Wala Bagh, Katra Ahluwalia, Amritsar, Punjab 143006",
-    "mapUrl": "https://maps.google.com/?q=Jallianwala+Bagh+Amritsar",
-    "bulletPoints": [
-      "Site of the 1919 massacre where General Dyer ordered troops to fire on unarmed civilians",
-      "Over 1,000 people were killed and more than 1,500 injured",
-      "Bullet marks on walls are still preserved and visible",
-      "The Martyrs' Well where many jumped to escape bullets",
-      "Renovated in 2021 with a new museum, galleries, and sound-and-light show"
-    ]
+  "id": "Harmandir_Sahib",
+  "title": "Sri Harmandir Sahib",
+  "category": "Sikh Shrine",
+  "description": "The Harmandir Sahib, also known as the Golden Temple, is a Gurdwara located in the city of Amritsar, Punjab, India. It is the preeminent spiritual site of Sikhism, famous for its magnificent gold-plated dome and surrounding holy pool (Sarovar).",
+  "images": [
+    "/g.jpg",
+    "/g2.jpg"
+  ],
+  "link": "https://en.wikipedia.org/wiki/Harmandir_Sahib",
+  "bestTime": "October to March (pleasant weather)",
+  "timeRequired": "2–3 hours",
+  "highlights": [
+    "Gold-plated sanctum",
+    "Sarovar (holy pool)",
+    "Langar (free community kitchen)",
+    "Akal Takht view",
+    "Night illumination"
+  ],
+  "entryFee": "Free",
+  "timings": "Open 24 hours, every day",
+  "address": "Golden Temple Road, Atta Mandi, Katra Ahluwalia, Amritsar, Punjab 143006",
+  "mapUrl": "https://maps.google.com/?q=Harmandir+Sahib+Amritsar",
+  "bulletPoints": [
+    "Holiest Gurdwara and spiritual center of Sikhism",
+    "The temple's upper floors are covered with approximately 750 kg of pure gold",
+    "The Langar serves free meals to over 100,000 visitors daily",
+    "Founded by Guru Ram Das in 1577",
+    "The Sarovar surrounding it is believed to have healing properties"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a56fe26204b3f0fc3998706"
   },
-  {
-    "id": "Durgiana_Temple",
-    "title": "Durgiana Temple",
-    "category": "Hindu Temple",
-    "description": "The Durgiana Temple, also known as Lakshmi Narayan Temple, Durga Tirath and Sitla Mandir, is a premier Hindu temple situated in the city of Amritsar, Punjab, India. It architecturally resembles the Golden Temple and is dedicated to Goddess Durga.",
-    "images": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Durgianatempl.jpg/800px-Durgianatempl.jpg",
-      "https://images.unsplash.com/photo-1608958416719-74d3910c2264?q=80&w=800&auto=format&fit=crop"
-    ],
-    "link": "https://en.wikipedia.org/wiki/Durgiana_Temple",
-    "bestTime": "October to March, Navratri festival",
-    "timeRequired": "1–1.5 hours",
-    "highlights": ["Silver-plated doors", "Sacred pool", "Architecture mirroring Golden Temple", "Ancient Tree of Wishes", "Navratri celebrations"],
-    "entryFee": "Free",
-    "timings": "6:00 AM – 9:00 PM",
-    "address": "Durgiana Temple Road, Lohgarh, Amritsar, Punjab 143001",
-    "mapUrl": "https://maps.google.com/?q=Durgiana+Temple+Amritsar",
-    "bulletPoints": [
-      "Often called the 'Silver Temple' due to its ornate silver doors",
-      "Architecture inspired by the Golden Temple with a central pool",
-      "Dedicated to Goddess Durga and houses idols of Lakshmi and Narayan",
-      "Built in 1921 by Guru Harsai Mal Kapoor",
-      "Attracts thousands during Navratri and Janmashtami festivals"
-    ]
+  "id": "Jallianwala_Bagh",
+  "title": "Jallianwala Bagh",
+  "category": "Historic Memorial",
+  "description": "Jallianwala Bagh is a historic garden and memorial of national importance in Amritsar, India, preserved in memory of those wounded and killed in the Jallianwala Bagh Massacre that occurred on the festival of Baisakhi, 13 April 1919.",
+  "images": [
+    "/jb.jpg",
+    "/jb2.jpg",
+    "/jb3.jpg"
+  ],
+  "link": "https://en.wikipedia.org/wiki/Jallianwala_Bagh",
+  "bestTime": "October to March",
+  "timeRequired": "1–2 hours",
+  "highlights": [
+    "Martyrs' Well",
+    "Bullet marks on walls",
+    "Eternal Flame memorial",
+    "Narrow entrance passage",
+    "Sound & Light Show"
+  ],
+  "entryFee": "Free",
+  "timings": "6:30 AM – 7:30 PM (Summer) / 7:00 AM – 6:30 PM (Winter)",
+  "address": "Golden Temple Road, Jallan Wala Bagh, Katra Ahluwalia, Amritsar, Punjab 143006",
+  "mapUrl": "https://maps.google.com/?q=Jallianwala+Bagh+Amritsar",
+  "bulletPoints": [
+    "Site of the 1919 massacre where General Dyer ordered troops to fire on unarmed civilians",
+    "Over 1,000 people were killed and more than 1,500 injured",
+    "Bullet marks on walls are still preserved and visible",
+    "The Martyrs' Well where many jumped to escape bullets",
+    "Renovated in 2021 with a new museum, galleries, and sound-and-light show"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a56fe26204b3f0fc399870a"
   },
-  {
-    "id": "Gobindgarh_Fort",
-    "title": "Gobindgarh Fort",
-    "category": "Historic Fort",
-    "description": "Gobindgarh Fort is a historic military fort located in the center of the city of Amritsar, Punjab, India. Established in the 18th century, it was renovated by Maharaja Ranjit Singh and has now been opened to the public as a cultural museum.",
-    "images": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Entrance_to_Gobindgarh_Fort.jpg/800px-Entrance_to_Gobindgarh_Fort.jpg",
-      "https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?q=80&w=800&auto=format&fit=crop"
-    ],
-    "link": "https://en.wikipedia.org/wiki/Gobindgarh_Fort",
-    "bestTime": "October to March",
-    "timeRequired": "2–3 hours",
-    "highlights": ["7D Theatre show", "Sikh Warriors Museum", "Live cultural performances", "Turban tying experience", "Night heritage walk"],
-    "entryFee": "₹100 (Basic) / ₹500 (Premium with all shows)",
-    "timings": "10:00 AM – 10:00 PM",
-    "address": "Lohgarh Chowk, Old City, Amritsar, Punjab 143001",
-    "mapUrl": "https://maps.google.com/?q=Gobindgarh+Fort+Amritsar",
-    "bulletPoints": [
-      "Originally built by Bhangi Misl in the 18th century, later strengthened by Maharaja Ranjit Singh",
-      "Once housed the legendary Koh-i-Noor diamond",
-      "Now a heritage museum with live shows, 7D theatres, and cultural exhibitions",
-      "Renovated and opened to the public in 2017 after being under military control",
-      "Hosts the 'Whispering Walls' sound-and-light show every evening"
-    ]
+  "id": "Wagah",
+  "title": "Wagah-Attari Border",
+  "category": "Border Crossing",
+  "description": "Wagah is a village and border crossing station between Pakistan and India, famous for its daily Wagah border ceremony. Tourists gather here from all over the world to witness the spirited flag-lowering ceremony by both nations' forces.",
+  "images": [
+    "/wb1.jpeg",
+    "/wb.jpg"
+  ],
+  "link": "https://en.wikipedia.org/wiki/Wagah",
+  "bestTime": "October to March (avoid summer heat)",
+  "timeRequired": "3–4 hours (includes travel + ceremony)",
+  "highlights": [
+    "Beating Retreat Ceremony",
+    "BSF parade",
+    "Patriotic atmosphere",
+    "International border gate",
+    "Photo ops at Zero Line"
+  ],
+  "entryFee": "Free (VIP seats: ₹50–200)",
+  "timings": "Ceremony at 5:30 PM (Summer) / 4:30 PM (Winter) — arrive 2 hrs early",
+  "address": "Wagah, Amritsar District, Punjab 143108 (32 km from city center)",
+  "mapUrl": "https://maps.google.com/?q=Wagah+Border+Amritsar",
+  "bulletPoints": [
+    "The Beating Retreat ceremony is held daily at sunset since 1959",
+    "Located 32 km from Amritsar city center on the Grand Trunk Road",
+    "Thousands of spectators gather daily, creating an electrifying atmosphere",
+    "The ceremony involves synchronized marching, high kicks, and flag lowering by both nations",
+    "VIP and general seating is available — arrive at least 2 hours early for good seats"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a56fe26204b3f0fc3998707"
   },
-  {
-    "id": "Ram_Bagh,_Amritsar",
-    "title": "Ram Bagh Garden",
-    "category": "Heritage Garden",
-    "description": "Ram Bagh, also known as Maharaja Ranjit Singh Garden, is a historical palace garden in Amritsar. It housed the summer palace of Maharaja Ranjit Singh, the founder of the Sikh Empire, and is now a beautifully landscaped public park and museum.",
-    "images": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Maharaja_Ranjit_Singh_Panorama%2C_Amritsar_01.jpg/800px-Maharaja_Ranjit_Singh_Panorama%2C_Amritsar_01.jpg",
-      "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=800&auto=format&fit=crop"
-    ],
-    "link": "https://en.wikipedia.org/wiki/Ram_Bagh,_Amritsar",
-    "bestTime": "October to March (pleasant mornings)",
-    "timeRequired": "1.5–2 hours",
-    "highlights": ["Summer Palace of Maharaja Ranjit Singh", "Sikh weapon gallery", "Mughal-style gardens", "Historical paintings", "Morning jogging track"],
-    "entryFee": "₹10",
-    "timings": "6:00 AM – 8:00 PM",
-    "address": "Mall Road, Ram Bagh, Amritsar, Punjab 143001",
-    "mapUrl": "https://maps.google.com/?q=Ram+Bagh+Amritsar",
-    "bulletPoints": [
-      "Modeled after the famous Shalimar Gardens of Lahore",
-      "Houses the summer palace used by Maharaja Ranjit Singh in the early 19th century",
-      "Contains a museum with Sikh-era weapons, paintings, and coins",
-      "Named 'Ram Bagh' after Guru Ram Das, but commonly known as Company Bagh",
-      "The garden spans 84 acres and is a popular spot for morning walks"
-    ]
+  "id": "Durgiana_Temple",
+  "title": "Sri Durgiana Mandir",
+  "category": "Hindu Temple",
+  "description": "The Durgiana Temple, also known as Lakshmi Narayan Temple, Durga Tirath and Sitla Mandir, is a premier Hindu temple situated in the city of Amritsar, Punjab, India. It architecturally resembles the Golden Temple and is dedicated to Goddess Durga.",
+  "images": [
+    "https://res.cloudinary.com/dstgn8brb/image/upload/v1784091001/2023_08_22_17_49_IMG_8407_wljo0r.jpg",
+    "https://res.cloudinary.com/dstgn8brb/image/upload/v1784090881/2023_08_22_17_30_IMG_8376_k5awcq.jpg"
+  ],
+  "link": "https://en.wikipedia.org/wiki/Durgiana_Temple",
+  "bestTime": "October to March, Navratri festival",
+  "timeRequired": "1–1.5 hours",
+  "highlights": [
+    "Silver-plated doors",
+    "Sacred pool",
+    "Architecture mirroring Golden Temple",
+    "Ancient Tree of Wishes",
+    "Navratri celebrations"
+  ],
+  "entryFee": "Free",
+  "timings": "6:00 AM – 9:00 PM",
+  "address": "Durgiana Temple Road, Lohgarh, Amritsar, Punjab 143001",
+  "mapUrl": "https://maps.google.com/?q=Durgiana+Temple+Amritsar",
+  "bulletPoints": [
+    "Often called the 'Silver Temple' due to its ornate silver doors",
+    "Architecture inspired by the Golden Temple with a central pool",
+    "Dedicated to Goddess Durga and houses idols of Lakshmi and Narayan",
+    "Built in 1921 by Guru Harsai Mal Kapoor",
+    "Attracts thousands during Navratri and Janmashtami festivals"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a56fe26204b3f0fc399870b"
   },
+  "id": "Akal_Takht",
+  "title": "Sri Akal Takht Sahib",
+  "category": "Spiritual Throne",
+  "description": "The Akal Takht, meaning \"Throne of the Timeless One,\" is one of five takhts (seats of power) of the Sikh religion. It is located in the Harmandir Sahib (Golden Temple) complex in Amritsar, serving as the highest seat of temporal authority.",
+  "images": [
+    "https://res.cloudinary.com/dstgn8brb/image/upload/v1784091348/IMG_1749_mjx2qw.jpg",
+    "https://res.cloudinary.com/dstgn8brb/image/upload/v1784091210/IMG20201222114250_iwireq.jpg"
+  ],
+  "link": "https://en.wikipedia.org/wiki/Akal_Takht",
+  "bestTime": "October to March",
+  "timeRequired": "30 minutes – 1 hour",
+  "highlights": [
+    "Golden façade",
+    "Sri Guru Granth Sahib procession",
+    "Historical weapons display",
+    "Sikh political decrees (Hukamnamas)",
+    "Night Palki Sahib ceremony"
+  ],
+  "entryFee": "Free",
+  "timings": "Open 24 hours (within Golden Temple complex)",
+  "address": "Harmandir Sahib Complex, Amritsar, Punjab 143006",
+  "mapUrl": "https://maps.google.com/?q=Akal+Takht+Amritsar",
+  "bulletPoints": [
+    "Established by Guru Hargobind in 1606 as the seat of Sikh temporal authority",
+    "The highest temporal seat of authority for Sikhs worldwide",
+    "Sri Guru Granth Sahib is ceremonially carried here every night from the Golden Temple",
+    "Severely damaged during Operation Blue Star in 1984, later rebuilt",
+    "Hukamnamas (religious decrees) issued from here are binding on all Sikhs"
+  ]
+},
   {
-    "id": "Wagah",
-    "title": "Wagah Border",
-    "category": "Border Crossing",
-    "description": "Wagah is a village and border crossing station between Pakistan and India, famous for its daily Wagah border ceremony. Tourists gather here from all over the world to witness the spirited flag-lowering ceremony by both nations' forces.",
-    "images": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Wagah_border_ceremony_2017.jpg/800px-Wagah_border_ceremony_2017.jpg",
-      "https://images.unsplash.com/photo-1506461883276-594a12b11cc3?q=80&w=800&auto=format&fit=crop"
-    ],
-    "link": "https://en.wikipedia.org/wiki/Wagah",
-    "bestTime": "October to March (avoid summer heat)",
-    "timeRequired": "3–4 hours (includes travel + ceremony)",
-    "highlights": ["Beating Retreat Ceremony", "BSF parade", "Patriotic atmosphere", "International border gate", "Photo ops at Zero Line"],
-    "entryFee": "Free (VIP seats: ₹50–200)",
-    "timings": "Ceremony at 5:30 PM (Summer) / 4:30 PM (Winter) — arrive 2 hrs early",
-    "address": "Wagah, Amritsar District, Punjab 143108 (32 km from city center)",
-    "mapUrl": "https://maps.google.com/?q=Wagah+Border+Amritsar",
-    "bulletPoints": [
-      "The Beating Retreat ceremony is held daily at sunset since 1959",
-      "Located 32 km from Amritsar city center on the Grand Trunk Road",
-      "Thousands of spectators gather daily, creating an electrifying atmosphere",
-      "The ceremony involves synchronized marching, high kicks, and flag lowering by both nations",
-      "VIP and general seating is available — arrive at least 2 hours early for good seats"
-    ]
+  "_id": {
+    "$oid": "6a56fe26204b3f0fc399870c"
   },
-  {
-    "id": "Akal_Takht",
-    "title": "Akal Takht",
-    "category": "Spiritual Throne",
-    "description": "The Akal Takht, meaning \"Throne of the Timeless One,\" is one of five takhts (seats of power) of the Sikh religion. It is located in the Harmandir Sahib (Golden Temple) complex in Amritsar, serving as the highest seat of temporal authority.",
-    "images": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Akal_Takht_Amritsar.jpg/800px-Akal_Takht_Amritsar.jpg",
-      "https://images.unsplash.com/photo-1600121848594-d8644e57abab?q=80&w=800&auto=format&fit=crop"
-    ],
-    "link": "https://en.wikipedia.org/wiki/Akal_Takht",
-    "bestTime": "October to March",
-    "timeRequired": "30 minutes – 1 hour",
-    "highlights": ["Golden façade", "Sri Guru Granth Sahib procession", "Historical weapons display", "Sikh political decrees (Hukamnamas)", "Night Palki Sahib ceremony"],
-    "entryFee": "Free",
-    "timings": "Open 24 hours (within Golden Temple complex)",
-    "address": "Harmandir Sahib Complex, Amritsar, Punjab 143006",
-    "mapUrl": "https://maps.google.com/?q=Akal+Takht+Amritsar",
-    "bulletPoints": [
-      "Established by Guru Hargobind in 1606 as the seat of Sikh temporal authority",
-      "The highest temporal seat of authority for Sikhs worldwide",
-      "Sri Guru Granth Sahib is ceremonially carried here every night from the Golden Temple",
-      "Severely damaged during Operation Blue Star in 1984, later rebuilt",
-      "Hukamnamas (religious decrees) issued from here are binding on all Sikhs"
-    ]
+  "id": "Mata_Lal_Devi_Temple",
+  "title": "Mata Lal Devi Mandir",
+  "category": "Hindu Temple",
+  "description": "Mata Lal Devi Temple is a highly unique and popular Hindu shrine in Amritsar. Dedicated to the 20th-century female saint Lal Devi, the temple features a labyrinthine layout, mirrored walls, and cave-like walkways containing various deities.",
+  "images": [
+    "/mld.jpg",
+    "/mld2.webp"
+  ],
+  "link": "https://en.wikipedia.org/wiki/Mata_Lal_Devi_Temple",
+  "bestTime": "Year-round (indoor temple)",
+  "timeRequired": "1–1.5 hours",
+  "highlights": [
+    "Mirror maze (Sheesh Mahal)",
+    "Cave walkways",
+    "Water passage",
+    "Unique cave-temple architecture",
+    "Multiple deity shrines"
+  ],
+  "entryFee": "Free",
+  "timings": "5:00 AM – 9:00 PM",
+  "address": "Rani Ka Bagh, Amritsar, Punjab 143001",
+  "mapUrl": "https://maps.google.com/?q=Mata+Lal+Devi+Temple+Amritsar",
+  "bulletPoints": [
+    "Dedicated to the Hindu female saint Lal Devi (1926–1997)",
+    "Features a unique cave-like interior with narrow passages and water channels",
+    "Contains the famous Sheesh Mahal (Palace of Mirrors) — a fully mirrored room",
+    "Devotees wade through knee-deep water as part of the spiritual experience",
+    "One of the most unique temples in India due to its maze-like structure"
+  ]
+},
+
+
+{
+  "_id": {
+    "$oid": "6a56fe26204b3f0fc3998708"
   },
-  {
-    "id": "Mata_Lal_Devi_Temple",
-    "title": "Mata Lal Devi Temple",
-    "category": "Hindu Temple",
-    "description": "Mata Lal Devi Temple is a highly unique and popular Hindu shrine in Amritsar. Dedicated to the 20th-century female saint Lal Devi, the temple features a labyrinthine layout, mirrored walls, and cave-like walkways containing various deities.",
-    "images": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Sheesh_Mahal%2C_Mata_Lal_Devi_Temple.jpg/800px-Sheesh_Mahal%2C_Mata_Lal_Devi_Temple.jpg",
-      "https://images.unsplash.com/photo-1542856391-010fb87dcfed?q=80&w=800&auto=format&fit=crop"
-    ],
-    "link": "https://en.wikipedia.org/wiki/Mata_Lal_Devi_Temple",
-    "bestTime": "Year-round (indoor temple)",
-    "timeRequired": "1–1.5 hours",
-    "highlights": ["Mirror maze (Sheesh Mahal)", "Cave walkways", "Water passage", "Unique cave-temple architecture", "Multiple deity shrines"],
-    "entryFee": "Free",
-    "timings": "5:00 AM – 9:00 PM",
-    "address": "Rani Ka Bagh, Amritsar, Punjab 143001",
-    "mapUrl": "https://maps.google.com/?q=Mata+Lal+Devi+Temple+Amritsar",
-    "bulletPoints": [
-      "Dedicated to the Hindu female saint Lal Devi (1926–1997)",
-      "Features a unique cave-like interior with narrow passages and water channels",
-      "Contains the famous Sheesh Mahal (Palace of Mirrors) — a fully mirrored room",
-      "Devotees wade through knee-deep water as part of the spiritual experience",
-      "One of the most unique temples in India due to its maze-like structure"
-    ]
+  "id": "Gobindgarh_Fort",
+  "title": "Gobindgarh Fort",
+  "category": "Historic Fort",
+  "description": "Gobindgarh Fort is a historic military fort located in the center of the city of Amritsar, Punjab, India. Established in the 18th century, it was renovated by Maharaja Ranjit Singh and has now been opened to the public as a cultural museum.",
+  "images": [
+    "/gf1.jpg",
+    "/gf.jpg"
+  ],
+  "link": "https://en.wikipedia.org/wiki/Gobindgarh_Fort",
+  "bestTime": "October to March",
+  "timeRequired": "2–3 hours",
+  "highlights": [
+    "7D Theatre show",
+    "Sikh Warriors Museum",
+    "Live cultural performances",
+    "Turban tying experience",
+    "Night heritage walk"
+  ],
+  "entryFee": "₹100 (Basic) / ₹500 (Premium with all shows)",
+  "timings": "10:00 AM – 10:00 PM",
+  "address": "Lohgarh Chowk, Old City, Amritsar, Punjab 143001",
+  "mapUrl": "https://maps.google.com/?q=Gobindgarh+Fort+Amritsar",
+  "bulletPoints": [
+    "Originally built by Bhangi Misl in the 18th century, later strengthened by Maharaja Ranjit Singh",
+    "Once housed the legendary Koh-i-Noor diamond",
+    "Now a heritage museum with live shows, 7D theatres, and cultural exhibitions",
+    "Renovated and opened to the public in 2017 after being under military control",
+    "Hosts the 'Whispering Walls' sound-and-light show every evening"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a56fe26204b3f0fc399870d"
   },
-  {
-    "id": "Ram_Tirth",
-    "title": "Ram Tirth Temple",
-    "category": "Ancient Temple",
-    "description": "Ram Tirth Temple is an ancient pilgrimage site situated in Amritsar, Punjab, India. The site is the birthplace of Luv and Kush, the sons of Devi Sita and Lord Rama, and contains the ashram of Sage Valmiki, who composed the epic Ramayana here.",
-    "images": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Ram_Tirth_Temple_Amritsar.jpg/800px-Ram_Tirth_Temple_Amritsar.jpg",
-      "https://images.unsplash.com/photo-1566121318576-7df089886a11?q=80&w=800&auto=format&fit=crop"
-    ],
-    "link": "https://en.wikipedia.org/wiki/Ram_Tirth",
-    "bestTime": "October to March, Dussehra festival",
-    "timeRequired": "1–2 hours",
-    "highlights": ["Valmiki Ashram", "Ancient temple ruins", "Annual fair during Dussehra", "Sacred tank", "Mythological significance"],
-    "entryFee": "Free",
-    "timings": "6:00 AM – 7:00 PM",
-    "address": "Ram Tirth Road, Amritsar, Punjab 143105 (11 km from city center)",
-    "mapUrl": "https://maps.google.com/?q=Ram+Tirth+Temple+Amritsar",
-    "bulletPoints": [
-      "Believed to be the ashram where Sage Valmiki composed the Ramayana",
-      "Traditional birthplace of Lord Rama's sons, Luv and Kush",
-      "A grand annual fair is held here during Dussehra (October/November)",
-      "Contains a sacred tank where devotees bathe for spiritual purification",
-      "Located about 11 km west of Amritsar city center"
-    ]
-  }
-]
+  "id": "Ram_Tirth",
+  "title": "Ram Tirth Temple",
+  "category": "Ancient Temple",
+  "description": "Ram Tirth Temple is an ancient pilgrimage site situated in Amritsar, Punjab, India. The site is the birthplace of Luv and Kush, the sons of Devi Sita and Lord Rama, and contains the ashram of Sage Valmiki, who composed the epic Ramayana here.",
+  "images": [
+    "/ram-tirth.jpg",
+    "/rt1.jpg"
+  ],
+  "link": "https://en.wikipedia.org/wiki/Ram_Tirth",
+  "bestTime": "October to March, Dussehra festival",
+  "timeRequired": "1–2 hours",
+  "highlights": [
+    "Valmiki Ashram",
+    "Ancient temple ruins",
+    "Annual fair during Dussehra",
+    "Sacred tank",
+    "Mythological significance"
+  ],
+  "entryFee": "Free",
+  "timings": "6:00 AM – 7:00 PM",
+  "address": "Ram Tirth Road, Amritsar, Punjab 143105 (11 km from city center)",
+  "mapUrl": "https://maps.google.com/?q=Ram+Tirth+Temple+Amritsar",
+  "bulletPoints": [
+    "Believed to be the ashram where Sage Valmiki composed the Ramayana",
+    "Traditional birthplace of Lord Rama's sons, Luv and Kush",
+    "A grand annual fair is held here during Dussehra (October/November)",
+    "Contains a sacred tank where devotees bathe for spiritual purification",
+    "Located about 11 km west of Amritsar city center"
+  ]
+},
+
+
+
+{
+  "_id": {
+    "$oid": "6a56fe26204b3f0fc3998709"
+  },
+  "id": "Ram_Bagh,_Amritsar",
+  "title": "Ram Bagh Garden",
+  "category": "Heritage Garden",
+  "description": "Ram Bagh, also known as Maharaja Ranjit Singh Garden, is a historical palace garden in Amritsar. It housed the summer palace of Maharaja Ranjit Singh, the founder of the Sikh Empire, and is now a beautifully landscaped public park and museum.",
+  "images": [
+    "/rb.jpg",
+    "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=800&auto=format&fit=crop"
+  ],
+  "link": "https://en.wikipedia.org/wiki/Ram_Bagh,_Amritsar",
+  "bestTime": "October to March (pleasant mornings)",
+  "timeRequired": "1.5–2 hours",
+  "highlights": [
+    "Summer Palace of Maharaja Ranjit Singh",
+    "Sikh weapon gallery",
+    "Mughal-style gardens",
+    "Historical paintings",
+    "Morning jogging track"
+  ],
+  "entryFee": "₹10",
+  "timings": "6:00 AM – 8:00 PM",
+  "address": "Mall Road, Ram Bagh, Amritsar, Punjab 143001",
+  "mapUrl": "https://maps.google.com/?q=Ram+Bagh+Amritsar",
+  "bulletPoints": [
+    "Modeled after the famous Shalimar Gardens of Lahore",
+    "Houses the summer palace used by Maharaja Ranjit Singh in the early 19th century",
+    "Contains a museum with Sikh-era weapons, paintings, and coins",
+    "Named 'Ram Bagh' after Guru Ram Das, but commonly known as Company Bagh",
+    "The garden spans 84 acres and is a popular spot for morning walks"
+  ]
+}]

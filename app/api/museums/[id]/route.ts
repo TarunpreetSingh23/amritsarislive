@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import connectDB, { Museum, sanitizeImageUrl } from '@/lib/mongodb';
+import { sanitizeImageUrl } from '@/lib/mongodb';
 import fs from 'fs';
 import path from 'path';
 
@@ -9,25 +9,17 @@ export async function GET(
 ) {
   try {
     const { id } = await params;
-    let museumData: any = null;
-
-    try {
-      await connectDB();
-      const dbMuseum = await Museum.findOne({ id }).lean();
-      if (dbMuseum) {
-        museumData = dbMuseum;
-      } else {
-        throw new Error(`Museum with id ${id} not found in database`);
-      }
-    } catch (dbError: any) {
-      console.warn(`MongoDB query failed, checking museums.json for ${id}:`, dbError.message);
-      const filePath = path.join(process.cwd(), 'museums.json');
-      if (fs.existsSync(filePath)) {
-        const fileData = fs.readFileSync(filePath, 'utf8');
-        const museums = JSON.parse(fileData);
-        museumData = museums.find((m: any) => m.id === id);
-      }
+    const filePath = path.join(process.cwd(), 'museums.json');
+    if (!fs.existsSync(filePath)) {
+      return NextResponse.json(
+        { error: 'Mock data museums.json not found' },
+        { status: 500 }
+      );
     }
+    
+    const fileData = fs.readFileSync(filePath, 'utf8');
+    const museums = JSON.parse(fileData);
+    const museumData = museums.find((m: any) => m.id === id);
 
     if (!museumData) {
       return NextResponse.json(

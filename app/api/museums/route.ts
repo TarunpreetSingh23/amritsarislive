@@ -1,29 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server';
-import connectDB, { Museum, sanitizeImageUrl } from '@/lib/mongodb';
+import { sanitizeImageUrl } from '@/lib/mongodb';
 import fs from 'fs';
 import path from 'path';
 
 export async function GET(_req: NextRequest) {
   try {
-    let museumsData = [];
-    try {
-      await connectDB();
-      const dbMuseums = await Museum.find({}).lean();
-      if (dbMuseums && dbMuseums.length > 0) {
-        museumsData = dbMuseums;
-      } else {
-        throw new Error('No museums found in database');
-      }
-    } catch (dbError: any) {
-      console.warn('MongoDB connection failed, falling back to museums.json:', dbError.message);
-      const filePath = path.join(process.cwd(), 'museums.json');
-      if (fs.existsSync(filePath)) {
-        const fileData = fs.readFileSync(filePath, 'utf8');
-        museumsData = JSON.parse(fileData);
-      } else {
-        throw new Error('Mock data museums.json not found');
-      }
+    const filePath = path.join(process.cwd(), 'museums.json');
+    if (!fs.existsSync(filePath)) {
+      throw new Error('Mock data museums.json not found');
     }
+    
+    const fileData = fs.readFileSync(filePath, 'utf8');
+    const museumsData = JSON.parse(fileData);
 
     const museums = museumsData.map((m: any) => ({
       id: m.id,

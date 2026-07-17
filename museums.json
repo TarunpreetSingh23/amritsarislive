@@ -1,82 +1,160 @@
-[
-  {
-    "id": "war-memorial",
-    "title": "War Memorial & Museum",
-    "category": "War Memorial",
-    "description": "The Punjab State War Heroes' Memorial and Museum in Amritsar showcases the brave deeds and military history of Punjab from ancient times to the modern era. Features a massive 45-meter-high stainless steel sword monument, fighter jets, tanks, and galleries depicting battle history.",
-    "image": "/wm.HEIC",
-    "link": "https://en.wikipedia.org/wiki/Punjab_State_War_Heroes%27_Memorial_and_Museum",
-    "bestTime": "October to March",
-    "timeRequired": "1.5–2 hours",
-    "highlights": ["45-meter stainless steel sword", "Fighter jet & tank displays", "Battle dioramas", "Heroes' Hall of Fame", "Multimedia war galleries"],
-    "entryFee": "₹30 (Adults) / ₹10 (Children)",
-    "timings": "10:00 AM – 6:00 PM (Closed on Mondays)",
-    "address": "Amritsar-Attari Road, Near Bus Stand, Amritsar, Punjab 143001",
-    "mapUrl": "https://maps.google.com/?q=Punjab+State+War+Heroes+Memorial+Amritsar",
-    "bulletPoints": ["Houses the tallest stainless steel sword monument in the world at 45 meters", "Displays decommissioned fighter jets, tanks, and military artillery", "Galleries cover military history from the Vedic period to the Kargil War", "Memorial Wall inscribed with the names of over 5,000 war heroes from Punjab", "Opened in 2019, dedicated to Punjab's soldiers who served in Indian armed forces"]
+[{
+  "_id": {
+    "$oid": "6a45f82476a092bd6ff4070f"
   },
-  {
-    "id": "company-bagh-palace",
-    "title": "Company Bagh Summer Palace",
-    "category": "Heritage Palace",
-    "description": "The summer retreat retreat built by Maharaja Ranjit Singh inside the Ram Bagh Gardens (commonly known as Company Bagh). It exhibits heritage Sikh architecture, beautiful woodwork, weapons, coins, and paintings from the reign of the Lion of Punjab.",
-    "image": "/company-bagh-palace.jpg",
-    "link": "https://en.wikipedia.org/wiki/Ram_Bagh,_Amritsar",
-    "bestTime": "October to March (enjoy pleasant gardens)",
-    "timeRequired": "1–1.5 hours",
-    "highlights": ["Royal weapons collection", "Sikh-era coins & jewelry", "Ranjit Singh's personal effects", "Historical oil paintings", "Mughal-style architecture"],
-    "entryFee": "₹10",
-    "timings": "10:00 AM – 5:00 PM (Closed on Mondays)",
-    "address": "Ram Bagh Garden, Mall Road, Amritsar, Punjab 143001",
-    "mapUrl": "https://maps.google.com/?q=Company+Bagh+Amritsar",
-    "bulletPoints": ["Summer palace of the great Sikh emperor Maharaja Ranjit Singh", "Displays historic weapons including swords, shields, and muskets from the Sikh Empire", "Contains rare coins from the Sikh, Mughal, and British periods", "Oil paintings depict major battles and court scenes of the Sikh Empire era", "The surrounding Ram Bagh Gardens are modeled after the Shalimar Gardens of Lahore"]
-  },
-  {
-    "id": "partition-museum",
-    "title": "Partition Museum",
-    "category": "History Museum",
-    "description": "The world's first museum dedicated to the 1947 partition of British India. Located in the grand Town Hall building, it documents the division of Punjab and Bengal through oral histories, letters, photographs, and personal memorabilia donated by survivors.",
-    "image": "/partition-museum.jpg",
-    "link": "https://en.wikipedia.org/wiki/Partition_Museum",
-    "bestTime": "Year-round (indoor museum)",
-    "timeRequired": "2–3 hours",
-    "highlights": ["Survivor oral histories", "Personal memorabilia gallery", "Migration route maps", "Letters & photographs archive", "Interactive multimedia exhibits"],
-    "entryFee": "₹10 (Indians) / ₹100 (Foreign nationals)",
-    "timings": "10:00 AM – 5:00 PM (Closed on Mondays)",
-    "address": "Town Hall, Shastri Market, Hall Gate, Amritsar, Punjab 143001",
-    "mapUrl": "https://maps.google.com/?q=Partition+Museum+Amritsar",
-    "bulletPoints": ["The world's first museum dedicated entirely to the 1947 Partition of India", "Housed in the restored heritage Town Hall building at Hall Gate", "Contains personal artifacts donated by partition survivors — letters, clothes, utensils", "Oral history recordings of survivors are available for visitors to listen to", "Seven themed galleries chronicle the events leading up to and following the partition"]
-  },
-  {
-    "id": "ranjit-singh-panorama",
-    "title": "Maharaja Ranjit Singh Panorama",
-    "category": "Art & Multimedia",
-    "description": "A unique multimedia museum in Ram Bagh that presents the life and battles of Maharaja Ranjit Singh in a grand circular format. Features a stunning 360-degree panoramic painting, battle sound effects, and detailed three-dimensional historical displays.",
-    "image": "/ranjit-singh-panorama.jpg",
-    "link": "https://en.wikipedia.org/wiki/Maharaja_Ranjit_Singh_Museum",
-    "bestTime": "Year-round",
-    "timeRequired": "1–1.5 hours",
-    "highlights": ["360° panoramic painting", "3D battle displays", "Immersive sound effects", "Life-sized dioramas", "Sikh Empire timeline"],
-    "entryFee": "₹20",
-    "timings": "10:00 AM – 5:00 PM (Closed on Mondays)",
-    "address": "Ram Bagh Garden, Mall Road, Amritsar, Punjab 143001",
-    "mapUrl": "https://maps.google.com/?q=Maharaja+Ranjit+Singh+Panorama+Amritsar",
-    "bulletPoints": ["Features a massive 360-degree circular painting depicting Maharaja Ranjit Singh's life", "Life-sized three-dimensional dioramas recreate key battles of the Sikh Empire", "Immersive battle sound effects transport visitors into the era of the Lion of Punjab", "Chronicles the rise, reign, and legacy of Maharaja Ranjit Singh (1780–1839)", "Located adjacent to the Company Bagh Summer Palace in Ram Bagh Garden"]
-  },
-  {
-    "id": "digital-sikh-museum",
-    "title": "Digital Sikh Museum",
-    "category": "Digital & Spiritual",
-    "description": "Located underground in the Golden Temple Entrance Plaza, this museum uses high-tech digital projection, mapping displays, and documentaries to present the spiritual history of the Gurus and the Golden Temple itself.",
-    "image": "/digital-sikh-museum.jpg",
-    "link": "https://en.wikipedia.org/wiki/Akal_Takht",
-    "bestTime": "Year-round (indoor, air-conditioned)",
-    "timeRequired": "1–1.5 hours",
-    "highlights": ["High-tech projection mapping", "Digital storytelling", "Interactive touchscreens", "Documentary theater", "Underground gallery"],
-    "entryFee": "Free",
-    "timings": "9:00 AM – 7:00 PM",
-    "address": "Golden Temple Entrance Plaza (Underground), Amritsar, Punjab 143006",
-    "mapUrl": "https://maps.google.com/?q=Golden+Temple+Amritsar",
-    "bulletPoints": ["Located in an underground gallery beneath the Golden Temple entrance plaza", "Uses cutting-edge digital projection and mapping to tell the story of Sikhism", "Interactive touchscreens let visitors explore the lives of the ten Sikh Gurus", "Features a documentary theater with short films on Sikh history and philosophy", "Completely free to visit and air-conditioned throughout — a welcome respite"]
+  "id": "company-bagh-palace",
+  "title": "Company Bagh Summer Palace",
+  "category": "Heritage Palace",
+  "description": "The summer retreat palace built by Maharaja Ranjit Singh inside the Ram Bagh Gardens (commonly known as Company Bagh). It exhibits heritage Sikh architecture, beautiful woodwork, weapons, coins, and paintings from the reign of the Lion of Punjab.",
+  "image": "/company-bagh-palace.jpg",
+  "link": "https://en.wikipedia.org/wiki/Ram_Bagh,_Amritsar",
+  "address": "Inside Ram Bagh Gardens, Mall Road, Amritsar, Punjab 143001",
+  "bestTime": "Morning or evening hours.",
+  "bulletPoints": [
+    "Constructed in 1818, it served as the royal summer escape for the King of Punjab, Maharaja Ranjit Singh.",
+    "Displays a rare collection of weaponry, including matchlock guns, swords, shields, and royal armor.",
+    "Exhibits old manuscripts, Sikh-era gold and silver coins, and a replication of the Koh-i-Noor diamond.",
+    "Surrounded by the historical Ram Bagh garden (Company Bagh) which features rare botanicals and old trees."
+  ],
+  "entryFee": "₹10 (Indian Citizens); ₹250 (Foreigners)",
+  "highlights": [
+    "Durbar Hall woodwork",
+    "Maharaja Ranjit Singh Armoury",
+    "Sikh Paintings & Miniature Art",
+    "Heritage Red Sandstone Gateway"
+  ],
+  "mapUrl": "https://maps.app.goo.gl/uK5G4n8tL2b6P3Vb7",
+  "timeRequired": "1 - 2 Hours",
+  "timings": "10:00 AM - 5:00 PM (Closed Mondays)",
+  "updatedAt": {
+    "$date": "2026-07-05T05:22:02.536Z"
   }
-]
+},
+{
+  "_id": {
+    "$oid": "6a45f82476a092bd6ff40711"
+  },
+  "id": "ranjit-singh-panorama",
+  "title": "Maharaja Ranjit Singh Panorama",
+  "category": "Art & Multimedia",
+  "description": "A unique multimedia museum in Ram Bagh that presents the life and battles of Maharaja Ranjit Singh in a grand circular format. Features a stunning 360-degree panoramic painting, battle sound effects, and detailed three-dimensional historical displays.",
+  "image": "/images/museums/ranjit-singh-panorama.jpg",
+  "link": "https://en.wikipedia.org/wiki/Maharaja_Ranjit_Singh_Museum",
+  "address": "Ram Bagh Gardens, Mall Road, Amritsar, Punjab 143001",
+  "bestTime": "Morning or mid-day hours.",
+  "bulletPoints": [
+    "Features a massive, 12-meter-high, 360-degree cylindrical painting showcasing the six major battles fought by the Maharaja.",
+    "Synchronizes battle sounds, lights, and narrator explanations to make history feel like a movie.",
+    "Displays life-size figures of generals like Hari Singh Nalwa and the French and Italian commanders who trained the Sikh army.",
+    "Located in the middle of the beautiful Ram Bagh gardens, walking distance from the Summer Palace."
+  ],
+  "entryFee": "₹10 (Adults); ₹5 (Children)",
+  "highlights": [
+    "360-degree Panoramic Painting",
+    "Battle of Sobraon sound show",
+    "Maharaja Ranjit Singh Durbar diorama",
+    "Life-size warrior statues"
+  ],
+  "mapUrl": "https://maps.app.goo.gl/uK5G4n8tL2b6P3Vb7",
+  "timeRequired": "1 - 1.5 Hours",
+  "timings": "10:00 AM - 5:00 PM (Closed Mondays)",
+  "updatedAt": {
+    "$date": "2026-07-05T05:22:02.798Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a45f82476a092bd6ff40710"
+  },
+  "id": "partition-museum",
+  "title": "Partition Museum",
+  "category": "History Museum",
+  "description": "The world's first museum dedicated to the 1947 partition of British India. Located in the grand Town Hall building, it documents the division of Punjab and Bengal through oral histories, letters, photographs, and personal memorabilia donated by survivors.",
+  "image": "/partition-museum.jpg",
+  "link": "https://en.wikipedia.org/wiki/Partition_Museum",
+  "address": "Town Hall, Katra Ahluwalia, Amritsar, Punjab 143006",
+  "bestTime": "Mid-day hours (best to avoid weekend rush for reading the extensive displays).",
+  "bulletPoints": [
+    "World's first physical museum dedicated to the partition of India and Pakistan, opened in 2017.",
+    "Houses 14 interactive galleries showcasing refugee artifacts like sewing machines, utensils, and trunk boxes carried across borders.",
+    "Features extensive newspaper clippings, boundary commission maps, and video logs of survivors telling their stories.",
+    "Concludes with the 'Gallery of Hope', where visitors write messages of peace and tie them on a barbed wire tree structure."
+  ],
+  "entryFee": "₹10 (Indian Citizens); ₹250 (Foreigners); Free (Partition Survivors)",
+  "highlights": [
+    "Gallery of Migration",
+    "Interactive Oral History Stations",
+    "Gallery of Hope (Tree of Hope)",
+    "Personal Belongings of Refugees"
+  ],
+  "mapUrl": "https://maps.app.goo.gl/o1kZ45R6h7YVd72n8",
+  "timeRequired": "2 - 3 Hours",
+  "timings": "10:00 AM - 6:00 PM (Closed Mondays)",
+  "updatedAt": {
+    "$date": "2026-07-05T05:22:02.644Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a45f82476a092bd6ff4070e"
+  },
+  "id": "war-memorial",
+  "title": "War Memorial & Museum",
+  "category": "War Memorial",
+  "description": "The Punjab State War Heroes' Memorial and Museum in Amritsar showcases the brave deeds and military history of Punjab from ancient times to the modern era. Features a massive 45-meter-high stainless steel sword monument, fighter jets, tanks, and galleries depicting battle history.",
+  "image": "/w.jpg",
+  "link": "https://en.wikipedia.org/wiki/Punjab_State_War_Heroes%27_Memorial_and_Museum",
+  "address": "Amritsar-Attari GT Road Bypass, Amritsar, Punjab 143001",
+  "bestTime": "October to March (afternoon hours to enjoy the outdoor displays and indoor galleries).",
+  "bulletPoints": [
+    "Features a stunning 45-meter-high stainless steel sword monument that stands tall at the entrance, representing victory.",
+    "Displays historical weapons, models of battlegrounds, war photos, and decommissioned fighter planes, tanks, and a model aircraft carrier.",
+    "Houses 8 state-of-the-art galleries detailing pre-British, British, and post-independence war achievements of Punjab soldiers.",
+    "Includes a 7D auditorium and a water laser show portraying the major battles fought by the Indian Army."
+  ],
+  "entryFee": "₹100 (General); ₹50 (Children); Free (Defense Personnel)",
+  "highlights": [
+    "45m Stainless Steel Sword",
+    "Decommissioned MiG-21 Fighter",
+    "Sherman & Patton Tanks",
+    "Light & Sound Laser Show"
+  ],
+  "mapUrl": "https://maps.app.goo.gl/o5kZ45R6h7YVd72p8",
+  "timeRequired": "2 - 3 Hours",
+  "timings": "10:00 AM - 6:00 PM (Closed Mondays)",
+  "updatedAt": {
+    "$date": "2026-07-05T05:22:02.457Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a45f82476a092bd6ff40712"
+  },
+  "id": "digital-sikh-museum",
+  "title": "Digital Sikh Museum",
+  "category": "Digital & Spiritual",
+  "description": "Located underground in the Golden Temple Entrance Plaza, this museum uses high-tech digital projection, mapping displays, and documentaries to present the spiritual history of the Gurus and the Golden Temple itself.",
+  "image": "/images/museums/digital-sikh-museum.jpg",
+  "link": "https://en.wikipedia.org/wiki/Akal_Takht",
+  "address": "Golden Temple Entrance Plaza, Golden Temple Complex, Amritsar, Punjab 143006",
+  "bestTime": "Afternoon hours (great escape from the midday sun when visiting the Golden Temple).",
+  "bulletPoints": [
+    "An underground, state-of-the-art multimedia gallery utilizing laser projections and immersive soundscapes.",
+    "Features 4 large galleries explaining the history of Sikhism, the compilation of Guru Granth Sahib, and the concept of Langar.",
+    "Uses projection mapping on physical models to show the historical evolution and reconstructions of the Golden Temple.",
+    "Provides audio-guided tours in multiple languages, making it popular with international tourists."
+  ],
+  "entryFee": "Free",
+  "highlights": [
+    "3D Projection Mapping Show",
+    "Interlinked LED Screens",
+    "Spiritual Teachings Audio Guide",
+    "Underground Plaza Entrance"
+  ],
+  "mapUrl": "https://maps.app.goo.gl/u21xWJ74NnF2S9Zf6",
+  "timeRequired": "1 Hour",
+  "timings": "6:00 AM - 10:00 PM (Daily)",
+  "updatedAt": {
+    "$date": "2026-07-05T05:22:02.914Z"
+  }
+}]

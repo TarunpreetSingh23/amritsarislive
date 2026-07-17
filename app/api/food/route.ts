@@ -1,29 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
-import connectDB, { Food } from '@/lib/mongodb';
 import fs from 'fs';
 import path from 'path';
 
 export async function GET(_req: NextRequest) {
   try {
-    let foodData = [];
-    try {
-      await connectDB();
-      const dbFood = await Food.find({}).lean();
-      if (dbFood && dbFood.length > 0) {
-        foodData = dbFood;
-      } else {
-        throw new Error('No food places found in database');
-      }
-    } catch (dbError: any) {
-      console.warn('MongoDB connection failed, falling back to food.json:', dbError.message);
-      const filePath = path.join(process.cwd(), 'food.json');
-      if (fs.existsSync(filePath)) {
-        const fileData = fs.readFileSync(filePath, 'utf8');
-        foodData = JSON.parse(fileData);
-      } else {
-        throw new Error('Mock data food.json not found');
-      }
+    const filePath = path.join(process.cwd(), 'food.json');
+    if (!fs.existsSync(filePath)) {
+      throw new Error('Mock data food.json not found');
     }
+    
+    const fileData = fs.readFileSync(filePath, 'utf8');
+    const foodData = JSON.parse(fileData);
 
     const foodPlaces = foodData.map((f: any) => ({
       id: f.id,
