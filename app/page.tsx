@@ -22,6 +22,7 @@ export default function Home() {
 
       {/* Footer */}
       {/* Redesigned Simple Light Golden Cream Footer */}
+
       <div className='w-full h-[100px]'>
 
       </div>
